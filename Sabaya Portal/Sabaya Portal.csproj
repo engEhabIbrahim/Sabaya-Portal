@@ -106,7 +106,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404-page.html" />
+    <Content Include="about-us.html" />
+    <Content Include="blog-full-width.html" />
+    <Content Include="blog-left-sidebar.html" />
+    <Content Include="blog-right-sidebar.html" />
+    <Content Include="blog-single.html" />
+    <Content Include="coming-soon.html" />
+    <Content Include="contact.html" />
+    <Content Include="gallery.html" />
     <Content Include="Global.asax" />
+    <Content Include="index-2.html" />
+    <Content Include="index.html" />
+    <Content Include="portfolio-2-column.html" />
+    <Content Include="portfolio-3-column.html" />
+    <Content Include="portfolio-4-column.html" />
+    <Content Include="portfolio-masonary.html" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="services-1.html" />
+    <Content Include="services-2.html" />
+    <Content Include="services.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

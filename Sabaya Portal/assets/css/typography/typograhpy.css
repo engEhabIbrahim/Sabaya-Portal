@@ -1,0 +1,289 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 56px;
+}
+
+h3,
+h4 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;   
+}
+
+h3 {    
+    font-size: 22px;    
+    line-height: 35px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.boxed-btn {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.header-info p span {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header-info i {
+    font-size: 45px;
+}
+
+.cart-search i {
+    font-size: 20px;
+}
+
+.cart-icon .cart-count {
+    line-height: 12px;
+    font-size: 10px;
+}
+
+.cart-icon i {
+    font-size: 24px;
+}
+
+.search__area .search__inner form input {
+    font-size: 25px;
+}
+
+.search__area .search__inner form button {
+    line-height: 60px;
+    font-size: 25px;
+}
+
+.search__area .search__inner .search__close__btn {
+    font-size: 30px;
+    line-height: 58px;
+}
+
+.cartHeaderLabels div {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+a.productName {
+    font-size: 16px;
+    font-weight:  500;
+}
+
+.cartSubtotal {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.cart-icon .cartRemove i {
+    font-size: 16px;
+}
+
+.cart-btn {
+    font-size: 14px;
+}
+
+.navbar-pc li a {
+    font-size: 16px;
+}
+
+.header-single-slider h1 b {
+    font-weight: 800;
+}
+
+.header-single-slider p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.header-single-slider .boxed-btn {
+    font-size: 16px;
+}
+
+.watch-video i {
+    line-height: 42px;
+    font-size: 16px;
+}
+
+.watch-video {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.portfolio figcaption a {
+    font-weight: 500;
+}
+
+.features-box figcaption i {
+    font-size: 40px;
+}
+
+.service-box h4 {
+    font-weight: 700;
+}
+
+.service-box a {
+    font-weight: 500;
+}
+
+#fun-fact h3 {
+    font-size: 34px;
+    line-height: 54px;
+}
+
+#fun-fact p {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.pricing {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pricing .price {
+    font-size: 40px;
+}
+
+.pricing-content ul li {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#subscribe-form a {
+    font-size: 20px;
+}
+
+.recent-blog-post .meta-info li {
+    font-size: 12px;
+}
+
+.recent-blog-post .meta-info .posted-by {
+    font-size: 14px;
+}
+
+.recent-blog-post .meta-info li span.post-date {
+    font-size: 12px;
+}
+
+.action-bar {
+    font-size: 16px;
+}
+
+.action-bar p {
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.payment-method a i {
+    font-size: 20px;
+}
+
+#breadcrumb-area h2 {
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 400;
+}
+
+#breadcrumb-area h2 span {
+    font-weight: 700;
+}
+
+#our-identity h3 {
+    font-size: 26px;
+    line-height: 36px;
+}
+
+#our-identity .boxed-btn {
+    font-size: 16px;
+}
+
+.achieve-box i {
+    font-size: 36px;
+}
+
+.portfolio-box .content h4 {
+    font-weight: 700;
+}
+
+.full-width .blog-post .meta-info li {
+    font-size: 12px;
+}
+
+.contact-info .info-box i {
+    font-size: 40px;
+}
+
+.contact-info .info-box h4 {
+    line-height: 22px;
+}
+
+.contact-us-box i {
+    font-size: 46px;
+}
+
+.contact-us-box h4 {
+    font-size: 20px;
+}
+
+/* Coming Soon */
+
+.coming-soon-wrapper h1 {
+    font-size: 96px;
+    line-height: 1.1;
+    font-weight: 300;
+}
+
+.coming-soon-wrapper h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.text-404 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.text-404 i {
+    font-size: 80px;
+}
+
+#page-404 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#page-404 h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
