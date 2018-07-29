@@ -1,0 +1,29 @@
+/*
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
+=     00   00 00 00   00 00 00   00 00 00   00 00 00   00 00    =
+=     00   00    00        00    00    00   00    00   00       =
+=     00   00    00      00      00    00   00    00   00       =
+=     00   00    00    00        00    00   00    00   00       =
+=  00 00   00 00 00   00 00 00   00 00 00   00 00 00   00       =
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+*/
+@font-face {
+    font-family: "helveticaneueltarabic-light";
+    src: url('../fonts/helveticaneueltarabic-light.eot');
+    src: url('../fonts/helveticaneueltarabic-light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/helveticaneueltarabic-light.svg#DroidKufi Regular') format('svg'),
+    url('../fonts/helveticaneueltarabic-light.woff') format('woff'),
+    url('../fonts/helveticaneueltarabic-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "helveticaneueltarabic-bold";
+    src: url('../fonts/helveticaneueltarabic-bold.eot');
+    src: url('../fonts/helveticaneueltarabic-bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/helveticaneueltarabic-bold.svg#DroidKufi Regular') format('svg'),
+        url('../fonts/helveticaneueltarabic-bold.woff') format('woff'),
+        url('../fonts/helveticaneueltarabic-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

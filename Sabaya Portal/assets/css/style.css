@@ -65,6 +65,8 @@
 @import url('typography/typograhpy.css');
 @import url('colors/default.css');
 @import url('widget.css');
+@import url('font.css');
+
 
 
 /*------ Theme Reset Css
@@ -73,6 +75,9 @@
 body {
     background: #fff;
     color: #385573;
+    direction:rtl;
+    font-family: "helveticaneueltarabic-bold";
+
 }
 
 * {
@@ -350,6 +355,7 @@ figure {
     margin: 25px 0;
 }
 
+
 .cart-search li {
     margin-left: 10px;
 }
@@ -389,6 +395,7 @@ figure {
     text-align: center;
     border-radius: 50%;
 }
+
 
 /* Search*/
 
@@ -566,6 +573,7 @@ figure {
     -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.08);
             box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.08);
     z-index: 9999;
+    
 }
 
 .mobile-menu-area {
@@ -586,6 +594,8 @@ figure {
 
 nav.navbar-pc ul li {
     display: inline-block;
+
+
 }
 
 .navbar-pc li a {
@@ -596,6 +606,7 @@ nav.navbar-pc ul li {
     -o-transition: .3s all;
     transition: .3s all;
 }
+
 
 .navbar-pc li a:hover,
 .navbar-pc li.active > a {
