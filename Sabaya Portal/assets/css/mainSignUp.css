@@ -339,7 +339,7 @@ iframe {
   cursor: pointer;
 }
 
-.label-checkbox100::before {
+/*.label-checkbox100::before {
   content: "\f00c";
   font-family: FontAwesome;
   font-size: 13px;
@@ -364,7 +364,7 @@ iframe {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-}
+}*/
 
 .input-checkbox100:checked + .label-checkbox100::before {
   color: #c87ef0;

@@ -30,58 +30,94 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/utilSignUp.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/mainSignUp.css">
 <!--===============================================================================================-->
+    <script>
+        function CheckBoxRequired_ClientValidate(sender, e) {
+            e.IsValid = jQuery(".AcceptedAgreement input:checkbox").is(':checked');
+        }
+    </script>
+    <style>
+        #MyCheckBox{
+            float:left;
+        }
+    </style>
 </head>
 <body style="background-color: #999999;">
+                   
 
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="login100-more" style="background-image: url('assets/img/bg-01SignUp.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" runat="server">
 					<span class="login100-form-title p-b-59">
 						حساب جديد
 					</span>
-
-					<div class="wrap-input100 validate-input" data-validate="يجب ادخال الاسم">
+					<div class="wrap-input100 " >
 						<span class="label-input100">الاسم الكامل</span>
-						<input class="input100" type="text" name="name" placeholder="الاسم ...">
+						<input class="input100" type="text" name="name" id="txtFullName" placeholder="الاسم ..." runat="server">
 						<span class="focus-input100"></span>
+                        <asp:RequiredFieldValidator id="TitleRequiredValidator" runat="server"
+                                      ControlToValidate="txtFullName" ForeColor="red"
+                                      Display="static" ErrorMessage="مطلوب"  />
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "يجب ادخال ايميل صالح: ex@abc.xyz">
+					<div class="wrap-input100 " >
 						<span class="label-input100">البريد الاكتروني</span>
-						<input class="input100" type="text" name="email" placeholder="البريد الالكتروني ...">
+						<input class="input100" type="text" name="email" id="txtEmail" placeholder="البريد الالكتروني ..." runat="server">
 						<span class="focus-input100"></span>
+                          <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                                      ControlToValidate="txtEmail" ForeColor="red"
+                                      Display="static" ErrorMessage="مطلوب"  />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="البريد الالكتروني غير صالح"
+                            ControlToValidate="txtEmail" ForeColor="red"
+                                      Display="static"
+                                ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$">
+                        </asp:RegularExpressionValidator>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="يجب ادخال اسم المستخدم">
+					<div class="wrap-input100 " >
 						<span class="label-input100">اسم المستخدم </span>
-						<input class="input100" type="text" name="username" placeholder="اسم المستخدم ...">
+						<input class="input100" type="text" name="username" id="txtUserName" placeholder="اسم المستخدم ..." runat="server">
 						<span class="focus-input100"></span>
+                         <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                                      ControlToValidate="txtUserName" ForeColor="red"
+                                      Display="static" ErrorMessage="مطلوب"  />
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "يجب ادخال الرقم السري">
+					<div class="wrap-input100 " >
 						<span class="label-input100">الرقم السري</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
+						<input class="input100" type="password" name="pass" id="txtPassword" placeholder="*************" runat="server">
 						<span class="focus-input100"></span>
+                         <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
+                                      ControlToValidate="txtPassword" ForeColor="red"
+                                      Display="static" ErrorMessage="مطلوب"  />
 					</div>
+                  
 
-					<div class="wrap-input100 validate-input" data-validate = "يجب تاكيد الرقم السري">
+					<div class="wrap-input100 " >
 						<span class="label-input100">تاكيد الرقم السري</span>
-						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
+						<input class="input100" type="password" name="repeat-pass" id="txtConfirmPassword" placeholder="*************" runat="server">
 						<span class="focus-input100"></span>
+                          <asp:RequiredFieldValidator id="RequiredFieldValidator4" runat="server"
+                                      ControlToValidate="txtConfirmPassword" ForeColor="red"
+                                      Display="static" ErrorMessage="مطلوب"  />
+                        
+                        <asp:CompareValidator ID="comparevalidateor" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword"
+                            ForeColor="red"
+                                      Display="Static" ErrorMessage="الرقم السري غير متطابق"></asp:CompareValidator>
+                        
 					</div>
 
                     <div class="wrap-input100 " >
 						<span class="label-input100">رقم الجوال</span>
-						<input class="input100" type="text" name="Phone" placeholder="اختياري">
+						<input class="input100" type="text" name="Phone" id="txtPhoneNumber" placeholder="اختياري" runat="server">
 						<span class="focus-input100"></span>
 					</div>
 
                     <%--<div class="wrap-input100 " >--%>
 						<span class="label-input100">الموقع</span>
-                         <select class="form-control"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl">
+                         <select class="form-control" id="DrpLocation" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
                             <option value="Riyad"  >الرياض</option>
                             <option value="Geda" >جدة</option>
                             <option value="Baten" >الباطن</option>
@@ -91,15 +127,21 @@
                    
  					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-							<label class="label-checkbox100" for="ckb1">
+							<%--<input class="input-checkbox100" id="CheckboxPrivacy" type="checkbox" name="remember-me" runat="server" >--%>
+                            <label class="label-checkbox100" for="ckb1" style="display:inline;">
 								<span class="txt1">
 									 اوافق علي
 									<a href="#" class="txt2 hov1">
-										سياية الخصوصية
+										الشروط والاحكام
 									</a>
 								</span>
 							</label>
+                          <asp:CheckBox runat="server" ID="MyCheckBox" CssClass="AcceptedAgreement"  />
+                            <br />
+                            <asp:CustomValidator runat="server" ID="CheckBoxRequired" EnableClientScript="true"
+                            OnServerValidate="CheckBoxRequired_ServerValidate"
+                            ClientValidationFunction="CheckBoxRequired_ClientValidate">عليك الموافقة علي الشروط والاحكام من اجل الاستكمال</asp:CustomValidator>
+                            
 						</div>
 
 
@@ -108,10 +150,12 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+                           
+							<button id="btnSignUp" runat="server" OnClientClick="return check()" onserverclick="btnSignUp_Click"  class="login100-form-btn">
 								انشاء الحساب
 							</button>
 						</div>
+                        
 
 						<a href="LoginPage.aspx" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
 							تسجيل الدخول 
