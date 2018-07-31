@@ -281,7 +281,7 @@
                                     <li><a href="404-page.html">404 Page</a></li>
                                 </ul>
                             </li>
-                            <li><a href="contact.html">تواصل معنا</a></li>
+                            <li><a href="Contact Us.aspx">تواصل معنا</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -372,71 +372,7 @@
     
     <!--===// Start:  Header Slider
     =================================-->
-    <header>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="header-slider">
-                    <div class="header-single-slider">
-                        <div class="container inner-content text-left">
 
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <h1><b>Business litigation</b> expert <br> we are for your invest</h1>
-                                    <p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
-                                    <a href="#" class="boxed-btn">Explore more  ... </a>
-                                    <a href="https://www.youtube.com/watch?v=pGbIOC83-So&amp;t=35s" class="watch-video mfp-iframe"><i class="fas fa-play"></i>Watch Video</a>
-                                    
-                                </div>
-                                <div class="col-lg-5">
-                                    <img src="assets/img/mockup.png" alt="">
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="header-single-slider">
-                        <div class="container inner-content text-right">
-
-                            <div class="row">
-                                <div class="col-lg-5 order-2 order-lg-1">
-                                    <img src="assets/img/mockup.png" alt="">
-                                </div>
-
-                                <div class="col-lg-7 order-1 order-lg-2">
-                                    <h1><b>Business litigation</b> expert <br> we are for your invest</h1>
-                                    <p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
-                                    <a href="#" class="boxed-btn">Explore more  ... </a>
-                                    <a href="https://www.youtube.com/watch?v=pGbIOC83-So&amp;t=35s" class="watch-video mfp-iframe"><i class="fas fa-play"></i>Watch Video</a>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="header-single-slider">
-                        <div class="container inner-content text-center">                           
-
-                            <div class="row">
-                                <div class="col-lg-8 offset-0 offset-lg-2">
-                                    <h1><b>Business litigation</b> expert <br> we are for your invest</h1>
-                                    <p>Randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
-                                    <a href="#" class="boxed-btn">Explore more  ... </a>
-                                    <a href="https://www.youtube.com/watch?v=pGbIOC83-So&amp;t=35s" class="watch-video mfp-iframe"><i class="fas fa-play"></i>Watch Video</a>
-                                </div>
-                                <div class="col-lg-8 offset-0 offset-lg-2">
-                                    <img src="assets/img/mockup.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <!--===// End: Header Slider
-    =================================-->
     
     
     <!--===// Start:  Contact Info

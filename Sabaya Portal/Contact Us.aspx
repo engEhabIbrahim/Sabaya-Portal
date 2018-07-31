@@ -85,7 +85,7 @@
                             </div>
                         </div>
                          <div class="col-md-6">
-                           <asp:Button ID="btnSubmit" runat="server" style="text-align:center; position:center; color:white"  class="boxed-btn" Text="Submit" />
+                           <asp:Button ID="btnSubmit" runat="server" style="text-align:center; position:center; color:white"  class="boxed-btn" Text="ارسال" />
     
 <%--                        <button class="boxed-btn">Send Message</button>--%>
     </div>
@@ -141,6 +141,4 @@
     =================================-->
 </asp:Content>
 
-    <!--===// End: Breadcrumb
-    =================================-->
-</asp:Content>
+    

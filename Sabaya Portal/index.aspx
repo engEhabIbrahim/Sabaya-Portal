@@ -3,50 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!--===// Start:  Contact Info
-    =================================-->
-
-    <section id="contact-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="contact-info">
-                        <li>
-                            <div class="inner-content">
-                                <i class="icofont icofont-phone-circle"></i>
-                                <h5>24x7 Support</h5>
-                                <p>0 (123) 456 7891</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="inner-content">
-                                <i class="icofont icofont-ui-map"></i>
-                                <h5>Quick Contact Us</h5>
-                                <p>+880-123-456890</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="inner-content">
-                                <i class="icofont icofont-ui-email"></i>
-                                <h5>Send Us an Email</h5>
-                                <p>email@gmail.com</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="inner-content">
-                                <i class="icofont icofont-wall-clock"></i>
-                                <h5>Our Working Hours </h5>
-                                <p>Monday to Friday</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!--===// End: Contact Info
-    =================================-->
+   
     
     
     <!--===// Start:  Our Portfolio
