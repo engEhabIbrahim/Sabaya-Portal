@@ -73,7 +73,23 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="flex-m w-full p-b-33">
+                    <div class="wrap-input100 " >
+						<span class="label-input100">رقم الجوال</span>
+						<input class="input100" type="text" name="Phone" placeholder="اختياري">
+						<span class="focus-input100"></span>
+					</div>
+
+                    <%--<div class="wrap-input100 " >--%>
+						<span class="label-input100">الموقع</span>
+                         <select class="form-control"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl">
+                            <option value="Riyad"  >الرياض</option>
+                            <option value="Geda" >جدة</option>
+                            <option value="Baten" >الباطن</option>
+                        </select>
+                       
+					<%--</div>--%>
+                   
+ 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 							<label class="label-checkbox100" for="ckb1">
@@ -111,11 +127,13 @@
 
 <!--===============================================================================================-->
 	<script src="assets/vendorSignUp/jquery/jquery-3.2.1.min.js"></script>
+<%--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--%>
 <!--===============================================================================================-->
 	<script src="assets/vendorSignUp/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
 	<script src="assets/vendorSignUp/bootstrap/js/popper.js"></script>
 	<script src="assets/vendorSignUp/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
 	<script src="assets/vendorSignUp/select2/select2.min.js"></script>
 <!--===============================================================================================-->

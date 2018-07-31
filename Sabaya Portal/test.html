@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+</head>
+<body>
+    <script type="text/javascript">
+   window.fbAsyncInit = function() {
+        var appID = 'xxxxxxxxxxxxxxxxxxxxxxxxxx';
+        FB.init({
+              appId: appID,
+              status: true,
+              cookie: true,
+              xfbml: true
+        });
+
+        // This bit adds the login functionality to the login
+        // button when api load is complete
+        document.getElementById("login").onclick = function() {
+        FB.login(function(response) {
+            if (response.session) {
+                if (response.perms) {
+                    // user is logged in and granted some permissions.
+                    // perms is a comma separated list of granted permissions
+                } else {
+                    // user is logged in, but did not grant any permissions
+                }
+            } else {
+                // user is not logged in
+            }
+        }, {perms:'read_stream,publish_stream,offline_access'});
+    }
+    };
+    (function() {
+        var e = document.createElement("script");
+        e.async = true;
+        e.src = "https://connect.facebook.net/en_US/all.js?xfbml=1";
+        document.getElementById("fb-root").appendChild(e);
+    }());
+    </script>
+    <a id="login" href="somewhere.html">My login button</a>
+</body>
+</html>

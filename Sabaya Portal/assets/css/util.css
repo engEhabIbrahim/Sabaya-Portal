@@ -2237,7 +2237,10 @@
 
 /* ------------------------------------ */
 .text-center {text-align: center;}
-.text-left {text-align: left;}
+.text-left {
+    text-align: left;
+    padding-right: 240px;
+}
 .text-right {text-align: right;}
 .text-middle {vertical-align: middle;}
 
