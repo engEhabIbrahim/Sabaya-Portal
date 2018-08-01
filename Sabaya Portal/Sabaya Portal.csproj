@@ -301,7 +301,9 @@
     <Content Include="assets\webfonts\fa-regular-400.svg" />
     <Content Include="assets\webfonts\fa-solid-900.svg" />
     <Content Include="assets\img\bg-01SignUp.jpg" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="index.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="packages.config" />
@@ -364,15 +366,31 @@
     <Content Include="services.html" />
     <Content Include="SignUp.aspx" />
     <Content Include="test.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>

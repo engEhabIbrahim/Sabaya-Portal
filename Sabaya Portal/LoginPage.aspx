@@ -116,7 +116,7 @@ function fbLogout() {
 					</div>
                     <div class="row">
 					<div class="text-right p-t-8 p-b-31">
-						<a href="#">
+						<a href="ForgetPassword.aspx">
 							نسيت كلمة السر ؟
 						</a>
 					</div>
