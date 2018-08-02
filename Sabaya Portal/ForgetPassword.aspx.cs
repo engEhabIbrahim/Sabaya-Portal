@@ -73,7 +73,7 @@ namespace Sabaya_Portal
             smtpClient.Credentials = new System.Net.NetworkCredential()
             {
                 UserName = "emysh766@gmail.com",
-                Password = "01018007235"
+                Password = "ommariem0000ommoaz"
             };
 
             smtpClient.EnableSsl = true;
