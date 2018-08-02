@@ -62,7 +62,7 @@ namespace Sabaya_Portal
             sbEmailBody.Append("Please click on the following link to reset your password");
             sbEmailBody.Append("<br/>"); sbEmailBody.Append("http://http://localhost:53975/ChangePassword.aspx?uid=" + UniqueId);
             sbEmailBody.Append("<br/><br/>");
-            sbEmailBody.Append("<b>Pragim Technologies</b>");
+            sbEmailBody.Append("<b>Sabaya Portal </b>");
 
             mailMessage.IsBodyHtml = true;
 
