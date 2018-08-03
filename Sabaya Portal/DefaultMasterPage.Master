@@ -43,8 +43,11 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
                     <ul style="float:right; direction:ltr">
-                        <li><i class="fas fa-phone mr-2"></i>Call: 0 (123) 456 7891</li>
-                        <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                       <%-- <li><i class="fas fa-phone mr-2"></i>Call: 0 (123) 456 7891</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>--%>
                     </ul>
                 </div>
 

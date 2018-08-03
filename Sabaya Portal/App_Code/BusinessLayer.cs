@@ -65,6 +65,20 @@ namespace Sabaya_Portal.App_Code
             dal.ExcuteOperation("SignUp", param);
         }
 
+        public DataTable SPLogin(string UserName, string Password)
+        {
+            DataAccessLayer dal = new DataAccessLayer();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@UserName", SqlDbType.NVarChar, 50);
+            param[0].Value = UserName;
+
+            param[1] = new SqlParameter("@Password", SqlDbType.NVarChar);
+            param[1].Value = Password;
+
+            DataTable dt = dal.SelectData("SPLogin", param);
+            return dt;
+        }
+
 
         public void insertBillNum(int LastbillId)
         {

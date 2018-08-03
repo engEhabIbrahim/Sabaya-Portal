@@ -35,6 +35,8 @@
             e.IsValid = jQuery(".AcceptedAgreement input:checkbox").is(':checked');
         }
     </script>
+    <!--========================================== check if user name exists =====================================================-->
+            
     <style>
         #MyCheckBox{
             float:left;
@@ -59,7 +61,7 @@
 						<span class="focus-input100"></span>
                         <asp:RequiredFieldValidator id="TitleRequiredValidator" runat="server"
                                       ControlToValidate="txtFullName" ForeColor="red"
-                                      Display="static" ErrorMessage="مطلوب"  />
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
 					</div>
 
 					<div class="wrap-input100 " >
@@ -68,10 +70,10 @@
 						<span class="focus-input100"></span>
                           <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                                       ControlToValidate="txtEmail" ForeColor="red"
-                                      Display="static" ErrorMessage="مطلوب"  />
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="البريد الالكتروني غير صالح"
                             ControlToValidate="txtEmail" ForeColor="red"
-                                      Display="static"
+                                      Display="Dynamic"
                                 ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$">
                         </asp:RegularExpressionValidator>
 					</div>
@@ -82,7 +84,11 @@
 						<span class="focus-input100"></span>
                          <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
                                       ControlToValidate="txtUserName" ForeColor="red"
-                                      Display="static" ErrorMessage="مطلوب"  />
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
+                        <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtUserName" ID="RegularExpressionValidator3" 
+                            ValidationExpression = "^[\s\S]{3,}$" runat="server"
+                             ForeColor="red" ErrorMessage="لا يجب ان يقل اسم المستخدم عن 3 احرف"></asp:RegularExpressionValidator>
+                        <div id="test"></div>
 					</div>
 
 					<div class="wrap-input100 " >
@@ -91,7 +97,9 @@
 						<span class="focus-input100"></span>
                          <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
                                       ControlToValidate="txtPassword" ForeColor="red"
-                                      Display="static" ErrorMessage="مطلوب"  />
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
+                        <asp:RegularExpressionValidator Display = "Dynamic" ControlToValidate = "txtPassword" ID="RegularExpressionValidator2" 
+                          ForeColor="red"   ValidationExpression = "^[\s\S]{8,}$" runat="server" ErrorMessage="لا يجب ان يقل الرقم السري عن 8 احرف او ارقام"></asp:RegularExpressionValidator>
 					</div>
                   
 
@@ -101,26 +109,26 @@
 						<span class="focus-input100"></span>
                           <asp:RequiredFieldValidator id="RequiredFieldValidator4" runat="server"
                                       ControlToValidate="txtConfirmPassword" ForeColor="red"
-                                      Display="static" ErrorMessage="مطلوب"  />
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
                         
                         <asp:CompareValidator ID="comparevalidateor" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword"
                             ForeColor="red"
-                                      Display="Static" ErrorMessage="الرقم السري غير متطابق"></asp:CompareValidator>
+                                      Display="Dynamic" ErrorMessage="الرقم السري غير متطابق"></asp:CompareValidator>
                         
 					</div>
 
-                    <div class="wrap-input100 " >
+                   <%-- <div class="wrap-input100 " >
 						<span class="label-input100">رقم الجوال</span>
 						<input class="input100" type="text" name="Phone" id="txtPhoneNumber" placeholder="اختياري" runat="server">
 						<span class="focus-input100"></span>
-					</div>
+					</div>--%>
 
                     <%--<div class="wrap-input100 " >--%>
-						<span class="label-input100">الموقع</span>
-                         <select class="form-control" id="DrpLocation" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
-                            <option value="Riyad"  >الرياض</option>
-                            <option value="Geda" >جدة</option>
-                            <option value="Baten" >الباطن</option>
+						<span class="label-input100">تسجيل ك </span>
+                         <select class="form-control" id="DrpUserType" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
+                            <option value="مشجع او مشجعة"  >مشجع او مشجعة</option>
+                            <option value="المنتميات-الفرق والنوادي الرياضية" >المنتميات-الفرق والنوادي الرياضية</option>
+                            <option value="سيدة اعمال - مستثمرة" >سيدة اعمال - مستشمرة</option>
                         </select>
                        
 					<%--</div>--%>
@@ -139,7 +147,7 @@
                           <asp:CheckBox runat="server" ID="MyCheckBox" CssClass="AcceptedAgreement"  />
                             <br />
                             <asp:CustomValidator runat="server" ID="CheckBoxRequired" EnableClientScript="true"
-                            OnServerValidate="CheckBoxRequired_ServerValidate"
+                            OnServerValidate="CheckBoxRequired_ServerValidate" ForeColor="red"
                             ClientValidationFunction="CheckBoxRequired_ClientValidate">عليك الموافقة علي الشروط والاحكام من اجل الاستكمال</asp:CustomValidator>
                             
 						</div>
@@ -196,6 +204,36 @@
 
 	  gtag('config', 'UA-23581568-13');
 	</script>
+    <script>
+            $(document).ready(function () {
+                $('#txtUserName').keyup(function () {
+                var userName = $(this).val();
+                if (userName.length >= 3) {
+                    $.ajax({
+                        url: 'RegistrationService.asmx/UserNameExists',
+                        method: 'post',
+                        data: { userName: userName },
+                        dataType: 'json',
+                        success: function (data) {
+                            var divElement = $('#test');
+                            if (data.UserNameInUse) {
+                                divElement.text(data.UserName + ' مستخدم بالفعل');
+                                divElement.css('color', 'red');
+                            }
+                            else {
+                                divElement.text(data.UserName + ' متاح')
+                                divElement.css('color', 'green');
+                            }
+                        },
+                        error: function (err) {
+                            alert(err);
+                        }
+                    });
+                } 
+                });
+            
+            });
+                </script>
 </body>
 
 <!-- Mirrored from colorlib.com/etc/lf/Login_v13/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jul 2018 20:52:30 GMT -->
