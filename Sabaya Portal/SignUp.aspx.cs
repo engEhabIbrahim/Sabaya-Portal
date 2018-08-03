@@ -20,6 +20,14 @@ namespace Sabaya_Portal
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["LoggedIn"] != null)
+            {
+                if ((bool)Session["LoggedIn"] == true)
+                {
+                    Response.Redirect("index.aspx");
+                }
+            }
+
         }
         protected void CheckBoxRequired_ServerValidate(object sender, ServerValidateEventArgs e)
         {

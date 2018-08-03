@@ -14,7 +14,24 @@ namespace Sabaya_Portal
         BusinessLayer BL = new BusinessLayer();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                if (Session["LoggedIn"] != null)
+                {
+                    if (Request.QueryString["Logout"] == "true")
+                    {
+                        Session["UserName"] = "";
+                        Session["LoggedIn"] = false;
 
+                    }
+                    else if ((bool)Session["LoggedIn"] == true)
+                    {
+                        Response.Redirect("index.aspx");
+                    }
+                    
+                }
+
+            }
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -27,7 +44,7 @@ namespace Sabaya_Portal
                 {
                     Session["UserName"] = UserName;
                     Session["LoggedIn"] = true;
-                    Response.Redirect("index.aspx?");
+                    Response.Redirect("index.aspx");
                 }
                 else
                 {

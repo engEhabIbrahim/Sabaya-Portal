@@ -269,7 +269,8 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-                        <li><a href="SignUp.aspx"><i class="fa fa-lock" style="margin-right: 5px;"></i>انشاء حساب</a></li>
-                        <li><a href="LoginPage.aspx"><i class="fa fa-user" style="margin-right: 5px;"></i>تسجيل دخول</a></li>
+                     
+                        <li id="firstLI" runat="server"></li>
+                        <li id="secondLI" runat="server"></li>
 </asp:Content>
  
