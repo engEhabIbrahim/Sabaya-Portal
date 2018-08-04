@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using Sabaya_Portal.App_Code;
 
@@ -13,9 +15,18 @@ namespace Sabaya_Portal
     {
 
         BusinessLayer BL = new BusinessLayer();
+  
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["LoggedIn"] != null)
+            {
+                if ((bool)Session["LoggedIn"] == true)
+                {
+                    Response.Redirect("index.aspx");
+                }
+            }
 
         }
         protected void CheckBoxRequired_ServerValidate(object sender, ServerValidateEventArgs e)
@@ -29,12 +40,12 @@ namespace Sabaya_Portal
             string UserName = txtUserName.Value;
             string Password = txtPassword.Value;
             string ConfirmPassword = txtConfirmPassword.Value;
-            string PhoneNumber = txtPhoneNumber.Value;
-            string Location = DrpLocation.Value;
+            string PhoneNumber ="";
+            string UserType = DrpUserType.Value;
             string Gender = "";
             DateTime BirthDay = Convert.ToDateTime("1/1/1995");
             string ProfilePicture = "";
-            String UserType = "";
+            String Location = "";
             //if(FullName!=""&& Email!=""&& UserName!=""&& Password!="" &&Password==ConfirmPassword)
             //{
                 BL.SignUp( UserName, Email, Password, Gender, BirthDay, PhoneNumber, ProfilePicture, Location

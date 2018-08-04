@@ -359,6 +359,7 @@
     <Content Include="portfolio-3-column.html" />
     <Content Include="portfolio-4-column.html" />
     <Content Include="portfolio-masonary.html" />
+    <Content Include="RegistrationService.asmx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="services-1.html" />
@@ -391,6 +392,10 @@
     </Compile>
     <Compile Include="ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationService.asmx.cs">
+      <DependentUpon>RegistrationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>

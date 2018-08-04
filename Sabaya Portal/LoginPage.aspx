@@ -76,7 +76,7 @@ function getFbUserData(){
     function (response) {
         //document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
         //document.getElementById('fbLink').innerHTML = 'Logout from Facebook';
-        document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.first_name + '!';
+        document.getElementById('status').innerHTML = 'شكرا علي دخولك, ' + response.first_name + '!';
         //document.getElementById('userData').innerHTML = '<p><b>FB ID:</b> '+response.id+'</p><p><b>Name:</b> '+response.first_name+' '+response.last_name+'</p><p><b>Email:</b> '+response.email+'</p><p><b>Gender:</b> '+response.gender+'</p><p><b>Locale:</b> '+response.locale+'</p><p><b>Picture:</b> <img src="'+response.picture.data.url+'"/></p><p><b>FB Profile:</b> <a target="_blank" href="'+response.link+'">click to view profile</a></p>';
     });
 }
@@ -87,7 +87,7 @@ function fbLogout() {
         document.getElementById('fbLink').setAttribute("onclick","fbLogin()");
         document.getElementById('fbLink').innerHTML = '<img src="fblogin.png"/>';
         document.getElementById('userData').innerHTML = '';
-        document.getElementById('status').innerHTML = 'You have successfully logout from Facebook.';
+        document.getElementById('status').innerHTML = 'تم تسجيل خروجك بنجاح من فيس بوك';
     });
 }
 </script>
@@ -98,21 +98,27 @@ function fbLogout() {
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('assets/img/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" runat="server">
 					<span class="login100-form-title p-b-49">
 						تسجيل الدخول
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "اسم المستخدم مطلوب">
+					<div class="wrap-input100" >
 						<span class="label-input100">اسم المستخدم</span>
-						<input class="input100" type="text" name="username" placeholder="قم بكتابة اسم المستخدم">
+						<input class="input100" type="text" name="username" placeholder="قم بكتابة اسم المستخدم" runat="server" id="txtUserNameLogin">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                                      ControlToValidate="txtUserNameLogin" ForeColor="red"
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="الرقم السري مطلوب">
+					<div class="wrap-input100" >
 						<span class="label-input100">الرقم السري</span>
-						<input class="input100" type="password" name="pass" placeholder="الرقم السري">
+						<input class="input100" type="password" name="pass" placeholder="الرقم السري" runat="server" id="txtPasswordLogin">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
+                         <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
+                                      ControlToValidate="txtPasswordLogin" ForeColor="red"
+                                      Display="Dynamic" ErrorMessage="مطلوب"  />
 					</div>
                     <div class="row">
 					<div class="text-right p-t-8 p-b-31">
@@ -127,18 +133,22 @@ function fbLogout() {
 									 تذكرني
 								</span>
 							</label>
-                          <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                          <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" >
 
 						</div>
 
 
 					</div>
                         </div>
+                    <div class="row">
+                        <div id="LoginErrorMessage" runat="server" style="position: relative;bottom: 25px;margin: 0 auto;color: red;">
+                        </div>
+                    </div>
 
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button id="btnLogin" runat="server" onserverclick="btnLogin_Click" class="login100-form-btn" >
 								تسجيل الدخول
 							</button>
 						</div>

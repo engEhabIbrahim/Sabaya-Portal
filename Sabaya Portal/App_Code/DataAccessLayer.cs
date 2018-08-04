@@ -8,6 +8,8 @@ namespace Sabaya_Portal.App_Code
 {
     public class DataAccessLayer
     {
+        public string UserName { get; set; }
+        public bool UserNameInUse { get; set; }
         SqlConnection cn;
         public DataAccessLayer()
         {

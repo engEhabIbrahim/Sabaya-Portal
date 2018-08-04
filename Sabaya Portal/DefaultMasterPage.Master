@@ -17,6 +17,39 @@
     <link rel="stylesheet" href="assets/css/font.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+    .dropbtn {
+   cursor:pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    direction:rtl;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*.dropdown-content a:hover {background-color: #ddd;}*/
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -43,8 +76,11 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
                     <ul style="float:right; direction:ltr">
-                        <li><i class="fas fa-phone mr-2"></i>Call: 0 (123) 456 7891</li>
-                        <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                       <%-- <li><i class="fas fa-phone mr-2"></i>Call: 0 (123) 456 7891</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>--%>
                     </ul>
                 </div>
 
@@ -73,7 +109,7 @@
             <div class="clearfix">
                 <div class="float-left">
                     <div class="main-logo">
-                        <a href="#"><img src="assets/img/logo.png" alt=""></a>
+                        <a href="index.aspx"><img src="assets/img/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="float-right cart-search">
@@ -241,7 +277,7 @@
                 <div class="col-lg-12">
                     <nav class="navbar-pc" >
                         <ul style="float:right;">
-                            <li class="active"><a href="index-2.html">الرئيسية</a></li>
+                            <li class="active"><a href="index.aspx">الرئيسية</a></li>
                             <li><a href="about-us.html">الاخبار</a></li>
                             <li class="b-dropdown">
                                 <a href="services.html">لا للفراغ</a>
