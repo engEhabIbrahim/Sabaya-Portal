@@ -12,18 +12,38 @@ namespace Sabaya_Portal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["LoggedIn"] != null)
+            if(!IsPostBack)
             {
-                if ((bool)Session["LoggedIn"] == false)
+                if (Session["LoggedIn"] != null)
                 {
-                    firstLI.InnerHtml = "<a href=\"SignUp.aspx\"><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>انشاء حساب</a>";
-                    secondLI.InnerHtml = "<a href=\"LoginPage.aspx\"><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>تسجيل دخول</a>";
+                    if ((bool)Session["LoggedIn"] == false)
+                    {
+                        firstLI.InnerHtml = "<a href=\"SignUp.aspx\"><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>انشاء حساب</a>";
+                        secondLI.InnerHtml = "<a href=\"LoginPage.aspx\"><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>تسجيل دخول</a>";
+                    }
+                    else
+                    {
+                        var userProfile = new StringBuilder();
+                        userProfile.Append(" <div class=\"dropdown\">");
+                        userProfile.Append("<a class=\"dropbtn\">" + "مرحبا" + " " + Session["FullName"] + "<i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>");
+                        userProfile.Append("</a>");
+                        userProfile.Append(" <div class=\"dropdown-content\">");
+                        userProfile.Append("<a href=\"#\">تعديل البيانات</a>");
+                        userProfile.Append("<a href=\"#\">الاهتمامات الرياضية</a>");
+                        userProfile.Append("<a href=\"LoginPage.aspx?Logout=true\">تسجيل خروج</a>");
+                        userProfile.Append("</div></div>");
+
+
+                        firstLI.InnerHtml = userProfile.ToString();
+
+                    }
                 }
-                else
+                else if (Request.QueryString["FullName"] != null)
                 {
+                    Session["FullName"] = Request.QueryString["FullName"].ToString();
                     var userProfile = new StringBuilder();
                     userProfile.Append(" <div class=\"dropdown\">");
-                    userProfile.Append("<a class=\"dropbtn\">"+ "مرحبا"  + " " + Session["UserName"] + "<i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>");
+                    userProfile.Append("<a class=\"dropbtn\">" + "مرحبا" + " " + Session["FullName"] + "<i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>");
                     userProfile.Append("</a>");
                     userProfile.Append(" <div class=\"dropdown-content\">");
                     userProfile.Append("<a href=\"#\">تعديل البيانات</a>");
@@ -34,12 +54,15 @@ namespace Sabaya_Portal
 
                     firstLI.InnerHtml = userProfile.ToString();
 
+
+
                 }
-            }
-            else
-            {
-                firstLI.InnerHtml = "<a href=\"SignUp.aspx\"><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>انشاء حساب</a>";
-                secondLI.InnerHtml = "<a href=\"LoginPage.aspx\"><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>تسجيل دخول</a>";
+                else
+                {
+                    firstLI.InnerHtml = "<a href=\"SignUp.aspx\"><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>انشاء حساب</a>";
+                    secondLI.InnerHtml = "<a href=\"LoginPage.aspx\"><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>تسجيل دخول</a>";
+
+                }
 
             }
         }

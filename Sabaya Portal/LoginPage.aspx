@@ -7,6 +7,8 @@
 	<title>تسجيل الدخول</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="919756516055-682kvh760f2firpofek9ekrcqvqb72c3.apps.googleusercontent.com">
+
 <!--===============================================================================================-->
 	<%--<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>--%>
 <!--===============================================================================================-->
@@ -76,8 +78,20 @@ function getFbUserData(){
     function (response) {
         //document.getElementById('fbLink').setAttribute("onclick","fbLogout()");
         //document.getElementById('fbLink').innerHTML = 'Logout from Facebook';
-        document.getElementById('status').innerHTML = 'شكرا علي دخولك, ' + response.first_name + '!';
+        document.getElementById('status').innerHTML = ' سيتم تحويلك للصفحة الرئيسية في غضون ثواني ' + response.first_name + '!';
         //document.getElementById('userData').innerHTML = '<p><b>FB ID:</b> '+response.id+'</p><p><b>Name:</b> '+response.first_name+' '+response.last_name+'</p><p><b>Email:</b> '+response.email+'</p><p><b>Gender:</b> '+response.gender+'</p><p><b>Locale:</b> '+response.locale+'</p><p><b>Picture:</b> <img src="'+response.picture.data.url+'"/></p><p><b>FB Profile:</b> <a target="_blank" href="'+response.link+'">click to view profile</a></p>';
+        localStorage.setItem('FacebookFullName', response.first_name + ' ' + response.last_name);
+        localStorage.setItem('FacebookEmail', response.email);
+        localStorage.setItem('FacebookGender', response.gender);
+        localStorage.setItem('IsFacebookUser', true);
+
+
+        FB.Event.subscribe('auth.login', function () {
+            window.location.href = 'index.aspx?FullName='+ response.first_name + ' ' + response.last_name+'';
+        });
+
+
+
     });
 }
 
@@ -91,7 +105,82 @@ function fbLogout() {
     });
 }
 </script>
+    <!--===============================================================================================-->
+                         <%--Google Login Javascript SDK--%>
+ <%--<script>
+        function onSuccess(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            gapi.client.load('plus', 'v1', function () {
+                var request = gapi.client.plus.people.get({
+                    'userId': 'me'
+                });
+                //Display the user details
+                request.execute(function (resp) {
+                    localStorage.setItem('GoogleFullName', resp.displayName);
+                    localStorage.setItem('GoogleEmail', resp.emails[0].value);
+                    localStorage.setItem('GoogleGender', resp.gender);
+                    document.getElementById('status').innerHTML = ' سيتم تحويلك للصفحة الرئيسية في غضون ثواني ' + resp.displayName + '!';
+                    window.location.href = 'index.aspx?FullName=' + resp.displayName ;
 
+
+                });
+            });
+        }
+        function onFailure(error) {
+            alert(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('gSignIn', {
+                'scope': 'profile email',
+                //'width': 240,
+                //'height': 50,
+                //'longtitle': true,
+                //'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+        window.onbeforeunload = function (e) {
+            gapi.auth2.getAuthInstance().signOut();
+        };
+       //function signOut() {
+       //     var auth2 = gapi.auth2.getAuthInstance();
+       //     auth2.signOut().then(function () {
+       //         $('.userContent').html('');
+       //         $('#gSignIn').slideDown('slow');
+       //     });
+       // }
+    </script>--%>
+    <script>
+        function onLoadGoogleCallback() {
+            gapi.load('auth2', function () {
+                auth2 = gapi.auth2.init({
+                    client_id: '919756516055-682kvh760f2firpofek9ekrcqvqb72c3.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin',
+                    scope: 'profile'
+                });
+
+                auth2.attachClickHandler(element, {},
+                  function (googleUser) {
+                      localStorage.setItem('GoogleFullName',googleUser.getBasicProfile().getName());
+                      localStorage.setItem('GoogleEmail', googleUser.getBasicProfile().getEmail());
+                      localStorage.setItem('IsGoogleUser', true);
+                      document.getElementById('status').innerHTML = ' سيتم تحويلك للصفحة الرئيسية في غضون ثواني ' + googleUser.getBasicProfile().getName() + '!';
+                      window.location.href = 'index.aspx?FullName=' + googleUser.getBasicProfile().getName();
+
+                  }, function (error) {
+                      console.log('Sign-in error', error);
+                  }
+                  );
+            });
+
+            element = document.getElementById('gSignIn');
+        }
+        window.onbeforeunload = function (e) {
+            gapi.auth2.getAuthInstance().signOut();
+        };
+
+    </script>
 </head>
 <body>
 
@@ -169,14 +258,19 @@ function fbLogout() {
 							<i class="fa fa-facebook"></i>
 						</a>
 
-						<a href="#" class="login100-social-item bg2">
+						<%--<a href="#" class="login100-social-item bg2" >
 							<i class="fa fa-twitter"></i>
-						</a>
+						</a>--%>
 
-						<a href="#" class="login100-social-item bg3">
+						<a href="#" class="login100-social-item bg3" id="gSignIn">
 							<i class="fa fa-google"></i>
+                            <script src="https://apis.google.com/js/platform.js?onload=onLoadGoogleCallback" async defer></script>
 						</a>
 					</div>
+                    <!-- HTML for render Google Sign-In button -->
+<%--                        <div id="gSignIn"></div>--%>
+                        <!-- HTML for displaying user details -->
+<%--                        <div class="userContent"></div>--%>
                      <!-- Display user profile data -->
                             <%--<div id="userData"></div>--%>
                     
@@ -199,6 +293,13 @@ function fbLogout() {
 
 
 	<div id="dropDownSelect1"></div>
+    <div>
+        <input type="text" id="txtFaceBookFullName" style="display:none" runat="server" />
+        <input type="text" id="txtFaceBookEmail" style="display:none" runat="server" />
+        <input type="text" id="txtFaceBookGender" style="display:none" runat="server" />
+        <input type="text" id="txtFaceBookLocale" style="display:none" runat="server" />
+
+    </div>
 
 <!--===============================================================================================-->
 	<script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -218,6 +319,7 @@ function fbLogout() {
 	<script src="assets/js/main.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <%--<script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>--%>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
