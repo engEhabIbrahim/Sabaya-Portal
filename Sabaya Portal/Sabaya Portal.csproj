@@ -306,6 +306,7 @@
     <Content Include="ForgetPassword.aspx" />
     <Content Include="index.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="no_leisure.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -392,6 +393,13 @@
     </Compile>
     <Compile Include="ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="no_leisure.aspx.cs">
+      <DependentUpon>no_leisure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="no_leisure.aspx.designer.cs">
+      <DependentUpon>no_leisure.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrationService.asmx.cs">
       <DependentUpon>RegistrationService.asmx</DependentUpon>
