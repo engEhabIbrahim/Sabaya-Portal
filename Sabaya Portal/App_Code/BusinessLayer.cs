@@ -255,5 +255,37 @@ namespace Sabaya_Portal.App_Code
             dt = DAL.SelectData("GetDataForPrinting", param);
             return dt;
         }
+
+        public void AddNewMatch(string TitleOfMatch, string place, string nameofGame,int typeofGame, string date
+        , string time)
+        {
+            SqlParameter[] param = new SqlParameter[6];
+
+            param[0] = new SqlParameter("@TitleOfMatch", SqlDbType.NVarChar);
+            param[0].Value = TitleOfMatch;
+
+            param[1] = new SqlParameter("@place", SqlDbType.NVarChar);
+            param[1].Value = place;
+
+            param[2] = new SqlParameter("@nameofGame", SqlDbType.NVarChar);
+            param[2].Value = nameofGame;
+
+            param[3] = new SqlParameter("@typeofGame", SqlDbType.Int);
+            param[3].Value = typeofGame;
+
+            param[4] = new SqlParameter("@date", SqlDbType.NVarChar, 50);
+            param[4].Value = date;
+
+            param[5] = new SqlParameter("@time", SqlDbType.NVarChar,50);
+            param[5].Value = time;
+
+       
+
+
+
+
+            DataAccessLayer dal = new DataAccessLayer();
+            dal.ExcuteOperation("AddNewMatch", param);
+        }
     }
 }

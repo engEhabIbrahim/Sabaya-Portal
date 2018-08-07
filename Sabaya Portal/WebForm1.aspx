@@ -1,34 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true"   CodeBehind="no_leisure.aspx.cs"  Inherits="Sabaya_Portal.no_leisure" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<%--      <link href="styles/jquery-ui.css" rel="stylesheet" />
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/jquery-ui.js"></script>
-     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#<%=txtFromDate.ClientID %>").datepicker({ dateFormat: 'dd-mm-yy' });
-            $("#<%=txtToDate.ClientID %>").datepicker({ dateFormat: 'dd-mm-yy' });
-        });
-    </script>--%>
-        <script type="text/javascript">
-        $(function () {
-            $('[id*=txtDatePicker]').datepicker({
-                changeMonth: true,
-                changeYear: true,
-                format: "dd/mm/yyyy",
-                language: "tr"
-            });
-        });
-    </script>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sabaya_Portal.WebForm1" %>
 
+<!DOCTYPE html>
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container">
-         <div class="col-md-6 col-md-offset-6">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+      <style type="text/css">
+        body
+        {
+            padding: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <div class="col-md-4 col-md-offset-4">
  
-            <form class="form-horizontal" role="form">
                 <h2 id="head" runat="server">لا للفراغ</h2>
                   <div class="form-group">
                     <label for="txttitle" class="col-sm-3 control-label" style="float:right">إنشاء فعاليه او مباراه</label>
@@ -50,7 +37,7 @@
                    <div class="form-group">
                     <label for="email" class="col-sm-3 control-label" style="float:right">إسم المباراه</label>
                     <div class="col-sm-">
-                       <asp:TextBox id="txtname" runat="server"  placeholder="مباراه كره قدم " class="form-control" />
+                       <asp:TextBox id="txtname" runat="server"  placeholder="مباراه كره قدم " class="form-control" TextMode="multiline" Rows="3" />
               
                          </div>
                 </div>
@@ -76,8 +63,7 @@
                 <div class="form-group">
                     <label for="email" class="col-sm-3 control-label" style="float:right">تاريخ المباره</label>
                     <div class="col-sm-">
-                         <asp:Textbox id="txtDatePicker" runat="server"  placeholder="التاريخ" class="form-control"/>
-
+                         <asp:Textbox id="txtDate" runat="server"  placeholder="التاريخ" class="form-control"/>
 
                     </div>
                 </div>
@@ -86,13 +72,37 @@
                
                 <div class="form-group">
                     <div class="col-sm-6 col-sm-offset-3" >
-                        <asp:Button ID="BtnRegister" runat="server" Text="اضافة" class="btn btn-primary btn-block" OnClick="BtnRegister_Click"  />
+                        <asp:Button ID="BtnRegister" runat="server" Text="اضافة" class="btn btn-primary btn-block"  OnClick="btnSubmit_Click"/>
                     </div>
                 </div>
-            </form> <!-- /form -->
-          </div>
-                                  <hr />
+             <!-- /form -->
+          </div> 
+                                 
 
     </div>
-  
-</asp:Content>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
+        media="screen" />
+    <!-- Bootstrap -->
+    <!-- Bootstrap DatePicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"
+        type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"
+        type="text/javascript"></script>
+    <!-- Bootstrap DatePicker -->
+    <script type="text/javascript">
+        $(function () {
+            $('[id*=txtDate]').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "tr"
+            });
+        });
+    </script>
+    </form>
+</body>
+</html>
