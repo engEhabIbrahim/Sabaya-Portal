@@ -95,6 +95,7 @@
                 <div class="form-group">
                     <div class="col-sm-6 col-sm-offset-3" >
                         <asp:Button ID="BtnRegister" runat="server" Text="اضافة" class="btn btn-primary btn-block" OnClick="BtnRegister_Click"  />
+                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
             </form> <!-- /form -->
