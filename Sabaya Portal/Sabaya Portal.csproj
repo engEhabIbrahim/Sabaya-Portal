@@ -306,6 +306,7 @@
     <Content Include="ForgetPassword.aspx" />
     <Content Include="index.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="main.aspx" />
     <Content Include="no_leisure.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -336,8 +337,8 @@
     <Content Include="assets\fonts\helveticaneueltarabic-light.eot" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.ttf" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.woff" />
+    <Content Include="assets\img\img1.jpg" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -396,6 +397,13 @@
     <Compile Include="ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="no_leisure.aspx.cs">
       <DependentUpon>no_leisure.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -447,13 +455,6 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
