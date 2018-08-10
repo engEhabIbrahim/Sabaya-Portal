@@ -301,6 +301,7 @@
     <Content Include="assets\webfonts\fa-regular-400.svg" />
     <Content Include="assets\webfonts\fa-solid-900.svg" />
     <Content Include="assets\img\bg-01SignUp.jpg" />
+    <Content Include="btnzeftttttt.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="ForgetPassword.aspx" />
@@ -339,6 +340,7 @@
     <Content Include="assets\fonts\helveticaneueltarabic-light.woff" />
     <Content Include="assets\img\img1.jpg" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="assets\css\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -376,6 +378,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="btnzeftttttt.aspx.cs">
+      <DependentUpon>btnzeftttttt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="btnzeftttttt.aspx.designer.cs">
+      <DependentUpon>btnzeftttttt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

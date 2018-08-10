@@ -28,7 +28,7 @@
      <div class="container">
          <div class="col-md-6 col-md-offset-6">
  
-            <form class="form-horizontal" role="form">
+<%--            <form class="form-horizontal" role="form">--%>
                 <h2 id="head" runat="server">لا للفراغ</h2>
                   <div class="form-group">
                     <label for="txttitle" class="col-sm-3 control-label" style="float:right">إنشاء فعاليه او مباراه</label>
@@ -94,11 +94,12 @@
                
                 <div class="form-group">
                     <div class="col-sm-6 col-sm-offset-3" >
+                           
                         <asp:Button ID="BtnRegister" runat="server" Text="اضافة" class="btn btn-primary btn-block" OnClick="BtnRegister_Click"  />
                         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                     </div>
                 </div>
-            </form> <!-- /form -->
+<%--            </form> <!-- /form -->--%>
           </div>
                                   <hr />
 
