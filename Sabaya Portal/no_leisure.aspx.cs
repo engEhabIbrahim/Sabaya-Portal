@@ -21,8 +21,6 @@ namespace Sabaya_Portal
      
         protected void BtnRegister_Click(object sender, EventArgs e)
         {
-
-            
                 BL.AddNewMatch(txttitle.Text, Txtplace.Text, txtname.Text, Convert.ToInt32(Ddtypeofgame.SelectedValue), txtDatePicker.Text, txttime.Text);
                 Label1.Text = "تمت إضافه المباراه بنجاح";
             
