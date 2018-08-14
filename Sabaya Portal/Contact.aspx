@@ -70,7 +70,7 @@
             <div class="clearfix">
                 <div class="float-left">
                     <div class="main-logo">
-                        <a href="#"><img src="assets/img/logo.png" alt=""></a>
+                        <a href="index.aspx"><img src="assets/img/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div class="float-right cart-search">
@@ -104,18 +104,19 @@
                 <div class="col-lg-12">
                     <nav class="navbar-pc" >
                         <ul style="float:right;">
-                            <li class="active"><a href="index-2.html">الرئيسية</a></li>
-                            <li><a href="about-us.html">الاخبار</a></li>
-                            <li class="b-dropdown">
-                                <a href="services.html">لا للفراغ</a>
-                                <ul class="b-dropdown-menu">
+                            <li ><a href="index.aspx">الرئيسية</a></li>
+                            <li><a href="#">الاخبار</a></li>
+                            <li >
+                                <a href="no_leisure.aspx">لا للفراغ</a>
+                              <%--  <ul class="b-dropdown-menu">
                                     <li><a href="services-1.html">Services 1</a></li>
                                     <li><a href="services-2.html">Services 2</a></li>
-                                </ul>
+                                </ul>--%>
                             </li>
-                            <li class="b-dropdown">
+<%--                            <li class="b-dropdown">--%>
+                            <li>
                                 <a href="#">مراسلة فريق او لاعبة </a>
-                                <ul class="b-dropdown-menu">
+                               <%-- <ul class="b-dropdown-menu">
                                     <li><a href="portfolio-2-column.html">Portfolio 2 Column</a></li>
                                     <li><a href="portfolio-3-column.html">Portfolio 3 Column</a></li>
                                     <li><a href="portfolio-4-column.html">Portfolio 4 Column</a></li>
@@ -125,26 +126,22 @@
                                             <li><a href="portfolio-masonary.html">Portfolio masonary</a></li>
                                         </ul>
                                     </li>
-                                </ul>
+                                </ul>--%>
                             </li>
-                            <li class="b-dropdown">
+                            <li >
                                 <a href="#">مباريات</a>
-                                <ul class="b-dropdown-menu">
+                               <%-- <ul class="b-dropdown-menu">
                                     <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
                                     <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
                                     <li><a href="blog-full-width.html">Blog Full Width</a></li>
                                     <li><a href="blog-single.html">Blog Details</a></li>
-                                </ul>
+                                </ul>--%>
                             </li>
-                            <li class="b-dropdown">
+                            <li >
                                 <a href="#">فيديو وصور</a>
-                                <ul class="b-dropdown-menu">
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                                    <li><a href="404-page.html">404 Page</a></li>
-                                </ul>
+                               
                             </li>
-                            <li><a href="Contact Us.aspx">تواصل معنا</a></li>
+                            <li class="active"><a href="Contact.aspx">تواصل معنا</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -156,49 +153,46 @@
                 <div class="col-md-12">
                     <div class="mobile-menu">
                         <nav class="mobile-menu-active">
-                            <ul>
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li class="b-dropdown">
-                                    <a href="services.html">Services</a>
-                                    <ul class="b-dropdown-menu">
-                                        <li><a href="services-1.html">Services 1</a></li>
-                                        <li><a href="services-2.html">Services 2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="b-dropdown">
-                                    <a href="#">Portfolio</a>
-                                    <ul class="b-dropdown-menu">
-                                        <li><a href="portfolio-2-column.html">Portfolio 2 Column</a></li>
-                                        <li><a href="portfolio-3-column.html">Portfolio 3 Column</a></li>
-                                        <li><a href="portfolio-4-column.html">Portfolio 4 Column</a></li>
-                                        <li class="b-sub-dropdown">
-                                            <a href="#">Other Pages</a>
-                                            <ul class="b-sub-dropdown-menu">
-                                                <li><a href="portfolio-masonary.html">Portfolio masonary</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li class="b-dropdown">
-                                    <a href="#">Blog</a>
-                                    <ul class="b-dropdown-menu">
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                        <li><a href="blog-full-width.html">Blog Full Width</a></li>
-                                        <li><a href="blog-single.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="b-dropdown">
-                                    <a href="#">Pages</a>
-                                    <ul class="b-dropdown-menu">
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="404-page.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
+                            <ul style="float:right;">
+                            <li ><a href="index.aspx">الرئيسية</a></li>
+                            <li><a href="#">الاخبار</a></li>
+                            <li >
+                                <a href="no_leisure.aspx">لا للفراغ</a>
+                              <%--  <ul class="b-dropdown-menu">
+                                    <li><a href="services-1.html">Services 1</a></li>
+                                    <li><a href="services-2.html">Services 2</a></li>
+                                </ul>--%>
+                            </li>
+<%--                            <li class="b-dropdown">--%>
+                            <li>
+                                <a href="#">مراسلة فريق او لاعبة </a>
+                               <%-- <ul class="b-dropdown-menu">
+                                    <li><a href="portfolio-2-column.html">Portfolio 2 Column</a></li>
+                                    <li><a href="portfolio-3-column.html">Portfolio 3 Column</a></li>
+                                    <li><a href="portfolio-4-column.html">Portfolio 4 Column</a></li>
+                                    <li class="b-sub-dropdown">
+                                        <a href="#">Other Pages</a>
+                                        <ul class="b-sub-dropdown-menu">
+                                            <li><a href="portfolio-masonary.html">Portfolio masonary</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>--%>
+                            </li>
+                            <li >
+                                <a href="#">مباريات</a>
+                               <%-- <ul class="b-dropdown-menu">
+                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                    <li><a href="blog-full-width.html">Blog Full Width</a></li>
+                                    <li><a href="blog-single.html">Blog Details</a></li>
+                                </ul>--%>
+                            </li>
+                            <li >
+                                <a href="#">فيديو وصور</a>
+                               
+                            </li>
+                            <li class="active"><a href="Contact.aspx">تواصل معنا</a></li>
+                        </ul>
                         </nav>                                
                     </div>
                 </div>
