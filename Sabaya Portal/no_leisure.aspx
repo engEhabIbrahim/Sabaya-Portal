@@ -1,24 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true"   CodeBehind="no_leisure.aspx.cs"  Inherits="Sabaya_Portal.no_leisure" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<%--      <link href="styles/jquery-ui.css" rel="stylesheet" />
-    <script src="scripts/jquery-1.11.3.min.js"></script>
-    <script src="scripts/jquery-ui.js"></script>
-     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#<%=txtFromDate.ClientID %>").datepicker({ dateFormat: 'dd-mm-yy' });
-            $("#<%=txtToDate.ClientID %>").datepicker({ dateFormat: 'dd-mm-yy' });
-        });
-    </script>--%>
-        <script type="text/javascript">
-        $(function () {
-            $('[id*=txtDatePicker]').datepicker({
-                changeMonth: true,
-                changeYear: true,
-                format: "dd/mm/yyyy",
-                language: "tr"
-            });
-        });
-    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
@@ -104,5 +86,19 @@
                                   <hr />
 
     </div>
-  
+   <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"
+        type="text/javascript"></script>
+        <script type="text/javascript">
+        $(function () {
+            $('[id*=txtDatePicker]').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "dd/mm/yyyy",
+                language: "tr"
+            });
+        });
+    </script>
 </asp:Content>
