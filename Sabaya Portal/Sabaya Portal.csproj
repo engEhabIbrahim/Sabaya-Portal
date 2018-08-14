@@ -141,6 +141,8 @@
     <Content Include="assets\fonts\helveticaneueltarabic-bold.svg" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.svg" />
     <Content Include="assets\fonts\icofont7858.svg" />
+    <Content Include="assets\img\2.png" />
+    <Content Include="assets\img\3.png" />
     <Content Include="assets\img\404-image.png" />
     <Content Include="assets\img\author01.png" />
     <Content Include="assets\img\bg-01.jpg" />
@@ -267,7 +269,6 @@
     <Content Include="assets\js\mainSignUp.js" />
     <Content Include="assets\js\map-script.js" />
     <Content Include="assets\js\owl.carousel.min.js" />
-    <Content Include="assets\js\popper.min.js" />
     <Content Include="assets\js\wow.min.js" />
     <Content Include="assets\vendorSignUp\animate\animate.css" />
     <Content Include="assets\vendorSignUp\animsition\css\animsition.min.css" />
@@ -302,8 +303,13 @@
     <Content Include="assets\webfonts\fa-solid-900.svg" />
     <Content Include="assets\img\bg-01SignUp.jpg" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="CompleteIndividualMatch.aspx" />
+    <Content Include="CompleteTeam.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="ForgetPassword.aspx" />
+    <Content Include="InCompleteIndividualmatch.aspx" />
+    <Content Include="InCompleteteam.aspx" />
     <Content Include="index.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="no_leisure.aspx" />
@@ -336,8 +342,10 @@
     <Content Include="assets\fonts\helveticaneueltarabic-light.eot" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.ttf" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.woff" />
+    <Content Include="assets\img\img1.jpg" />
+    <Content Include="scripts\calendarscript.js" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
+    <Content Include="JsonResponse.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -375,12 +383,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalendarEvent.cs" />
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompleteIndividualMatch.aspx.cs">
+      <DependentUpon>CompleteIndividualMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompleteIndividualMatch.aspx.designer.cs">
+      <DependentUpon>CompleteIndividualMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompleteTeam.aspx.cs">
+      <DependentUpon>CompleteTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompleteTeam.aspx.designer.cs">
+      <DependentUpon>CompleteTeam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -389,12 +412,32 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventDAO.cs" />
     <Compile Include="ForgetPassword.aspx.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproperCalendarEvent.cs" />
+    <Compile Include="InCompleteIndividualmatch.aspx.cs">
+      <DependentUpon>InCompleteIndividualmatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InCompleteIndividualmatch.aspx.designer.cs">
+      <DependentUpon>InCompleteIndividualmatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InCompleteteam.aspx.cs">
+      <DependentUpon>InCompleteteam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InCompleteteam.aspx.designer.cs">
+      <DependentUpon>InCompleteteam.aspx</DependentUpon>
     </Compile>
     <Compile Include="no_leisure.aspx.cs">
       <DependentUpon>no_leisure.aspx</DependentUpon>
@@ -447,13 +490,6 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
