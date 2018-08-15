@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" CodeBehind="InCompleteteam.aspx.cs" Inherits="Sabaya_Portal.InCompleteteam" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true"  EnableEventValidation="false" CodeBehind="InCompleteteam.aspx.cs" Inherits="Sabaya_Portal.InCompleteteam" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="container py-4">  
                 <h5 class="text-center text-uppercase">فعاليات جماعيه غير مكتمله </h5>  
                 <asp:Repeater ID="Repeater1" runat="server">  
@@ -45,9 +44,10 @@
                                  
                             </tr>
                             <tr>
-                                <td></td>
+                                <td style="text-align:right;"><asp:Label ID="Match" runat="server" Visible="false" Text='<%# Eval("no_leisureID") %>'  /> </td>  
+
                                 <td>
-                                    <asp:Button ID="Button1" runat="server" Text="إنضمام" class="btn btn-primary btn-block"  />
+                                    <asp:Button ID="Button1" runat="server" Text="إنضمام" class="btn btn-primary btn-block" OnClick="GetValue"  />
                                 </td>
                             </tr>  
                         </table>  

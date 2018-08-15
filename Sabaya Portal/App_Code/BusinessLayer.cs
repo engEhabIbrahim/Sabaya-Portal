@@ -287,5 +287,17 @@ namespace Sabaya_Portal.App_Code
             DataAccessLayer dal = new DataAccessLayer();
             dal.ExcuteOperation("AddNewMatch", param);
         }
+
+        public void adduserJoined( int match_ID)
+        {
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = new SqlParameter("@match_ID", SqlDbType.Int);
+            param[0].Value = match_ID;
+            
+            
+            DataAccessLayer dal = new DataAccessLayer();
+            dal.ExcuteOperation("adduserJoined", param);
+        }
     }
 }

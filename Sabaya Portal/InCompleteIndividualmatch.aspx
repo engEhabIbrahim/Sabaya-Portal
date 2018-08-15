@@ -1,12 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" CodeBehind="InCompleteIndividualmatch.aspx.cs" Inherits="Sabaya_Portal.InCompleteIndividualmatch" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" EnableEventValidation="false"  CodeBehind="InCompleteIndividualmatch.aspx.cs" Inherits="Sabaya_Portal.InCompleteIndividualmatch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
             <div class="container py-4">  
-                <h5 class="text-center text-uppercase">فعاليات جماعيه غير مكتمله </h5>  
-                <asp:Repeater ID="Repeater1" runat="server">  
+                <h5 class="text-center text-uppercase">فعاليات فرديه غير مكتمله </h5>  
+                <asp:Repeater ID="Repeater1" runat="server" >  
                     <ItemTemplate>  
                         <table class="table table-bordered">  
                             <tr>  
@@ -44,10 +43,11 @@
                                 </td> 
                                  
                             </tr>
-                            <tr>
-                                <td></td>
+                            <tr>      
+                                 <td style="text-align:right;"><asp:Label ID="Match"  Visible="false" runat="server" Text='<%# Eval("no_leisureID") %>'  /> </td>  
+
                                 <td>
-                                    <asp:Button ID="Button1" runat="server" Text="إنضمام" class="btn btn-primary btn-block"  />
+                                    <asp:Button ID="Button1" runat="server" Text="إنضمام" class="btn btn-primary btn-block" OnClick="GetValue"  />
                                 </td>
                             </tr>  
                         </table>  
