@@ -50,7 +50,7 @@ namespace Sabaya_Portal
             //{
                 BL.SignUp( UserName, Email, Password, Gender, BirthDay, PhoneNumber, ProfilePicture, Location
                           , false, false, false, UserType, false, FullName);
-                Response.Redirect("index.aspx");
+                Response.Redirect("index.aspx?FullName="+ FullName );
 
             //}
 

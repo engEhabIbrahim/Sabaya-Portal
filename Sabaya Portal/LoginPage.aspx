@@ -84,11 +84,12 @@ function getFbUserData(){
         localStorage.setItem('FacebookEmail', response.email);
         localStorage.setItem('FacebookGender', response.gender);
         localStorage.setItem('IsFacebookUser', true);
+        window.location.href = 'index.aspx?FullName=' + response.first_name + ' ' + response.last_name + '';
 
 
-        FB.Event.subscribe('auth.login', function () {
-            window.location.href = 'index.aspx?FullName='+ response.first_name + ' ' + response.last_name+'';
-        });
+
+        //FB.Event.subscribe('auth.login', function () {
+        //});
 
 
 
