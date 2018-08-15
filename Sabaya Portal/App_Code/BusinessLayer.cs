@@ -257,9 +257,9 @@ namespace Sabaya_Portal.App_Code
         }
 
         public void AddNewMatch(string TitleOfMatch, string place, string nameofGame,int typeofGame, string date
-        , string time)
+        , string time, string createdby)
         {
-            SqlParameter[] param = new SqlParameter[6];
+            SqlParameter[] param = new SqlParameter[7];
 
             param[0] = new SqlParameter("@TitleOfMatch", SqlDbType.NVarChar);
             param[0].Value = TitleOfMatch;
@@ -279,7 +279,10 @@ namespace Sabaya_Portal.App_Code
             param[5] = new SqlParameter("@time", SqlDbType.NVarChar,50);
             param[5].Value = time;
 
-       
+            param[6] = new SqlParameter("@createdby", SqlDbType.NVarChar,200);
+            param[6].Value = createdby;
+
+
 
 
 
@@ -288,14 +291,16 @@ namespace Sabaya_Portal.App_Code
             dal.ExcuteOperation("AddNewMatch", param);
         }
 
-        public void adduserJoined( int match_ID)
+        public void adduserJoined( int match_ID ,string UserName)
         {
-            SqlParameter[] param = new SqlParameter[1];
+            SqlParameter[] param = new SqlParameter[2];
 
             param[0] = new SqlParameter("@match_ID", SqlDbType.Int);
             param[0].Value = match_ID;
-            
-            
+
+            param[1] = new SqlParameter("@UserName", SqlDbType.NVarChar,100);
+            param[1].Value = UserName;
+
             DataAccessLayer dal = new DataAccessLayer();
             dal.ExcuteOperation("adduserJoined", param);
         }
