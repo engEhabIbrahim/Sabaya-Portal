@@ -1511,9 +1511,7 @@ section#our-portfolio.section-padding {
     position: relative; 
 }
 
-.team-member:hover .team-footer {
-   visibility: hidden;
-}
+
 
 .team-member .team-footer:before {
     content: '';

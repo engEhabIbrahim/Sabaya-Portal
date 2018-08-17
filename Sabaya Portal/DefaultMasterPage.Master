@@ -238,9 +238,9 @@
                     <nav class="navbar-pc" >
                         <ul style="float:right;">
                             <li class="active"><a href="index.aspx">الرئيسية</a></li>
-                            <li><a href="about-us.html">الاخبار</a></li>
+                            <li><a href="News.aspx">الاخبار</a></li>
                             <li class="b-dropdown">
-                                <a href="services.html">لا للفراغ</a>
+                                <a href="no_leisure.aspx">لا للفراغ</a>
                                 <ul class="b-dropdown-menu">
                                     <li><a href="services-1.html">Services 1</a></li>
                                     <li><a href="services-2.html">Services 2</a></li>

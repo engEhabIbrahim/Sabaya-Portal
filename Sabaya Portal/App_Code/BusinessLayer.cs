@@ -256,7 +256,7 @@ namespace Sabaya_Portal.App_Code
             return dt;
         }
 
-        public void AddNewMatch(string TitleOfMatch, string place, string nameofGame,int typeofGame, string date
+        public void AddNewMatch(string TitleOfMatch, string place, int nameofGame,int typeofGame, string date
         , string time, string createdby)
         {
             SqlParameter[] param = new SqlParameter[7];
@@ -267,7 +267,7 @@ namespace Sabaya_Portal.App_Code
             param[1] = new SqlParameter("@place", SqlDbType.NVarChar);
             param[1].Value = place;
 
-            param[2] = new SqlParameter("@nameofGame", SqlDbType.NVarChar);
+            param[2] = new SqlParameter("@nameofGame", SqlDbType.Int);
             param[2].Value = nameofGame;
 
             param[3] = new SqlParameter("@typeofGame", SqlDbType.Int);

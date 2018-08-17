@@ -204,6 +204,10 @@
     <Content Include="assets\img\icon\icon06.png" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\mockup.png" />
+    <Content Include="assets\img\NewsImages\1.jpg" />
+    <Content Include="assets\img\NewsImages\2.jpg" />
+    <Content Include="assets\img\NewsImages\6.jpg" />
+    <Content Include="assets\img\NewsImages\7.jpg" />
     <Content Include="assets\img\paymenticon01.png" />
     <Content Include="assets\img\paymenticon02.png" />
     <Content Include="assets\img\portfolio2\related2-01.png" />
@@ -312,6 +316,8 @@
     <Content Include="InCompleteteam.aspx" />
     <Content Include="index.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="NewsDetails.aspx" />
     <Content Include="no_leisure.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -429,6 +435,20 @@
     </Compile>
     <Compile Include="InCompleteteam.aspx.designer.cs">
       <DependentUpon>InCompleteteam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="no_leisure.aspx.cs">
       <DependentUpon>no_leisure.aspx</DependentUpon>
