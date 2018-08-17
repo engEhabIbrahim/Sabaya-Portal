@@ -38,16 +38,36 @@
 
                 </div>
                 <br />
-                   <div class="form-group">
+
+            
+                                     <asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                             <div class="form-group">
+         <label for="Image" class="col-sm-3 control-label" style="float:right">نوع المباراه </label>
+
+        <asp:DropDownList ID="DropMatch" class=" col-lg-6 col-sm-3"  runat="server" AutoPostBack = "true" OnSelectedIndexChanged = "DropMatch_Changed"></asp:DropDownList> </div>
+      <div class="form-group">
+        <label for="Image" class="col-sm-3 control-label" style="float:right">إسم المباراه </label>
+
+      <asp:DropDownList ID="DropAllGames"  class=" col-lg-6 col-sm-3"  runat="server" AutoPostBack = "true" ></asp:DropDownList>
+
+      </div>
+            </ContentTemplate>
+                        </asp:UpdatePanel>
+
+             
+<%--                   <div class="form-group">
                     <label for="email" class="col-sm-3 control-label" style="float:right">إسم المباراه</label>
                     <div class="col-sm-">
                        <asp:TextBox id="txtname" runat="server"  placeholder="مباراه كره قدم " class="form-control" />
                  <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" ControlToValidate="txtname" runat="server" ErrorMessage="مطلوب"></asp:RequiredFieldValidator>
 
                          </div>
-                </div>
+                </div>--%>
                 <br />
-              <div class="form-group">
+<%--              <div class="form-group">
                     <label for="Image" class="col-sm-3 control-label" style="float:right">نوع المباراه </label>
                     <div class="col-sm-">
                       <asp:DropDownList ID="Ddtypeofgame" class=" col-lg-6 col-sm-3" runat="server">
@@ -58,7 +78,7 @@
                         <asp:RequiredFieldValidator ID="rfvType" runat="server" ControlToValidate="Ddtypeofgame" 
                             InitialValue="-1" ForeColor="Red" ErrorMessage="مطلوب"></asp:RequiredFieldValidator>
                         </div>
-                </div>
+                </div>--%>
              
                <br />
                   <div class="form-group">

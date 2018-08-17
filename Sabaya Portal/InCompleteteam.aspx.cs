@@ -43,7 +43,7 @@ namespace Sabaya_Portal
             int matchID =Convert.ToInt32((item.FindControl("Match") as Label).Text);
          
             //string message = "تم الانضمام بنجاح";
-            BL.adduserJoined(matchID);
+            //BL.adduserJoined(matchID);
 
             //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
         }

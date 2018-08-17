@@ -47,7 +47,7 @@ namespace Sabaya_Portal
             //message += "\\nName: " + (item.FindControl("lblName") as Label).Text;
             //message += "\\nCountry: " + (item.FindControl("txtCountry") as TextBox).Text;
             //string message = "تم الانضمام بنجاح";
-            BL.adduserJoined(matchID);
+            //BL.adduserJoined(matchID);
 
             //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
         }
