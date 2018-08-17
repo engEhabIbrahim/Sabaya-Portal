@@ -12,9 +12,44 @@
     <title>Sabaya Portal</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <style>
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {cursor: pointer;}
+</style>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -35,7 +70,7 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
-                    <ul style="float:right; direction:ltr">
+                    <ul style="float:right; ">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
 
                         </asp:ContentPlaceHolder>
@@ -69,7 +104,7 @@
             <div class="clearfix">
                 <div class="float-left">
                     <div class="main-logo">
-                        <a href="index.aspx"><img src="assets/img/logo.png" alt=""/></a>
+                        <a href="index.aspx"><img src="assets/img/sabayalogo.png" style="width:144px;height:35px;"  alt=""/></a>
                     </div>
                 </div>
                 <div class="float-right cart-search">
@@ -240,7 +275,7 @@
                             <li class="active"><a href="index.aspx">الرئيسية</a></li>
                             <li><a href="about-us.html">الاخبار</a></li>
                             <li class="b-dropdown">
-                                <a href="services.html">لا للفراغ</a>
+                                <a href="no_leisure.aspx">لا للفراغ</a>
                                 <ul class="b-dropdown-menu">
                                     <li><a href="services-1.html">Services 1</a></li>
                                     <li><a href="services-2.html">Services 2</a></li>

@@ -12,7 +12,7 @@
     <!--===// Start:  Team
     =================================-->
 
-    <section id="our-team" class="section-padding">
+<%--    <section id="our-team" class="section-padding">
         <div class="container">  
 
             <div class="row">
@@ -132,7 +132,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--%>
     
     <!--===// End: Team
     =================================-->
@@ -142,7 +142,7 @@
     <!--===// Start:  Subcribe
     =================================-->
     
-    <section id="subscribe">
+<%--    <section id="subscribe">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 subscribe-text">
@@ -157,7 +157,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--%>
 
     <!--===// End: Subscribe
     =================================-->
@@ -166,7 +166,7 @@
     <!--===// Start:  Recent Blog
     =================================-->
     
-    <section id="recent-blog" class="section-padding-top">
+<%--    <section id="recent-blog" class="section-padding-top">
         <div class="container">
 
             <div class="row">
@@ -259,7 +259,7 @@
             </div>
             
         </div>
-    </section>
+    </section>--%>
 
     <!--===// End: Recent Blog
     =================================-->

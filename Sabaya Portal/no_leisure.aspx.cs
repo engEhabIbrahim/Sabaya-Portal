@@ -8,6 +8,7 @@ using Sabaya_Portal.App_Code;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text;
 
 
 namespace Sabaya_Portal
@@ -21,11 +22,42 @@ namespace Sabaya_Portal
 
             if (!IsPostBack)
             {
-                string query = "select MatchID, MatchName from Match";
-                BindDropDownList(DropMatch, query, "MatchName", "MatchID", "إختر نوع اللعبه");
 
-                DropAllGames.Enabled = false;
-                DropAllGames.Items.Insert(0, new ListItem("إختر إسم اللعبه", "0"));
+                if (Session["LoggedIn"] != null)
+                {
+                    if ((bool)Session["LoggedIn"] == false)
+                    {
+                        Response.Redirect("LoginPage.aspx");
+                    }
+                    else
+                    {
+                        var userProfile = new StringBuilder();
+                        userProfile.Append(" <div class=\"dropdown\">");
+                        userProfile.Append("<a class=\"dropbtn\">" + "مرحبا" + " " + Session["FullName"] + "<i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>");
+                        userProfile.Append("</a>");
+                        userProfile.Append(" <div class=\"dropdown-content\">");
+                        userProfile.Append("<a href=\"#\">تعديل البيانات</a>");
+                        userProfile.Append("<a href=\"#\">الاهتمامات الرياضية</a>");
+                        userProfile.Append("<a href=\"LoginPage.aspx?Logout=true\">تسجيل خروج</a>");
+                        userProfile.Append("</div></div>");
+
+
+                        firstLI.InnerHtml = userProfile.ToString();
+                        string query = "select MatchID, MatchName from Match";
+                        BindDropDownList(DropMatch, query, "MatchName", "MatchID", "إختر نوع اللعبه");
+
+                        DropAllGames.Enabled = false;
+                        DropAllGames.Items.Insert(0, new ListItem("إختر إسم اللعبه", "0"));
+
+
+                    }
+                }
+                else
+                {
+                    Response.Redirect("LoginPage.aspx");
+
+                }
+
             }
 
         }

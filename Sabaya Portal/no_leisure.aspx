@@ -10,7 +10,9 @@
         type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-
+    
+                        <li id="firstLI" runat="server"></li>
+                        <li id="secondLI" runat="server"></li>
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

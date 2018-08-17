@@ -18,8 +18,8 @@ namespace Sabaya_Portal
                 {
                     if ((bool)Session["LoggedIn"] == false)
                     {
-                        firstLI.InnerHtml = "<a href=\"SignUp.aspx\"><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>انشاء حساب</a>";
-                        secondLI.InnerHtml = "<a href=\"LoginPage.aspx\"><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>تسجيل دخول</a>";
+                        firstLI.InnerHtml = "<a href=\"SignUp.aspx\">انشاء حساب</a><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>";
+                        secondLI.InnerHtml = "<a href=\"LoginPage.aspx\">تسجيل دخول</a><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>";
                     }
                     else
                     {
@@ -59,8 +59,8 @@ namespace Sabaya_Portal
                 }
                 else
                 {
-                    firstLI.InnerHtml = "<a href=\"SignUp.aspx\"><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>انشاء حساب</a>";
-                    secondLI.InnerHtml = "<a href=\"LoginPage.aspx\"><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>تسجيل دخول</a>";
+                    firstLI.InnerHtml = "<a href=\"SignUp.aspx\">انشاء حساب</a><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>";
+                    secondLI.InnerHtml = "<a href=\"LoginPage.aspx\">تسجيل دخول</a><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>";
 
                 }
 
