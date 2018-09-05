@@ -10,24 +10,24 @@
 namespace Sabaya_Portal {
     
     
-    public partial class News {
+    public partial class _try {
         
         /// <summary>
-        /// myRepeater control.
+        /// ClubsRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater myRepeater;
+        protected global::System.Web.UI.WebControls.Repeater ClubsRepeater;
         
         /// <summary>
-        /// NewsDatasource control.
+        /// Clubdata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource NewsDatasource;
+        protected global::System.Web.UI.WebControls.SqlDataSource Clubdata;
     }
 }

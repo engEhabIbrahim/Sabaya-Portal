@@ -162,6 +162,10 @@
     <Content Include="assets\img\blog-sidebar\blogimg04.jpg" />
     <Content Include="assets\img\blog-sidebar\blogimg05.jpg" />
     <Content Include="assets\img\blog-sidebar\popular-post-01.png" />
+    <Content Include="assets\img\Clubs\Club1.jpg" />
+    <Content Include="assets\img\Clubs\Club2.jpeg" />
+    <Content Include="assets\img\Clubs\Club3.jpg" />
+    <Content Include="assets\img\Clubs\Club4.jpg" />
     <Content Include="assets\img\comingsoon-logo.png" />
     <Content Include="assets\img\comingsoonbg.jpg" />
     <Content Include="assets\img\favicon.png" />
@@ -202,12 +206,14 @@
     <Content Include="assets\img\icon\icon04.png" />
     <Content Include="assets\img\icon\icon05.png" />
     <Content Include="assets\img\icon\icon06.png" />
+    <Content Include="assets\img\logo.jpg" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\mockup.png" />
     <Content Include="assets\img\NewsImages\1.jpg" />
     <Content Include="assets\img\NewsImages\2.jpg" />
     <Content Include="assets\img\NewsImages\6.jpg" />
     <Content Include="assets\img\NewsImages\7.jpg" />
+    <Content Include="assets\img\NewsImages\9.jpg" />
     <Content Include="assets\img\paymenticon01.png" />
     <Content Include="assets\img\paymenticon02.png" />
     <Content Include="assets\img\portfolio2\related2-01.png" />
@@ -308,6 +314,7 @@
     <Content Include="assets\webfonts\fa-solid-900.svg" />
     <Content Include="assets\img\bg-01SignUp.jpg" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="ClubDetails.aspx" />
     <Content Include="CompleteIndividualMatch.aspx" />
     <Content Include="CompleteTeam.aspx" />
     <Content Include="Contact.aspx" />
@@ -349,6 +356,9 @@
     <Content Include="assets\fonts\helveticaneueltarabic-light.ttf" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.woff" />
     <Content Include="assets\img\img1.jpg" />
+    <Content Include="try.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="yallakora.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -392,6 +402,13 @@
     </Compile>
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClubDetails.aspx.cs">
+      <DependentUpon>ClubDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClubDetails.aspx.designer.cs">
+      <DependentUpon>ClubDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="CompleteIndividualMatch.aspx.cs">
       <DependentUpon>CompleteIndividualMatch.aspx</DependentUpon>
@@ -495,6 +512,20 @@
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="try.aspx.cs">
+      <DependentUpon>try.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="try.aspx.designer.cs">
+      <DependentUpon>try.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,8 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" EnableEventValidation="false"  CodeBehind="InCompleteIndividualmatch.aspx.cs" Inherits="Sabaya_Portal.InCompleteIndividualmatch" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <li id="firstLI" runat="server"></li>
+     <li id="secondLI" runat="server"></li>
+</asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
             <div class="container py-4">  
                 <h5 class="text-center text-uppercase">فعاليات فرديه غير مكتمله </h5>  
                 <asp:Repeater ID="Repeater1" runat="server" >  
@@ -20,11 +24,11 @@
                                         </tr>  
                                         <tr>  
                                             <td style="text-align:right;">مكان الفعاليه</td>  
-                                            <td style="text-align:right;"><%#Eval("place")%></td>  
+                                            <td style="text-align:right;"><%#Eval("GovName")%> , <%#Eval("ClubName")%> </td>  
                                         </tr>  
                                         <tr>  
                                             <td style="text-align:right;">إسم المباراه</td>  
-                                            <td style="text-align:right;"><%#Eval("nameofGame")%></td>  
+                                            <td style="text-align:right;"><%#Eval("GameName")%></td>  
                                         </tr>  
                                         <tr>  
                                             <td style="text-align:right;">التاريخ</td>  

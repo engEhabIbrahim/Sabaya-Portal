@@ -1,4 +1,4 @@
-/*
+﻿/*
 * ------------------------------------------------------------------
 *
 * Project: Boostify - Multipurpose Business HTML template
@@ -133,7 +133,7 @@ figure {
 }
 
 .section-header {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .section-header h2 {
@@ -2027,7 +2027,6 @@ section#our-portfolio.section-padding {
 }
 
 .recent-blog-post .meta-info li span.post-date {
-    float: right;
 }
 
 .recent-blog-post .meta-info li.tags a {
@@ -2040,6 +2039,7 @@ section#our-portfolio.section-padding {
 
 .recent-blog-post .post-content p {
     margin-bottom: 20px;
+
 }
 
 .recent-blog-post .post-content .boxed-btn {
@@ -3125,4 +3125,204 @@ a.comment-date:hover {
 /*------User Profile
 =======================================*/
 
+#maincontent {
+	z-index:1000;
+	margin-top:0px;
+    display:block;
+}
+              /* call action */
 
+.call-action {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+	background:#f8f8f8;
+	border:1px solid #e9e9e9;
+	border-left:none;
+	padding: 30px 20px 20px 20px;
+	margin-bottom:0;
+	overflow:hidden;
+     border-right: 5px solid #3498db;
+}
+
+.call-action .text {
+	float:right;
+}
+
+.call-action .text h2 {
+	font-weight:700;
+	margin-bottom:10px;
+}
+
+.call-action .cta {
+	float:left;
+}
+
+.tagline_text {
+	padding:0;
+}
+
+.btn-theme {
+    
+    text-shadow: none;
+    background: #3498db;
+    color: #ffffff;
+
+}
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        .btn-large {
+            padding: 11px 19px;
+            font-size: 17.5px;
+            border-radius: 2px;
+        }
+        /*----------------------------------------
+  6.Faq Area
+----------------------------------------*/
+
+.faq-details .panel-heading {
+  padding: 0;
+}
+
+.panel-default>.panel-heading {
+  background-color: #fff;
+  border: medium none;
+  color: #333;
+}
+
+.faq-details h4.check-title a {
+  color: #1ca54d;
+  display: block;
+  font-weight: 700;
+  
+  margin-left: 40px;
+  padding: 6px 10px;
+  text-decoration: none;
+}
+
+.panel-body {
+  padding: 15px 15px 0px 50px;
+}
+
+.faq-details h4.check-title {
+  color: #1ca54d;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.faq-details a span.acc-icons {
+  position: relative;
+}
+
+.faq-details a span.acc-icons::before {
+  color: #1ca54d;
+  content: "";
+  font-family: fontawesome;
+  font-size: 24px;
+  height: 40px;
+  left: -51px;
+  line-height: 39px;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  width: 42px;
+}
+
+.faq-details h4.check-title a.active, .faq-details a.active span.acc-icons::before {
+  color: #1ca54d;
+}
+
+.faq-details a.active span.acc-icons::before {
+  content: "";
+  font-family: fontawesome;
+  font-size: 24px;
+  height: 40px;
+  left: -51px;
+  line-height: 39px;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  width: 42px;
+}
+
+.second-row {
+  margin-top: 30px;
+}
+
+.event-content.head-team h4 {
+  background: transparent none repeat scroll 0 0;
+  color: #1ca54d;
+  padding: 30px 0 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+.panel-default {
+    border-color: #ddd;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.panel-group .panel-heading {
+    border-bottom: 0;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #ddd;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 1px solid #ddd;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+.panel-default {
+    border-color: #ddd;
+}
+.panel {
+    margin-bottom: 20px;
+  
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+
+          
