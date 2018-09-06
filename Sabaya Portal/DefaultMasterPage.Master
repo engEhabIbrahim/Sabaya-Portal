@@ -104,7 +104,7 @@
             <div class="clearfix">
                 <div class="float-left">
                     <div class="main-logo">
-                        <a href="index.aspx"><img src="assets/img/sabayalogo.png" style="width:144px;height:35px;"  alt=""/></a>
+                        <a href="index.aspx"><img src="assets/img/logo.jpg" style="width:144px;height:35px;"  alt=""/></a>
                     </div>
                 </div>
                 <div class="float-right cart-search">
@@ -273,14 +273,10 @@
                     <nav class="navbar-pc" >
                         <ul style="float:right;">
                             <li class="active"><a href="index.aspx">الرئيسية</a></li>
-                            <li><a href="about-us.html">الاخبار</a></li>
-                            <li class="b-dropdown">
-                                <a href="no_leisure.aspx">لا للفراغ</a>
-                                <ul class="b-dropdown-menu">
-                                    <li><a href="services-1.html">Services 1</a></li>
-                                    <li><a href="services-2.html">Services 2</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="News.aspx">الاخبار</a></li>
+                            <li><a href="no_leisure.aspx">لا للفراغ</a></li>
+                              
+                            
                             <li class="b-dropdown">
                                 <a href="#">مراسلة فريق او لاعبة </a>
                                 <ul class="b-dropdown-menu">
@@ -325,17 +321,12 @@
                     <div class="mobile-menu">
                         <nav class="mobile-menu-active">
                             <ul>
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="about-us.html">About</a></li>
+                                <li><a href="index.aspx">الرئيسية</a></li>
+                                <li><a href="News.aspx">الاخبار</a></li>
+                                <li><a href="no_leisure.aspx">لا للفراغ</a></li>
+
                                 <li class="b-dropdown">
-                                    <a href="services.html">Services</a>
-                                    <ul class="b-dropdown-menu">
-                                        <li><a href="services-1.html">Services 1</a></li>
-                                        <li><a href="services-2.html">Services 2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="b-dropdown">
-                                    <a href="#">Portfolio</a>
+                                    <a href="#">مراسلة فريق او لاعبة </a>
                                     <ul class="b-dropdown-menu">
                                         <li><a href="portfolio-2-column.html">Portfolio 2 Column</a></li>
                                         <li><a href="portfolio-3-column.html">Portfolio 3 Column</a></li>
@@ -348,24 +339,23 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="gallery.html">Gallery</a></li>
                                 <li class="b-dropdown">
-                                    <a href="#">Blog</a>
+                                    <a href="#">مباريات</a>
                                     <ul class="b-dropdown-menu">
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                        <li><a href="blog-full-width.html">Blog Full Width</a></li>
-                                        <li><a href="blog-single.html">Blog Details</a></li>
+                                        <li><a href="CompleteTeam.aspx">فعاليات جماعيه مكتمله</a></li>
+                                        <li><a href="InCompleteteam.aspx">فعاليات جماعيه غير مكتمله</a></li>
+                                        <li><a href="CompleteIndividualMatch.aspx">فعاليات فرديه مكتمله </a></li>
+                                        <li><a href="InCompleteIndividualmatch.aspx">فعاليات فرديه غير مكتمله</a></li>
                                     </ul>
                                 </li>
                                 <li class="b-dropdown">
-                                    <a href="#">Pages</a>
+                                    <a href="#">فيديو وصور</a>
                                     <ul class="b-dropdown-menu">
                                         <li><a href="coming-soon.html">Coming Soon</a></li>
                                         <li><a href="404-page.html">404</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                            <li><a href="Contact.aspx">تواصل معنا</a></li>
                             </ul>
                         </nav>                                
                     </div>

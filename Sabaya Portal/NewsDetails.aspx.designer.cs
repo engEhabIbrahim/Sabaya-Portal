@@ -10,33 +10,42 @@
 namespace Sabaya_Portal {
     
     
-    public partial class InCompleteteam {
+    public partial class NewsDetails {
         
         /// <summary>
-        /// firstLI control.
+        /// title control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl firstLI;
+        protected global::System.Web.UI.WebControls.Label title;
         
         /// <summary>
-        /// secondLI control.
+        /// imgNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl secondLI;
+        protected global::System.Web.UI.WebControls.Image imgNews;
         
         /// <summary>
-        /// Repeater1 control.
+        /// lbldate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Label lbldate;
+        
+        /// <summary>
+        /// lbldes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbldes;
     }
 }

@@ -10,33 +10,24 @@
 namespace Sabaya_Portal {
     
     
-    public partial class InCompleteteam {
+    public partial class _try {
         
         /// <summary>
-        /// firstLI control.
+        /// ClubsRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl firstLI;
+        protected global::System.Web.UI.WebControls.Repeater ClubsRepeater;
         
         /// <summary>
-        /// secondLI control.
+        /// Clubdata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl secondLI;
-        
-        /// <summary>
-        /// Repeater1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.SqlDataSource Clubdata;
     }
 }

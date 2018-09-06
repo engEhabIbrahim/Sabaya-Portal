@@ -1,274 +1,258 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Sabaya_Portal.index" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="index.aspx.cs" Inherits="Sabaya_Portal.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  
+
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
-    
-    
-   
-    
-    
-    <!--===// Start:  Team
-    =================================-->
-
-<%--    <section id="our-team" class="section-padding">
-        <div class="container">  
-
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">                    
-                    <div class="section-header text-center">
-                        <h2>Our Team</h2>
-                        <p>There are many variations of passages of Lorem Ipsum availab but 5th alteration in some form, by inje humour or randomised</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="team-member">
-                        <img src="assets/img/team/team01.jpg" alt="">
-                        <div class="team-footer">
-                            <h4>Richardo Ven</h4>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="team-content">
-                            <div class="inner">
-                                <h4>Richardo Ven</h4>
-                                <p class="title">Web Developer</p>
-                                <p>Page when looking at its layout. The point of using Lorem Ipsum is it has  tere content here</p>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mt-5 mt-sm-0">
-                    <div class="team-member">
-                        <img src="assets/img/team/team02.jpg" alt="">
-                        <div class="team-footer">
-                            <h4>Richardo Ven</h4>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="team-content">
-                            <div class="inner">
-                                <h4>Richardo Ven</h4>
-                                <p class="title">Web Developer</p>
-                                <p>Page when looking at its layout. The point of using Lorem Ipsum is it has  tere content here</p>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mt-5 mt-md-0">
-                    <div class="team-member">
-                        <img src="assets/img/team/team03.jpg" alt="">
-                        <div class="team-footer">
-                            <h4>Richardo Ven</h4>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="team-content">
-                            <div class="inner">
-                                <h4>Richardo Ven</h4>
-                                <p class="title">Web Developer</p>
-                                <p>Page when looking at its layout. The point of using Lorem Ipsum is it has  tere content here</p>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-5 mt-lg-0 col-sm-6">
-                    <div class="team-member">
-                        <img src="assets/img/team/team04.jpg" alt="">
-                        <div class="team-footer">
-                            <h4>Richardo Ven</h4>
-                            <p>Web Developer</p>
-                        </div>
-                        <div class="team-content">
-                            <div class="inner">
-                                <h4>Richardo Ven</h4>
-                                <p class="title">Web Developer</p>
-                                <p>Page when looking at its layout. The point of using Lorem Ipsum is it has  tere content here</p>
-
-                                <ul>
-                                    <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-brand-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-dribbble"></i></a></li>
-                                    <li><a href="#"><i class="icofont icofont-social-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>--%>
-    
-    <!--===// End: Team
-    =================================-->
-
-   
-    
-    <!--===// Start:  Subcribe
-    =================================-->
-    
-<%--    <section id="subscribe">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <section id="contact" class="section-padding" style="padding-top:25px; padding-bottom:10px;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-6 subscribe-text">
-                    <h3>Subscribe now for news</h3>
-                    <p>We provide you all of update</p>
-                </div>
-                <div class="col-lg-7 col-md-6 text-center">
-                    <form id="subscribe-form" action="#" method="POST">
-                        <input type="email" name="email" id="subscribe-mail" placeholder="Input your email here" required>
-                        <a href="#"><i class="icofont icofont-external-link"></i></a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>--%>
 
-    <!--===// End: Subscribe
-    =================================-->
-    
-    
-    <!--===// Start:  Recent Blog
-    =================================-->
-    
-<%--    <section id="recent-blog" class="section-padding-top">
+                           <div class="col-lg-6 contact-info">
+            
+                    <div class="row" >
+                        <div class="col-lg-10 offset-lg-1">                    
+                            <div class="section-header text-center">
+                                <h2>احدث الفعاليات الفرديه</h2>
+                            </div>
+                        </div>
+                    </div>
+             <asp:Repeater ID="TOP3CompleteIndividual" runat="server" DataSourceID="IndividualDatasource">
+                <ItemTemplate>
+                    <div class="info-box">
+                        <i class="fa fa-spinner"></i>
+                          <h4 style="text-align:right"> <%# Eval("GameName")%> , <%# Eval("GovName")%>, <%# Eval("ClubName")%> </h4>
+                        <p style="text-align:right"><%# Eval("time")%></p> 
+                    </div>
+                    </ItemTemplate>
+
+                    </asp:Repeater>
+                   <asp:SqlDataSource ID="IndividualDatasource" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="SelectTop3" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+
+                </div>
+                   <div class="col-lg-6 contact-info">
+            
+                    <div class="row">
+                        <div class="col-lg-10 offset-lg-1">                    
+                            <div class="section-header text-center">
+                                <h2>احدث الفعاليات الجماعيه </h2>
+                            </div>
+                        </div>
+                    </div>
+                         <asp:Repeater ID="TOP3Completeteam" runat="server" DataSourceID="teamDatasource">
+                <ItemTemplate>
+                    <div class="info-box">
+                         <i class="fa fa-check-square"></i>
+                          <h4 style="text-align:right"> <%# Eval("GameName")%> , <%# Eval("GovName")%>, <%# Eval("ClubName")%> </h4>
+                        <p style="text-align:right"><%# Eval("time")%></p>  
+
+                    </div>
+                     </ItemTemplate>
+
+                    </asp:Repeater>
+                   <asp:SqlDataSource ID="teamDatasource" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="SelectTop3team" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+
+                </div>
+
+
+            </div>
+              <div class="row">
+                        <div class="col-lg-12 offset-lg-1">                    
+                            <div class="section-header text-center">
+                                <h2>احدث الاخبار</h2>
+                            </div>
+                        </div>
+                    </div>
+           <div class="row">
+            <asp:Repeater ID="myRepeater" runat="server" DataSourceID="NewsDatasource">
+                <ItemTemplate>
+                <div class="col-sm-3">
+                         <div class="team-member">
+                        <img src= '<%# Eval("image")%>' runat="server" width="297" height="170"  alt="">
+                             <div class="team-footer">
+          <a href="NewsDetails.aspx?Id=<%#Eval("Id")%>"> 
+
+                     <p>   <%# Eval("Title")%> </p>
+                                               </div>
+                             </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div> 
+
+        </div>
+
+    </section>
+        <section id="maincontent" style="padding-top:25px;">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="call-action">
+                  <div class="text">
+                <h2 style="text-align:right">منطقه إعلانات</h2>
+                <p style="text-align:right">
+                    ضع إعلانك هنا .... سوف يشاهده الكثير 
+                </p>
+              </div>
+                  <div class="cta">
+                <a class="btn btn-large btn-theme" href="#">
+							<i class="icon-plane icon-white"></i> عرض التفاصيل </a>
+              </div>
+            
+            
+
+            </div>
+              </div>
+          
+        </div>
+</div></section>
+   
+  
+     <section id="recent-blog" class="section-padding" style="padding-top:25px; padding-bottom:10px;">
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">                    
+                <div class="col-lg-12 offset-lg-3">                    
                     <div class="section-header text-center">
-                        <h2>Recent Blog</h2>
-                        <p>There are many variations of passages of Lorem Ipsum availab but 5th alteration in some form, by inje humour or randomised</p>
+                        <h2  >الملاعب</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row">
+                  <asp:Repeater ID="ClubsRepeater" runat="server" DataSourceID="Clubdata">
+                <ItemTemplate>
                 <div class="col-lg-6 mb-4">
                     <article class="recent-blog-post">
                         <div class="post-thumb">
-                            <img src="assets/img/recent-blog/recentblog01.jpg" alt="">
-                            <div class="post-author">
+                                <img src= '<%# Eval("Clubimage")%>' runat="server" width="260" height="150" alt="">
+                          <%--  <div class="post-author">
                                 <img src="assets/img/author01.png" alt="">
-                            </div>
+                            </div>--%>
                         </div>
                         <div class="post-content">                            
-                            <ul class="meta-info list-inline">
-                                <li class="posted-by">By <a href="#">Admin</a> <span class="post-date">18 Jan 2017</span></li>
-                                <li class="tags"><a href="#">Marketing</a><a href="#">Business</a><a href="#">Skill</a></li>
-                            </ul>                            
-                            <h5 class="post-title"><a href="blog-single.html">Business suggestion or startup</a></h5>
-                            <p>Page when looking at its layout using Lorem Ipsum is that it has a life...</p>
-                            <a href="#" class="boxed-btn">Read More <i class="fas fa-angle-right"></i></a>
+                         
+                               <a href="ClubDetails.aspx?Id=<%#Eval("ClubID")%>" class="posted-by"><%# Eval("ClubName")%></a>
+                            
+                                
+                            <h6 style="float:right;"><span class="post-date"><%# Eval("GovName")%> </span></h6>
+                
+                            <h5 class="post-title"><a href="blog-single.html"><%# Eval("GameName")%></a></h5>
+                            <a href="ClubDetails.aspx?Id=<%#Eval("ClubID")%>" class="boxed-btn"><i class="fas fa-angle-left"></i>عرض التفاصيل </a>
                         </div>
                     </article>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <article class="recent-blog-post">
-                        <div class="post-thumb">
-                            <img src="assets/img/recent-blog/recentblog02.jpg" alt="">
-                            <div class="post-author">
-                                <img src="assets/img/author01.png" alt="">
-                            </div>
-                        </div>
-                        <div class="post-content">                            
-                            <ul class="meta-info list-inline">
-                                <li class="posted-by">By <a href="#">Admin</a> <span class="post-date">18 Jan 2017</span></li>
-                                <li class="tags"><a href="#">Marketing</a><a href="#">Business</a><a href="#">Skill</a></li>
-                            </ul>                            
-                            <h5 class="post-title"><a href="blog-single.html">Business suggestion or startup</a></h5>
-                            <p>Page when looking at its layout using Lorem Ipsum is that it has a life...</p>
-                            <a href="#" class="boxed-btn">Read More <i class="fas fa-angle-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <article class="recent-blog-post">
-                        <div class="post-thumb">
-                            <img src="assets/img/recent-blog/recentblog03.jpg" alt="">
-                            <div class="post-author">
-                                <img src="assets/img/author01.png" alt="">
-                            </div>
-                        </div>
-                        <div class="post-content">                            
-                            <ul class="meta-info list-inline">
-                                <li class="posted-by">By <a href="#">Admin</a> <span class="post-date">18 Jan 2017</span></li>
-                                <li class="tags"><a href="#">Marketing</a><a href="#">Business</a><a href="#">Skill</a></li>
-                            </ul>                            
-                            <h5 class="post-title"><a href="blog-single.html">Business suggestion or startup</a></h5>
-                            <p>Page when looking at its layout using Lorem Ipsum is that it has a life...</p>
-                            <a href="#" class="boxed-btn">Read More <i class="fas fa-angle-right"></i></a>
-
-                        </div>
-                    </article>
-                </div>
-                <div class="col-lg-6">
-                    <article class="recent-blog-post">
-                        <div class="post-thumb">
-                            <img src="assets/img/recent-blog/recentblog04.jpg" alt=""/>
-                            <div class="post-author">
-                                <img src="assets/img/author01.png" alt="">
-                            </div>
-                        </div>
-                        <div class="post-content">                            
-                            <ul class="meta-info list-inline">
-                                <li class="posted-by">By <a href="#">Admin</a> <span class="post-date">18 Jan 2017</span></li>
-                                <li class="tags"><a href="#">Marketing</a><a href="#">Business</a><a href="#">Skill</a></li>
-                            </ul>                            
-                            <h5 class="post-title"><a href="blog-single.html">Business suggestion or startup</a></h5>
-                            <p>Page when looking at its layout using Lorem Ipsum is that it has a life...</p>
-                            <a href="#" class="boxed-btn">Read More <i class="fas fa-angle-right"></i></a>
-                        </div>
-                    </article>
-                </div>
+                    </ItemTemplate>
+                      </asp:Repeater>
             </div>
             
-        </div>
-    </section>--%>
 
+        </div>
+    </section>
+          <asp:SqlDataSource ID="Clubdata" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="select4clubs" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+
+        <section id="faq" class="section-padding" style="padding-top:5px; padding-bottom:10px;">
+
+     <div class="faq-area area-padding">
+    <div class="container">
+          <div class="row">
+                <div class="col-lg-12 offset-lg-3">                    
+                    <div class="section-header text-center">
+                        <h2  >انواع الرياضات والفرق</h2>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="faq-details">
+            <div class="panel-group" id="accordion">
+              <!-- Panel Default -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="check-title">
+											<a data-toggle="collapse" class="active" data-parent="#accordion" href="#check1">
+                                                   <p style="float:right"> العاب فرديه</p>    <span class="fa fa-angle-down arrow"></span>
+											</a>
+										</h4>
+                </div>
+                <div id="check1" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <asp:Repeater ID="individualGameName" runat="server" DataSourceID="individualName">
+                          <ItemTemplate>
+                    <p style="text-align:right">
+                        <i  class="fa fa-angle-double-left"></i>  <a href="#"> <%# Eval("GameName")%></a>                  
+ <br /><br />
+                        
+ 
+                    </p>
+                              </ItemTemplate>
+                          </asp:Repeater>
+                  </div>
+                </div>
+              </div>
+              <!-- End Panel Default -->
+          
+        
+       
+            </div>
+          </div>
+        </div>
+ <div class="col-md-6 col-sm-6 col-xs-12">
+               <div class="faq-details">
+            <div class="panel-group" id="accordion">
+              <!-- Panel Default -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="check-title">
+											<a data-toggle="collapse" class="active" data-parent="#accordion" href="#check2">
+                                                <p style="float:right"> العاب جماعيه</p>               <span class="fa fa-angle-down arrow"></span>
+											</a>
+										</h4>
+                </div>
+                <div id="check2" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      <asp:Repeater ID="TeamGameName" runat="server" DataSourceID="TeamName">
+                          <ItemTemplate>
+                    <p style="text-align:right">
+                        <i  class="fa fa-angle-double-left"></i>  <a href="#"> <%# Eval("GameName")%></a>                  
+ <br /><br />
+                        
+ 
+                    </p>
+                              </ItemTemplate>
+                          </asp:Repeater>
+                  </div>
+                </div>
+              </div>
+              <!-- End Panel Default -->
+          
+        
+       
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- end Row -->
+    </div>
+  </div>
+</section>
+
+    
     <!--===// End: Recent Blog
     =================================-->
-       
-    
+      <asp:SqlDataSource ID="individualName" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="selectIndividualGameName" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+          <asp:SqlDataSource ID="TeamName" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="selectTeamGameName" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+
+  
+  <asp:SqlDataSource ID="NewsDatasource" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="SelectTop4" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
 
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
                      
                         <li id="firstLI" runat="server"></li>
                         <li id="secondLI" runat="server"></li>

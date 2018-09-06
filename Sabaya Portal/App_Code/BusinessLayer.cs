@@ -256,31 +256,35 @@ namespace Sabaya_Portal.App_Code
             return dt;
         }
 
-        public void AddNewMatch(string TitleOfMatch, string place, string nameofGame,int typeofGame, string date
-        , string time, string createdby)
+        public void AddNewMatch(string TitleOfMatch, int nameofGame,int typeofGame, string date
+        , string time, string createdby,int GovID, int ClubID)
         {
-            SqlParameter[] param = new SqlParameter[7];
+            SqlParameter[] param = new SqlParameter[8];
 
             param[0] = new SqlParameter("@TitleOfMatch", SqlDbType.NVarChar);
             param[0].Value = TitleOfMatch;
 
-            param[1] = new SqlParameter("@place", SqlDbType.NVarChar);
-            param[1].Value = place;
 
-            param[2] = new SqlParameter("@nameofGame", SqlDbType.NVarChar);
-            param[2].Value = nameofGame;
+            param[1] = new SqlParameter("@nameofGame", SqlDbType.Int);
+            param[1].Value = nameofGame;
 
-            param[3] = new SqlParameter("@typeofGame", SqlDbType.Int);
-            param[3].Value = typeofGame;
+            param[2] = new SqlParameter("@typeofGame", SqlDbType.Int);
+            param[2].Value = typeofGame;
 
-            param[4] = new SqlParameter("@date", SqlDbType.NVarChar, 50);
-            param[4].Value = date;
+            param[3] = new SqlParameter("@date", SqlDbType.NVarChar, 50);
+            param[3].Value = date;
 
-            param[5] = new SqlParameter("@time", SqlDbType.NVarChar,50);
-            param[5].Value = time;
+            param[4] = new SqlParameter("@time", SqlDbType.NVarChar,50);
+            param[4].Value = time;
 
-            param[6] = new SqlParameter("@createdby", SqlDbType.NVarChar,200);
-            param[6].Value = createdby;
+            param[5] = new SqlParameter("@createdby", SqlDbType.NVarChar,200);
+            param[5].Value = createdby;
+
+            param[6] = new SqlParameter("@GovID", SqlDbType.Int);
+            param[6].Value = GovID;
+
+            param[7] = new SqlParameter("@ClubID", SqlDbType.Int);
+            param[7].Value = ClubID;
 
 
 
@@ -298,11 +302,30 @@ namespace Sabaya_Portal.App_Code
             param[0] = new SqlParameter("@match_ID", SqlDbType.Int);
             param[0].Value = match_ID;
 
-            param[1] = new SqlParameter("@UserName", SqlDbType.NVarChar,100);
+            param[1] = new SqlParameter("@UserName", SqlDbType.NVarChar);
             param[1].Value = UserName;
 
             DataAccessLayer dal = new DataAccessLayer();
             dal.ExcuteOperation("adduserJoined", param);
         }
+        public DataTable SelectUsingID(int id)
+        {
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Id", SqlDbType.Int);
+            param[0].Value = id;
+            DataAccessLayer dal = new DataAccessLayer();
+            DataTable dt = dal.SelectData("SelectUsingID", param);
+            return dt;
+        }
+        public DataTable clubdetails(int id)
+        {
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@ClubID", SqlDbType.Int);
+            param[0].Value = id;
+            DataAccessLayer dal = new DataAccessLayer();
+            DataTable dt = dal.SelectData("clubdetails", param);
+            return dt;
+        }
     }
+
 }

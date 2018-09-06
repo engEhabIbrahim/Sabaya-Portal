@@ -5,11 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Sabaya_Portal
 {
     public partial class index : System.Web.UI.Page
     {
+        DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -35,6 +39,8 @@ namespace Sabaya_Portal
 
 
                         firstLI.InnerHtml = userProfile.ToString();
+                      
+
 
                     }
                 }
@@ -66,5 +72,6 @@ namespace Sabaya_Portal
 
             }
         }
+
     }
 }
