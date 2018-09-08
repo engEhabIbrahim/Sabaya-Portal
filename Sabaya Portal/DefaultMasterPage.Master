@@ -327,8 +327,16 @@
         <div class="mobile-menu-area d-md-none">
             <div class="row">
                 <div class="col-md-12">
+
                     <div class="mobile-menu">
+
                         <nav class="mobile-menu-active">
+                      <a href="News.aspx" style="color:white; padding-top:1px; font-size:15px; padding-bottom:10px; padding-right:3px;" >الاخبار </a>
+                      <a href="no_leisure.aspx" style="color:white; padding-top:1px; font-size:15px; padding-right:3px;" >لا للفراغ</a>
+                       <a href="./" style="color:white; padding-top:1px; font-size:15px; padding-right:3px;" >مراسله فريق او لاعبه</a>
+                                                    
+
+
                             <ul>
                                 <li><a href="index.aspx">الرئيسية</a></li>
                                 <li><a href="News.aspx">الاخبار</a></li>
