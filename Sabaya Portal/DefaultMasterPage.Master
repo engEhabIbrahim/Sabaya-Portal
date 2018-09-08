@@ -49,6 +49,12 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {cursor: pointer;}
+
+@media (max-width: 360px) {
+    .main-logo img {
+     width:300px;    
+    }
+}
 </style>
 
     <!--[if lt IE 9]>
@@ -104,7 +110,8 @@
             <div class="clearfix">
                 <div class="float-left">
                     <div class="main-logo">
-                        <a href="index.aspx"><img src="assets/img/logo.jpg" style="width:144px;height:35px;"  alt=""/></a>
+                        <a href="index.aspx">
+                            <img src="assets/img/logo.jpg" style="width:144px;height:35px;"  alt=""/></a>
                     </div>
                 </div>
                 <div class="float-right cart-search">
@@ -244,6 +251,7 @@
                         </li>
                     </ul>--%>
                 </div>
+          <div class="d-none d-lg-block">
                 <div class="float-right header-info">
                     <ul>
                         <li>
@@ -256,6 +264,7 @@
                         </li>
                     </ul>
                 </div>
+                    </div>
             </div>
         </div>
     </section>
