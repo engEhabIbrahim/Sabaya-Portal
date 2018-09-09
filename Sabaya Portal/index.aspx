@@ -1,21 +1,10 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/DefaultMasterPage.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="index.aspx.cs" Inherits="Sabaya_Portal.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-  .scroll {
-  display: block;
-  width: 100%;
-  height: 1210px;
-  overflow-y: scroll;
-  overflow-x:hidden;
-  scroll-behavior: smooth;
-}
- 
 
-</style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="scroll">
+
     <section id="contact" class="section-padding" style="padding-top:25px; padding-bottom:10px;">
         <div class="container">
             <div class="row">
@@ -249,7 +238,7 @@
       </div>
       <!-- end Row -->
     </div>
-  </div>
+  
 </section>
 
     
@@ -260,7 +249,7 @@
 
   
   <asp:SqlDataSource ID="NewsDatasource" runat="server" ConnectionString="<%$ ConnectionStrings:SabayaDBConnectionString %>" SelectCommand="SelectTop4" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-</div>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
