@@ -433,6 +433,7 @@ figure {
     height: 60px;
     padding: 15px;
     border: none;
+    text-align:left;
 }
 
 .search__area .search__inner form button {
@@ -2060,6 +2061,7 @@ section#our-portfolio.section-padding {
     color: #fff;
     padding-top: 180px;
     margin-top: 150px;
+    text-align:right;
 }
 
 #footer-widgets.contact-page-footer {

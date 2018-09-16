@@ -206,6 +206,12 @@
     <Content Include="assets\img\icon\icon04.png" />
     <Content Include="assets\img\icon\icon05.png" />
     <Content Include="assets\img\icon\icon06.png" />
+    <Content Include="assets\img\imgUploaded\1.jpg" />
+    <Content Include="assets\img\imgUploaded\2.jpg" />
+    <Content Include="assets\img\imgUploaded\3.jpg" />
+    <Content Include="assets\img\imgUploaded\4.jpg" />
+    <Content Include="assets\img\imgUploaded\5.jpg" />
+    <Content Include="assets\img\imgUploaded\6.jpg" />
     <Content Include="assets\img\logo.jpg" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\mockup.png" />
@@ -322,6 +328,7 @@
     <Content Include="InCompleteIndividualmatch.aspx" />
     <Content Include="InCompleteteam.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Index2.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="News.aspx" />
     <Content Include="NewsDetails.aspx" />
@@ -452,6 +459,13 @@
     </Compile>
     <Compile Include="InCompleteteam.aspx.designer.cs">
       <DependentUpon>InCompleteteam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index2.aspx.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index2.aspx.designer.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
     </Compile>
     <Compile Include="News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>
