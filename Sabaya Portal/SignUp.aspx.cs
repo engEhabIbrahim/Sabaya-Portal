@@ -45,7 +45,7 @@ namespace Sabaya_Portal
             string Gender = "";
             DateTime BirthDay = Convert.ToDateTime("1/1/1995");
             string ProfilePicture = "";
-            String Location = "";
+            String Location = DRBLocation.Value;
             //if(FullName!=""&& Email!=""&& UserName!=""&& Password!="" &&Password==ConfirmPassword)
             //{
                 BL.SignUp( UserName, Email, Password, Gender, BirthDay, PhoneNumber, ProfilePicture, Location

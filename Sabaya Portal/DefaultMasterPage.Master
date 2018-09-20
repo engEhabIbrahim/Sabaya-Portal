@@ -49,6 +49,19 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {cursor: pointer;}
+.LogoImage{
+    width:144px;
+    height:35px;
+}
+ 
+@media screen and (max-width: 1199px) {
+ .LogoImage{
+    width:500px;
+    height:35px; 
+ }
+
+
+}
 
 @media (max-width: 360px) {
     .main-logo img {
@@ -68,6 +81,10 @@ and (max-width : 320px)
   scroll-behavior: smooth;
 }
  
+</style>
+    <style type="text/css">
+::-webkit-scrollbar {width: 6px; height: 4px; background: #ffffff; }
+::-webkit-scrollbar-thumb { background-color: red; -webkit-border-radius: 1ex; }
 </style>
 
     <!--[if lt IE 9]>
@@ -125,7 +142,7 @@ and (max-width : 320px)
                 <div class="float-left">
                     <div class="main-logo">
                         <a href="index.aspx">
-                            <img src="assets/img/logo.jpg" style="width:144px;height:35px;"  alt=""/></a>
+                            <img src="assets/img/logo.jpg" class="LogoImage"  alt=""/></a>
                     </div>
                 </div>
                 <div class="float-right cart-search">

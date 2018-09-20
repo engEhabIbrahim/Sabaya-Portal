@@ -90,6 +90,16 @@
                              ForeColor="red" ErrorMessage="لا يجب ان يقل اسم المستخدم عن 3 احرف"></asp:RegularExpressionValidator>
                         <div id="test"></div>
 					</div>
+                    <span class="label-input100">محل الاقامة </span>
+                         <select class="form-control" id="DRBLocation" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
+                            <option value="محافظة الرياض"  >محافظة الرياض</option>
+                            <option value="الدرعية" >الدرعية</option>
+                            <option value="الخرج" >الخرج</option>
+                            <option value="الدوادمي"  >الدوادمي</option>
+                            <option value="المجمعة" >المجمعة</option>
+                            <option value="القويعية" >القويعية</option>
+
+                        </select>
 
 					<div class="wrap-input100 " >
 						<span class="label-input100">الرقم السري</span>
@@ -226,7 +236,8 @@
                             }
                         },
                         error: function (err) {
-                            alert(err);
+                            alert(JSON.stringify(err));
+
                         }
                     });
                 } 

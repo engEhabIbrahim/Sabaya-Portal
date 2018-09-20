@@ -5,16 +5,18 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-namespace Sabaya_Portal.App_Code
+
+namespace Sabaya_Portal
 {
-    public class DataAccessLayer
+   
+    public class DataClass
     {
         public string UserName { get; set; }
         public bool UserNameInUse { get; set; }
         SqlConnection cn;
-        public DataAccessLayer()
+        public DataClass()
         {
-         //   cn = new SqlConnection(@"database=SabayaDB; server=DESKTOP-KAC0FV5\MSSQLSERVER1; Integrated Security=true;");
+            //   cn = new SqlConnection(@"database=SabayaDB; server=DESKTOP-KAC0FV5\MSSQLSERVER1; Integrated Security=true;");
             string conString = ConfigurationManager.ConnectionStrings["SabayaDBConnectionString"].ConnectionString;
             cn = new SqlConnection(conString);
             //cn = new SqlConnection(@"database=SabayaDB; server=DESKTOP-LBCGH5U\EMANSHABAN; Integrated Security=true;");
@@ -67,6 +69,5 @@ namespace Sabaya_Portal.App_Code
             cmd.ExecuteNonQuery();
             cn.Close();
         }
-
     }
 }
