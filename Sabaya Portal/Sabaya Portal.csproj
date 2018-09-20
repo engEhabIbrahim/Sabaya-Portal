@@ -206,6 +206,12 @@
     <Content Include="assets\img\icon\icon04.png" />
     <Content Include="assets\img\icon\icon05.png" />
     <Content Include="assets\img\icon\icon06.png" />
+    <Content Include="assets\img\imgUploaded\1.jpg" />
+    <Content Include="assets\img\imgUploaded\2.jpg" />
+    <Content Include="assets\img\imgUploaded\3.jpg" />
+    <Content Include="assets\img\imgUploaded\4.jpg" />
+    <Content Include="assets\img\imgUploaded\5.jpg" />
+    <Content Include="assets\img\imgUploaded\6.jpg" />
     <Content Include="assets\img\logo.jpg" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\mockup.png" />
@@ -319,10 +325,13 @@
     <Content Include="CompleteTeam.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="ForgetPassword.aspx" />
+    <Content Include="ImgandVideo.aspx" />
     <Content Include="InCompleteIndividualmatch.aspx" />
     <Content Include="InCompleteteam.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Index2.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="Matches.aspx" />
     <Content Include="News.aspx" />
     <Content Include="NewsDetails.aspx" />
     <Content Include="no_leisure.aspx" />
@@ -438,6 +447,13 @@
     <Compile Include="ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ImgandVideo.aspx.cs">
+      <DependentUpon>ImgandVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImgandVideo.aspx.designer.cs">
+      <DependentUpon>ImgandVideo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ImproperCalendarEvent.cs" />
     <Compile Include="InCompleteIndividualmatch.aspx.cs">
       <DependentUpon>InCompleteIndividualmatch.aspx</DependentUpon>
@@ -452,6 +468,20 @@
     </Compile>
     <Compile Include="InCompleteteam.aspx.designer.cs">
       <DependentUpon>InCompleteteam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index2.aspx.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index2.aspx.designer.cs">
+      <DependentUpon>Index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Matches.aspx.cs">
+      <DependentUpon>Matches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Matches.aspx.designer.cs">
+      <DependentUpon>Matches.aspx</DependentUpon>
     </Compile>
     <Compile Include="News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>

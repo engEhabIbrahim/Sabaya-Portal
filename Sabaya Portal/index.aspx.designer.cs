@@ -13,6 +13,24 @@ namespace Sabaya_Portal {
     public partial class index {
         
         /// <summary>
+        /// individualGameName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater individualGameName;
+        
+        /// <summary>
+        /// TeamGameName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater TeamGameName;
+        
+        /// <summary>
         /// TOP3CompleteIndividual control.
         /// </summary>
         /// <remarks>
@@ -49,13 +67,40 @@ namespace Sabaya_Portal {
         protected global::System.Web.UI.WebControls.SqlDataSource teamDatasource;
         
         /// <summary>
-        /// myRepeater control.
+        /// Repeater1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater myRepeater;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// Repeater2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+        
+        /// <summary>
+        /// SqlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
         /// ClubsRepeater control.
@@ -74,24 +119,6 @@ namespace Sabaya_Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource Clubdata;
-        
-        /// <summary>
-        /// individualGameName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater individualGameName;
-        
-        /// <summary>
-        /// TeamGameName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater TeamGameName;
         
         /// <summary>
         /// individualName control.
