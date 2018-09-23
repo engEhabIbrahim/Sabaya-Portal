@@ -13,21 +13,30 @@ namespace Sabaya_Portal {
     public partial class _try {
         
         /// <summary>
-        /// ClubsRepeater control.
+        /// DropCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater ClubsRepeater;
+        protected global::System.Web.UI.WebControls.DropDownList DropCountry;
         
         /// <summary>
-        /// Clubdata control.
+        /// DropGOV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource Clubdata;
+        protected global::System.Web.UI.WebControls.DropDownList DropGOV;
+        
+        /// <summary>
+        /// DropCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropCity;
     }
 }

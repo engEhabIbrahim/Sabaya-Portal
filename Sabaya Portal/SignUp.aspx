@@ -90,7 +90,7 @@
                              ForeColor="red" ErrorMessage="لا يجب ان يقل اسم المستخدم عن 3 احرف"></asp:RegularExpressionValidator>
                         <div id="test"></div>
 					</div>
-                    <span class="label-input100">محل الاقامة </span>
+              <%--      <span class="label-input100">محل الاقامة </span>
                          <select class="form-control" id="DRBLocation" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
                             <option value="محافظة الرياض"  >محافظة الرياض</option>
                             <option value="الدرعية" >الدرعية</option>
@@ -99,7 +99,25 @@
                             <option value="المجمعة" >المجمعة</option>
                             <option value="القويعية" >القويعية</option>
 
-                        </select>
+                        </select>--%>
+                    	<div class="wrap-input100 " >
+                    <span class="label-input100">البلد  </span><br />
+                     <asp:DropDownList ID="DropCountry"  class=" col-lg-6 col-sm-3"  runat="server"  OnSelectedIndexChanged ="DropCountry_Changed" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
+                    </div>
+                    	<div class="wrap-input100 "  runat="server" id="divgov" visible="false">
+                         <asp:Label ID="LblGov" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
+                     <asp:DropDownList ID="DropGOV"  class=" col-lg-6 col-sm-3"  runat="server" OnSelectedIndexChanged ="DropGOV_Changed"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
+                    </div>
+                    	<div class="wrap-input100 " runat="server" id="divcity" visible="false">
+                          <asp:Label ID="LblCity" runat="server" Text="المدينه " class="label-input100"></asp:Label><br />
+
+                     <asp:DropDownList ID="DropCity" class=" col-lg-6 col-sm-3"  runat="server"  style="margin-top:20px;  margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
+</div>
+                 <div class="wrap-input100 " runat="server" id="divgov2" visible="false">
+
+              <asp:Label ID="Lblcity2" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
+             <input class="input100" type="text" name="name"  id="Text1" placeholder="المحافظه ..." runat="server"/>
+</div>
 
 					<div class="wrap-input100 " >
 						<span class="label-input100">الرقم السري</span>
@@ -208,15 +226,15 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag() { dataLayer.push(arguments); }
+	    gtag('js', new Date());
 
-	  gtag('config', 'UA-23581568-13');
+	    gtag('config', 'UA-23581568-13');
 	</script>
     <script>
-            $(document).ready(function () {
-                $('#txtUserName').keyup(function () {
+        $(document).ready(function () {
+            $('#txtUserName').keyup(function () {
                 var userName = $(this).val();
                 if (userName.length >= 3) {
                     $.ajax({
@@ -240,12 +258,13 @@
 
                         }
                     });
-                } 
-                });
-            
+                }
             });
+
+        });
                 </script>
 </body>
+
 
 <!-- Mirrored from colorlib.com/etc/lf/Login_v13/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jul 2018 20:52:30 GMT -->
 </html>
