@@ -563,6 +563,7 @@
     <Folder Include="assets\fonts\iconic\" />
     <Folder Include="assets\fonts\Linearicons-Free-v1.0.0\" />
     <Folder Include="assets\fonts\poppins\" />
+    <Folder Include="assets\img\userPersonalimg\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

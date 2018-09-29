@@ -10,12 +10,12 @@ namespace Sabaya_Portal.App_Code
     public class BusinessLayer
     {
         // users Management   
-                                           // Sign Up  For Sabaya Portal
-        public void SignUp( string UserName, string Email, string Password, string Gender, DateTime BirthDay,
-                           string PhoneNumber, string ProfilePicture, string Location,bool IsFacebookUser,
-                           bool IsGoogleUser, bool IsTwitterUser, string UserType, bool IsConfirmed , string FullName)
+        // Sign Up  For Sabaya Portal
+        public void SignUp(string UserName, string Email, string Password, string Gender, DateTime BirthDay,
+                                 string PhoneNumber, string ProfilePicture, string Location, bool IsFacebookUser,
+                                 bool IsGoogleUser, bool IsTwitterUser, string UserType, bool IsConfirmed, string FullName, int CountryID, int GovID, int CITYID, string BIO)
         {
-            SqlParameter[] param = new SqlParameter[14];
+            SqlParameter[] param = new SqlParameter[18];
 
 
             param[0] = new SqlParameter("@UserName", SqlDbType.NVarChar, 50);
@@ -39,7 +39,7 @@ namespace Sabaya_Portal.App_Code
             param[6] = new SqlParameter("@ProfilePicture", SqlDbType.NVarChar);
             param[6].Value = ProfilePicture;
 
-            param[7] = new SqlParameter("@Location", SqlDbType.NVarChar, 50);
+            param[7] = new SqlParameter("@Location", SqlDbType.NVarChar);
             param[7].Value = Location;
 
             param[8] = new SqlParameter("@IsFacebookUser", SqlDbType.Bit);
@@ -51,7 +51,7 @@ namespace Sabaya_Portal.App_Code
             param[10] = new SqlParameter("@IsTwitterUser", SqlDbType.Bit);
             param[10].Value = IsTwitterUser;
 
-            param[11] = new SqlParameter("@UserType", SqlDbType.NVarChar, 50);
+            param[11] = new SqlParameter("@UserType", SqlDbType.NVarChar);
             param[11].Value = UserType;
 
             param[12] = new SqlParameter("@IsConfirmed", SqlDbType.Bit);
@@ -60,10 +60,22 @@ namespace Sabaya_Portal.App_Code
             param[13] = new SqlParameter("@FullName", SqlDbType.NVarChar, 50);
             param[13].Value = FullName;
 
+            param[14] = new SqlParameter("@CountryID", SqlDbType.Int);
+            param[14].Value = CountryID;
+
+            param[15] = new SqlParameter("@GovID", SqlDbType.Int);
+            param[15].Value = GovID;
+
+            param[16] = new SqlParameter("@CITYID", SqlDbType.Int);
+            param[16].Value = CITYID;
+
+            param[17] = new SqlParameter("@BIO ", SqlDbType.NVarChar);
+            param[17].Value = BIO;
 
             DataAccessLayer dal = new DataAccessLayer();
             dal.ExcuteOperation("SignUp", param);
         }
+
 
         public DataTable SPLogin(string UserName, string Password)
         {

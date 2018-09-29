@@ -558,5 +558,7 @@
                      
                         <li id="firstLI" runat="server"></li>
                         <li id="secondLI" runat="server"></li>
+            <asp:Label ID="typeiorf" runat="server" ForeColor="White"   Font-Size="Large"  Visible="false" Text="Label"></asp:Label>
+
 </asp:Content>
  

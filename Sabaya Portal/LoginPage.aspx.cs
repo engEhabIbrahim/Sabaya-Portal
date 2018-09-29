@@ -24,6 +24,7 @@ namespace Sabaya_Portal
                     {
                         Session["FullName"] = "";
                         Session["LoggedIn"] = false;
+                        Session["UserType"] = "";
 
                     }
                     else if ((bool)Session["LoggedIn"] == true)
@@ -41,21 +42,25 @@ namespace Sabaya_Portal
             string UserName = txtUserNameLogin.Value;
             string Password = txtPasswordLogin.Value;
 
-               DataTable dt1 = BL.SPLogin(UserName, Password);
-                if (dt1.Rows.Count > 0)
-                {
-                    string FullName = dt1.Rows[0]["FullName"].ToString();
-                    Session["FullName"] = FullName;
-                    Session["LoggedIn"] = true;
-                    Response.Redirect("index.aspx");
-                }
-                else
-                {
-                    LoginErrorMessage.InnerText = "خطأ في اسم المستخدم او كلمة المرور";
-                }
+
+            DataTable dt1 = BL.SPLogin(UserName, Password);
+            if (dt1.Rows.Count > 0)
+            {
+                string FullName = dt1.Rows[0]["FullName"].ToString();
+                string UserType = dt1.Rows[0]["UserType"].ToString();
+                Session["UserType"] = UserType;
+
+                Session["FullName"] = FullName;
+                Session["LoggedIn"] = true;
+                Response.Redirect("index.aspx");
+            }
+            else
+            {
+                LoginErrorMessage.InnerText = "خطأ في اسم المستخدم او كلمة المرور";
+            }
 
 
-                
+
 
 
         }

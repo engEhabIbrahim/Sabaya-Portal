@@ -30,9 +30,26 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/utilSignUp.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/mainSignUp.css">
 <!--===============================================================================================-->
-    <script>
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script>
         function CheckBoxRequired_ClientValidate(sender, e) {
             e.IsValid = jQuery(".AcceptedAgreement input:checkbox").is(':checked');
+        }
+
+        $(document).ready(function () {
+            $('#UserImg').on('change', function () {
+                readPath(this);
+            });
+        });
+
+        function readPath(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#Image1').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
         }
     </script>
     <!--========================================== check if user name exists =====================================================-->
@@ -52,7 +69,7 @@
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
 				<form class="login100-form validate-form" runat="server">
-					<span class="login100-form-title p-b-59">
+					<span class="login100-form-title p-b-59" style="text-align:center">
 						حساب جديد
 					</span>
 					<div class="wrap-input100 " >
@@ -102,21 +119,21 @@
                         </select>--%>
                     	<div class="wrap-input100 " >
                     <span class="label-input100">البلد  </span><br />
-                     <asp:DropDownList ID="DropCountry"  class=" col-lg-6 col-sm-3"  runat="server"  OnSelectedIndexChanged ="DropCountry_Changed" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
+                     <asp:DropDownList ID="DropCountry"  class=" form-control  "  runat="server"  OnSelectedIndexChanged ="DropCountry_Changed" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
                     </div>
                     	<div class="wrap-input100 "  runat="server" id="divgov" visible="false">
                          <asp:Label ID="LblGov" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
-                     <asp:DropDownList ID="DropGOV"  class=" col-lg-6 col-sm-3"  runat="server" OnSelectedIndexChanged ="DropGOV_Changed"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
+                     <asp:DropDownList ID="DropGOV"  class=" form-control  "   runat="server" OnSelectedIndexChanged ="DropGOV_Changed"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
                     </div>
                     	<div class="wrap-input100 " runat="server" id="divcity" visible="false">
                           <asp:Label ID="LblCity" runat="server" Text="المدينه " class="label-input100"></asp:Label><br />
 
-                     <asp:DropDownList ID="DropCity" class=" col-lg-6 col-sm-3"  runat="server"  style="margin-top:20px;  margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
+                     <asp:DropDownList ID="DropCity" class=" form-control  "  runat="server"  style="margin-top:20px;  margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
 </div>
                  <div class="wrap-input100 " runat="server" id="divgov2" visible="false">
 
               <asp:Label ID="Lblcity2" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
-             <input class="input100" type="text" name="name"  id="Text1" placeholder="المحافظه ..." runat="server"/>
+             <input class="input100" type="text" name="name"  id="TxtGov" placeholder="المحافظه ..." runat="server"/>
 </div>
 
 					<div class="wrap-input100 " >
@@ -144,6 +161,24 @@
                                       Display="Dynamic" ErrorMessage="الرقم السري غير متطابق"></asp:CompareValidator>
                         
 					</div>
+                    	<div class="wrap-input100 " >
+						<span class="label-input100">إضافه صوره</span><br /><br />
+                            <asp:FileUpload ID="UserImg" runat="server" /><br />
+<%--                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5"  runat="server" ErrorMessage="من فضلك قم بإضافه صوره"   ForeColor="red" ControlToValidate="UserImg"></asp:RequiredFieldValidator>--%>
+<%--					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+                            <asp:Button ID="btnUpload" Text="عرض الصوره" runat="server"  class="login100-form-btn"  CausesValidation="False"  BackColor="#df5db5" OnClick="UploadFile" />
+ </div></div>--%>
+                   <asp:Image ID="Image1"  runat="server"   Height="200" Width="300" />
+                            </div>
+                    <div class="wrap-input100 " >
+						<span class="label-input100">سيره ذاتيه</span><br /><br />
+                        <asp:TextBox ID="txtbio" class="input100" runat="server" TextMode="MultiLine"></asp:TextBox>
+<%--                        <textarea id="txtbio"  runat="server" class="input100"  cols="20" rows="3"></textarea>--%>
+<%--                       <input class="input100" type="text" name="username" id="txtbio" placeholder="سيره ذاتيه ..." runat="server"/>--%>
+
+                        </div>
 
                    <%-- <div class="wrap-input100 " >
 						<span class="label-input100">رقم الجوال</span>
@@ -154,9 +189,13 @@
                     <%--<div class="wrap-input100 " >--%>
 						<span class="label-input100">تسجيل ك </span>
                          <select class="form-control" id="DrpUserType" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
-                            <option value="مشجع او مشجعة"  >مشجع او مشجعة</option>
-                            <option value="المنتميات-الفرق والنوادي الرياضية" >المنتميات-الفرق والنوادي الرياضية</option>
-                            <option value="سيدة اعمال - مستثمرة" >سيدة اعمال - مستشمرة</option>
+                            <option value="مشجعة"  > مشجعة</option>
+                              <option value="مشجع"  >مشجع </option>
+                            <option value="منتميه إلي-الفرق والنوادي الرياضية" >منتميه إلي-الفرق والنوادي الرياضية</option>
+                             <option value="منتمي إلي-الفرق والنوادي الرياضية" >منتمي إلي-الفرق والنوادي الرياضية</option>
+                          <option value="سيدة اعمال- مستثمرة" >سيدة اعمال - مستثمرة</option>
+                             <option value="رجل اعمال- مستثمر" >رجل اعمال - مستثمر</option>
+
                         </select>
                        
 					<%--</div>--%>
@@ -264,7 +303,6 @@
         });
                 </script>
 </body>
-
 
 <!-- Mirrored from colorlib.com/etc/lf/Login_v13/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jul 2018 20:52:30 GMT -->
 </html>

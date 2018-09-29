@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using System.Configuration;
+using System.IO;
 using Sabaya_Portal.App_Code;
 
 
@@ -16,10 +17,10 @@ namespace Sabaya_Portal
     {
 
         BusinessLayer BL = new BusinessLayer();
-  
-
+        static string fileUploadPath;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
 
@@ -33,7 +34,7 @@ namespace Sabaya_Portal
                 {
                     Response.Redirect("index.aspx");
                 }
-               
+
             }
 
         }
@@ -43,28 +44,42 @@ namespace Sabaya_Portal
         }
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
-            string FullName = txtFullName.Value;
-            string Email = txtEmail.Value;
-            string UserName = txtUserName.Value;
-            string Password = txtPassword.Value;
-            string ConfirmPassword = txtConfirmPassword.Value;
-            string PhoneNumber ="";
-            string UserType = DrpUserType.Value;
-            string Gender = "";
-            DateTime BirthDay = Convert.ToDateTime("1/1/1995");
-            string ProfilePicture = "";
-            //String Location = DRBLocation.Value;
-            //if(FullName!=""&& Email!=""&& UserName!=""&& Password!="" &&Password==ConfirmPassword)
-            //{
-                //BL.SignUp( UserName, Email, Password, Gender, BirthDay, PhoneNumber, ProfilePicture, Location
-                //          , false, false, false, UserType, false, FullName);
-                //Response.Redirect("index.aspx?FullName="+ FullName );
+            if (UserImg.HasFile)
+            {
+                string FileName = Path.GetFileName(UserImg.PostedFile.FileName);
+                //Save files to images folder
+                UserImg.SaveAs(Server.MapPath(@"~/assets/img/userPersonalimg/" + FileName));
+                fileUploadPath = @"~/assets/img/userPersonalimg/" + FileName;
+
+            }
+            else
+            {
+                fileUploadPath = "";
+            }
+
+            if (Convert.ToInt32(DropCountry.SelectedItem.Value) == 1)
+            {
 
 
+                if (txtFullName.Value != "" && txtEmail.Value != "" && txtUserName.Value != "" && txtPassword.Value != "" && txtPassword.Value == txtConfirmPassword.Value)
+                {
+                    BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
+                             , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Convert.ToInt32(DropGOV.SelectedValue), Convert.ToInt32(DropCity.SelectedValue), txtbio.Text);
 
-            //}
-
+                    Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
+                }
+            }
+            else
+            {
+                if (txtFullName.Value != "" && txtEmail.Value != "" && txtUserName.Value != "" && txtPassword.Value != "" && txtPassword.Value == txtConfirmPassword.Value)
+                {
+                    BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "", Convert.ToDateTime("1/1/1995"), "ll", fileUploadPath, TxtGov.Value
+                             , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), 0, 0, txtbio.Text);
+                    Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
+                }
+            }
         }
+
         private void BindDropDownList(DropDownList ddl, string query, string text, string value, string defaultText)
         {
             string conString = ConfigurationManager.ConnectionStrings["SabayaDBConnectionString"].ConnectionString;
