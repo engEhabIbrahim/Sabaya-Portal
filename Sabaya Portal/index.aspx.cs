@@ -18,12 +18,12 @@ namespace Sabaya_Portal
         {
             if (!IsPostBack)
             {
-
                 if (Session["LoggedIn"] != null)
                 {
                     if ((bool)Session["LoggedIn"] == false)
                     {
-                        Response.Redirect("LoginPage.aspx");
+                        firstLI.InnerHtml = "<a href=\"SignUp.aspx\">انشاء حساب</a><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>";
+                        secondLI.InnerHtml = "<a href=\"LoginPage.aspx\">تسجيل دخول</a><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>";
                     }
                     else
                     {
@@ -36,6 +36,8 @@ namespace Sabaya_Portal
                         userProfile.Append("<a href=\"#\">الاهتمامات الرياضية</a>");
                         userProfile.Append("<a href=\"LoginPage.aspx?Logout=true\">تسجيل خروج</a>");
                         userProfile.Append("</div></div>");
+                        firstLI.InnerHtml = userProfile.ToString();
+
                         switch (Session["UserType"].ToString())
                         {
                             case "مشجع":
@@ -59,15 +61,12 @@ namespace Sabaya_Portal
                         }
 
 
-
-
-                        firstLI.InnerHtml = userProfile.ToString();
-
                     }
                 }
                 else
                 {
-                    Response.Redirect("LoginPage.aspx");
+                    firstLI.InnerHtml = "<a href=\"SignUp.aspx\">انشاء حساب</a><i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>";
+                    secondLI.InnerHtml = "<a href=\"LoginPage.aspx\">تسجيل دخول</a><i class=\"fa fa-user\" style=\"margin-right:5px;\"></i>";
 
                 }
             }

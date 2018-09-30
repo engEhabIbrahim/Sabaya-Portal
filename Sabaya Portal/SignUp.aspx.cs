@@ -65,7 +65,7 @@ namespace Sabaya_Portal
                 {
                     BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
                              , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Convert.ToInt32(DropGOV.SelectedValue), Convert.ToInt32(DropCity.SelectedValue), txtbio.Text);
-
+                   
                     Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
                 }
             }
