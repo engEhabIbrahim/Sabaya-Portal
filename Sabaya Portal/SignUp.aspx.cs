@@ -61,22 +61,25 @@ namespace Sabaya_Portal
             {
 
 
-                if (txtFullName.Value != "" && txtEmail.Value != "" && txtUserName.Value != "" && txtPassword.Value != "" && txtPassword.Value == txtConfirmPassword.Value)
-                {
+                
                     BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
                              , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Convert.ToInt32(DropGOV.SelectedValue), Convert.ToInt32(DropCity.SelectedValue), txtbio.Text);
-                   
+                    Session["LoggedIn"] = true;
+                    Session["UserType"] = DrpUserType.Value;
+                    Session["FullName"] = txtFullName.Value;
                     Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
-                }
+                
             }
             else
             {
-                if (txtFullName.Value != "" && txtEmail.Value != "" && txtUserName.Value != "" && txtPassword.Value != "" && txtPassword.Value == txtConfirmPassword.Value)
-                {
+               
                     BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "", Convert.ToDateTime("1/1/1995"), "ll", fileUploadPath, TxtGov.Value
                              , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), 0, 0, txtbio.Text);
-                    Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
-                }
+                Session["LoggedIn"] = true;
+                Session["UserType"] = DrpUserType.Value;
+                Session["FullName"] = txtFullName.Value;
+                Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
+                
             }
         }
 

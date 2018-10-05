@@ -365,6 +365,7 @@
     <Content Include="assets\fonts\helveticaneueltarabic-light.ttf" />
     <Content Include="assets\fonts\helveticaneueltarabic-light.woff" />
     <Content Include="assets\img\img1.jpg" />
+    <Content Include="SearchResults.aspx" />
     <Content Include="try.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="yallakora.html" />
@@ -378,20 +379,12 @@
   <ItemGroup>
     <Content Include="404-page.html" />
     <Content Include="about-us.html" />
-    <Content Include="blog-full-width.html" />
-    <Content Include="blog-left-sidebar.html" />
-    <Content Include="blog-right-sidebar.html" />
-    <Content Include="blog-single.html" />
     <Content Include="coming-soon.html" />
     <Content Include="contact.html" />
     <Content Include="gallery.html" />
     <Content Include="Global.asax" />
     <Content Include="index-2.html" />
     <Content Include="index.html" />
-    <Content Include="portfolio-2-column.html" />
-    <Content Include="portfolio-3-column.html" />
-    <Content Include="portfolio-4-column.html" />
-    <Content Include="portfolio-masonary.html" />
     <Content Include="RegistrationService.asmx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -507,6 +500,13 @@
     <Compile Include="RegistrationService.asmx.cs">
       <DependentUpon>RegistrationService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
