@@ -103,49 +103,22 @@ namespace Sabaya_Portal {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divgov;
         
         /// <summary>
-        /// LblGov control.
+        /// rptCustomers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblGov;
+        protected global::System.Web.UI.WebControls.Repeater rptCustomers;
         
         /// <summary>
-        /// DropGOV control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropGOV;
-        
-        /// <summary>
-        /// divcity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divcity;
-        
-        /// <summary>
-        /// LblCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblCity;
-        
-        /// <summary>
-        /// DropCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropCity;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// divgov2 control.
@@ -173,6 +146,24 @@ namespace Sabaya_Portal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText TxtGov;
+        
+        /// <summary>
+        /// divgov3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divgov3;
+        
+        /// <summary>
+        /// displayselectedgov control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList displayselectedgov;
         
         /// <summary>
         /// txtPassword control.

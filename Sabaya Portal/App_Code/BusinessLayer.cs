@@ -11,11 +11,14 @@ namespace Sabaya_Portal.App_Code
     {
         // users Management   
         // Sign Up  For Sabaya Portal
+
+        // users Management   
+        // Sign Up  For Sabaya Portal
         public void SignUp(string UserName, string Email, string Password, string Gender, DateTime BirthDay,
-                                 string PhoneNumber, string ProfilePicture, string Location, bool IsFacebookUser,
-                                 bool IsGoogleUser, bool IsTwitterUser, string UserType, bool IsConfirmed, string FullName, int CountryID, int GovID, int CITYID, string BIO)
+                           string PhoneNumber, string ProfilePicture, string Location, bool IsFacebookUser,
+                           bool IsGoogleUser, bool IsTwitterUser, string UserType, bool IsConfirmed, string FullName, int CountryID, string CITYID, string BIO)
         {
-            SqlParameter[] param = new SqlParameter[18];
+            SqlParameter[] param = new SqlParameter[17];
 
 
             param[0] = new SqlParameter("@UserName", SqlDbType.NVarChar, 50);
@@ -63,14 +66,11 @@ namespace Sabaya_Portal.App_Code
             param[14] = new SqlParameter("@CountryID", SqlDbType.Int);
             param[14].Value = CountryID;
 
-            param[15] = new SqlParameter("@GovID", SqlDbType.Int);
-            param[15].Value = GovID;
+            param[15] = new SqlParameter("@CITYID", SqlDbType.NVarChar, 200);
+            param[15].Value = CITYID;
 
-            param[16] = new SqlParameter("@CITYID", SqlDbType.Int);
-            param[16].Value = CITYID;
-
-            param[17] = new SqlParameter("@BIO ", SqlDbType.NVarChar);
-            param[17].Value = BIO;
+            param[16] = new SqlParameter("@BIO ", SqlDbType.NVarChar);
+            param[16].Value = BIO;
 
             DataAccessLayer dal = new DataAccessLayer();
             dal.ExcuteOperation("SignUp", param);
