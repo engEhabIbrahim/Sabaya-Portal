@@ -207,6 +207,8 @@ namespace Sabaya_Portal
             Label1.Text = ddlCountries.SelectedItem.Text;
             divgov.Visible = false;
             divgov3.Visible = true;
+            displayselectedgov.Items.Clear();
+
             displayselectedgov.Items.Insert(0, new ListItem(Label1.Text, Label1.Text));
             displayselectedgov.Items.Insert(1, new ListItem("لإعاده إختيار المدينه", "لإعاده إختيار المدينه"));
 
