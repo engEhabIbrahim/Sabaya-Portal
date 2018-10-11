@@ -41,22 +41,25 @@ namespace Sabaya_Portal
                         switch (Session["UserType"].ToString())
                         {
                             case "مشجع":
-                                typeiorf.Visible = true;
-                                typeiorf.Text = "f";
+                                Img1.Visible = true;
+
                                 break;
                             case "مشجعة":
-                                typeiorf.Visible = true;
-                                typeiorf.Text = "f";
+                                Img2.Visible = true;
+
+
                                 break;
 
                             case "سيدة اعمال- مستثمرة":
-                                typeiorf.Visible = true;
-                                typeiorf.Text = "I";
+                                UserType.Visible = true;
+
+
                                 break;
 
                             case "رجل اعمال- مستثمر":
-                                typeiorf.Visible = true;
-                                typeiorf.Text = "I";
+                                Img3.Visible = true;
+
+
                                 break;
                         }
 

@@ -72,7 +72,7 @@
 					<span class="login100-form-title p-b-59" style="text-align:center">
 						حساب جديد
 					</span>
-					<div class="wrap-input100 " >
+					<div class="wrap-input100 " style="text-align:right" >
 						<span class="label-input100">الاسم الكامل</span>
 						<input class="input100" type="text" name="name" id="txtFullName" placeholder="الاسم ..." runat="server">
 						<span class="focus-input100"></span>
@@ -81,7 +81,7 @@
                                       Display="Dynamic" ErrorMessage="مطلوب"  />
 					</div>
 
-					<div class="wrap-input100 " >
+					<div class="wrap-input100 " style="text-align:right" >
 						<span class="label-input100">البريد الاكتروني</span>
 						<input class="input100" type="text" name="email" id="txtEmail" placeholder="البريد الالكتروني ..." runat="server">
 						<span class="focus-input100"></span>
@@ -95,7 +95,7 @@
                         </asp:RegularExpressionValidator>
 					</div>
 
-					<div class="wrap-input100 " >
+					<div class="wrap-input100 " style="text-align:right" >
 						<span class="label-input100">اسم المستخدم </span>
 						<input class="input100" type="text" name="username" id="txtUserName" placeholder="اسم المستخدم ..." runat="server">
 						<span class="focus-input100"></span>
@@ -108,11 +108,11 @@
                         <div id="test"></div>
 					</div>
            
-                    	<div class="wrap-input100 " >
+					<div class="wrap-input100 " style="text-align:right" >
                     <span class="label-input100">البلد  </span><br />
                      <asp:DropDownList ID="DropCountry"  class=" form-control  "  runat="server"  OnSelectedIndexChanged ="DropCountry_Changed" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
                     </div>
-                    	<div class="wrap-input100 "  runat="server" id="divgov" visible="false">
+                    	<div class="wrap-input100 "  runat="server" id="divgov" style="text-align:right" visible="false">
                                 <asp:Repeater ID="rptCustomers" runat="server" OnItemDataBound="OnItemDataBound">
 
         <ItemTemplate>
@@ -131,12 +131,12 @@
     </asp:Repeater>
         <asp:Label ID="Label1" runat="server" class="label-input100"  ForeColor="Red" Font-Size="X-Large"  Visible="false"  Text="Label"></asp:Label>
                     </div>
-                 <div class="wrap-input100 " runat="server" id="divgov2" visible="false">
+                 <div class="wrap-input100 " runat="server" style="text-align:right" id="divgov2" visible="false">
 
               <asp:Label ID="Lblcity2" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
              <input class="input100" type="text" name="name"  id="TxtGov" placeholder="المحافظه ..." runat="server"/>
 </div>
-                                        	<div class="wrap-input100 "  runat="server" id="divgov3" visible="false">
+                                        	<div class="wrap-input100 " style="text-align:right"  runat="server" id="divgov3" visible="false">
                                             <span class="label-input100" id="lblselectedgov">المدينه  </span><br />
 
                                                 <asp:DropDownList ID="displayselectedgov" runat="server" class=" form-control" OnSelectedIndexChanged="displayselectedgov_SelectedIndexChanged" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true" >              
@@ -147,7 +147,7 @@
                                                 </div>
 
 
-					<div class="wrap-input100 " >
+					<div class="wrap-input100 " style="text-align:right" >
 						<span class="label-input100">الرقم السري</span>
 						<input class="input100" type="password" name="pass" id="txtPassword" placeholder="*************" runat="server">
 						<span class="focus-input100"></span>
@@ -159,7 +159,7 @@
 					</div>
                   
 
-					<div class="wrap-input100 " >
+					<div class="wrap-input100 " style="text-align:right" >
 						<span class="label-input100">تاكيد الرقم السري</span>
 						<input class="input100" type="password" name="repeat-pass" id="txtConfirmPassword" placeholder="*************" runat="server">
 						<span class="focus-input100"></span>
@@ -172,18 +172,78 @@
                                       Display="Dynamic" ErrorMessage="الرقم السري غير متطابق"></asp:CompareValidator>
                         
 					</div>
-                    	<div class="wrap-input100 " >
-						<span class="label-input100">إضافه صوره</span><br /><br />
-                            <asp:FileUpload ID="UserImg" runat="server" /><br />
+					<div class="wrap-input100 " style="text-align:right" >
+						<span class="label-input100">إضافه صوره</span><br /><br /> 
+                            <asp:FileUpload ID="UserImg" runat="server" /><br /> <span style="color:Green;" class="label-input100">* إختياري </span>
 
                    <asp:Image ID="Image1"  runat="server"   Height="200" Width="300" />
                             </div>
-                    <div class="wrap-input100 " >
-						<span class="label-input100">سيره ذاتيه</span><br /><br />
+					<div class="wrap-input100 " style="text-align:right" >
+						<span class="label-input100">سيره ذاتيه</span><span style="color:Green;" class="label-input100">* إختياري </span><br /><br />
                         <asp:TextBox ID="txtbio" class="input100" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </div>
 
-						<span class="label-input100">تسجيل ك </span>
-                         <select class="form-control" id="DrpUserType" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
+                    
+                        <div class="container">
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    ?
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal" style="text-align:right" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">  مرحبا بك/ي في صبايا الجيل الرياضي</h4>
+          <button type="button" class="close" data-dismiss="modal" style="float:left;">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <span style="font-size:larger;color:red;">مشجعين</span><br />
+        <span style="font-size:medium;">تشجيع-معرفه كل جديد-الانضمام والمشاركه بالفعاليات الرياضيه</span><br />
+
+         <span style="font-size:larger;color:red;" >مستثمرين</span><br />
+         <span style="font-size:medium;">تشجيع-معرفه كل جديد-الانضمام والمشاركه بالفعاليات الرياضيه - إضافه الاعلانات لمنشآتكم بالدعم والرعايه (مباشره مع الفرق والاعضاء ) لإقامه الفعاليات والبطولات</span><br />
+
+        <span style="font-size:larger;color:red;">فريق -أعضاء -لاعبات </span><br />
+           <span style="font-size:medium;">هذا الخيار فقط للفرق واللاعبات الفرديه وعند التسجيل يلزم مراسلتنا لتفعيل العضويه</span><br />
+
+
+
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+                            </div>
+
+						        <div class="wrap-input100 " style="text-align:right" >
+
+						<span class="label-input100" >تسجيل ك </span>
+     
+
+
+
+
+<asp:RadioButtonList id="RBUsertype" class="label-input100" runat="server">
+            <asp:ListItem>مشجعة</asp:ListItem>
+            <asp:ListItem>مشجع </asp:ListItem>
+            <asp:ListItem>منتميه إلي-الفرق والنوادي الرياضية</asp:ListItem>
+            <asp:ListItem>منتمي إلي-الفرق والنوادي الرياضية</asp:ListItem>
+            <asp:ListItem>سيدة اعمال - مستثمرة</asp:ListItem>
+            <asp:ListItem>رجل اعمال - مستثمر</asp:ListItem>
+         </asp:RadioButtonList>
+                                                </div>
+<%--                         <select class="form-control" id="DrpUserType" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
                             <option value="مشجعة"  > مشجعة</option>
                               <option value="مشجع"  >مشجع </option>
                             <option value="منتميه إلي-الفرق والنوادي الرياضية" >منتميه إلي-الفرق والنوادي الرياضية</option>
@@ -191,14 +251,14 @@
                           <option value="سيدة اعمال- مستثمرة" >سيدة اعمال - مستثمرة</option>
                              <option value="رجل اعمال- مستثمر" >رجل اعمال - مستثمر</option>
 
-                        </select>
+                        </select>--%>
                        
 					<%--</div>--%>
                    
- 					<div class="flex-m w-full p-b-33">
+ 					<div class="flex-m w-full p-b-33" style="text-align:right">
 						<div class="contact100-form-checkbox">
                             <label class="label-checkbox100" for="ckb1" style="display:inline;">
-								<span class="txt1">
+								<span class="txt1" >
 									 اوافق علي
 									<a href="#" class="txt2 hov1">
 										الشروط والاحكام
@@ -296,6 +356,12 @@
 
         });
                 </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 </body>
 
 <!-- Mirrored from colorlib.com/etc/lf/Login_v13/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Jul 2018 20:52:30 GMT -->

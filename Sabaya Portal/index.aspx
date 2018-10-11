@@ -50,7 +50,7 @@
                       <asp:Repeater ID="individualGameName" runat="server" DataSourceID="individualName">
                           <ItemTemplate>
                     <p style="text-align:right">
-                        <i  class="fa fa-angle-double-left"></i>  <a href="#"> <%# Eval("GameName")%></a>                  
+                      <img src='<%# Eval("GameImg")%>' runat="server"  width="50" height="50"/>  <a href="#"> <%# Eval("GameName")%></a>                  
  <br /><br />
                         
  
@@ -84,7 +84,7 @@
                       <asp:Repeater ID="TeamGameName" runat="server" DataSourceID="TeamName">
                           <ItemTemplate>
                     <p style="text-align:right">
-                        <i  class="fa fa-angle-double-left"></i>  <a href="#"> <%# Eval("GameName")%></a>                  
+                      <img src='<%# Eval("GameImg")%>' runat="server"  width="50" height="50"/>  <a href="#"> <%# Eval("GameName")%></a>                  
  <br /><br />
                         
  
@@ -558,7 +558,12 @@
                      
                         <li id="firstLI" runat="server"></li>
                         <li id="secondLI" runat="server"></li>
-            <asp:Label ID="typeiorf" runat="server" ForeColor="White"   Font-Size="Large"  Visible="false" Text="Label"></asp:Label>
+                   <img  src="assets/img/UsertypeImg/bwoman.png" visible="false"  alt=""  id="UserType" runat="server"   width="30" height="30"/>          
+                   <img  src="assets/img/UsertypeImg/fan-man.png"  visible="false"  alt=""  id="Img1" runat="server"   width="30" height="30"/>                   
+                   <img  src="assets/img/UsertypeImg/fan-girl.png"  visible="false" alt=""  id="Img2" runat="server"   width="30" height="30"/>                   
+                   <img  src="assets/img/UsertypeImg/bman.png" visible="false"  alt=""  id="Img3" runat="server"   width="30" height="30"/>                   
+
+<%--            <asp:Label ID="typeiorf" runat="server" ForeColor="White"   Font-Size="Large"  Visible="false" Text="Label"></asp:Label>--%>
 
 </asp:Content>
  

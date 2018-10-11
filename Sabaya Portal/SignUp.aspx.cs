@@ -66,26 +66,26 @@ namespace Sabaya_Portal
             {
 
                 BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
-                      , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Label1.Text, txtbio.Text);
+                      , false, false, false, RBUsertype.SelectedItem.Text, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Label1.Text, txtbio.Text);
 
 
                 Session["LoggedIn"] = true;
-                    Session["UserType"] = DrpUserType.Value;
-                    Session["FullName"] = txtFullName.Value;
-                    Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
-                
+                Session["UserType"] = RBUsertype.SelectedItem.Text;
+                Session["FullName"] = txtFullName.Value;
+                Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
+
             }
             else
             {
 
                 BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "", Convert.ToDateTime("1/1/1995"), "ll", fileUploadPath, TxtGov.Value
-                       , false, false, false, DrpUserType.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), "", txtbio.Text);
+                       , false, false, false, RBUsertype.SelectedItem.Text, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), "", txtbio.Text);
 
                 Session["LoggedIn"] = true;
-                Session["UserType"] = DrpUserType.Value;
+                Session["UserType"] = RBUsertype.SelectedItem.Text;
                 Session["FullName"] = txtFullName.Value;
                 Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
-                
+
             }
         }
 
@@ -208,7 +208,6 @@ namespace Sabaya_Portal
             divgov.Visible = false;
             divgov3.Visible = true;
             displayselectedgov.Items.Clear();
-
             displayselectedgov.Items.Insert(0, new ListItem(Label1.Text, Label1.Text));
             displayselectedgov.Items.Insert(1, new ListItem("لإعاده إختيار المدينه", "لإعاده إختيار المدينه"));
 
@@ -227,6 +226,5 @@ namespace Sabaya_Portal
 
             }
         }
-
     }
 }

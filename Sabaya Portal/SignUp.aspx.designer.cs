@@ -247,13 +247,13 @@ namespace Sabaya_Portal {
         protected global::System.Web.UI.WebControls.TextBox txtbio;
         
         /// <summary>
-        /// DrpUserType control.
+        /// RBUsertype control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect DrpUserType;
+        protected global::System.Web.UI.WebControls.RadioButtonList RBUsertype;
         
         /// <summary>
         /// MyCheckBox control.
