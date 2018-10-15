@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
+using System.Text;
+using Sabaya_Portal.App_Code;
 
 
 
@@ -19,78 +22,46 @@ namespace Sabaya_Portal
 
             if (!IsPostBack)
             {
-
-                string query = "select CountryID, CountryName from Countries";
-
-                BindDropDownList(DropCountry, query, "CountryName", "CountryID", "إختر البلد");
-
-                //DropAllGames.Enabled = false;
-                //DropAllGames.Items.Insert(0, new ListItem("إختر إسم اللعبه", "0"));
-
-
+                locationSelection();
             }
-                }
-               
 
-       
-        private void BindDropDownList(DropDownList ddl, string query, string text, string value, string defaultText)
+
+        }
+
+
+
+
+        public void locationSelection ()
         {
-            string conString = ConfigurationManager.ConnectionStrings["SabayaDBConnectionString"].ConnectionString;
-            SqlCommand cmd = new SqlCommand(query);
-            using (SqlConnection con = new SqlConnection(conString))
+            var myLocation = new StringBuilder();
+            BusinessLayer BL = new BusinessLayer();
+            DataTable dt = BL.Locationselection();
+            DataTable dt2 = new DataTable();
+            string gov = "Reyad";
+            int x;
+            for (int i=0;i<dt.Rows.Count;i++)
             {
-                using (SqlDataAdapter sda = new SqlDataAdapter())
+                myLocation.Append("<li class=\"list-group-item librePanelListGroupItem\">");
+                //myLocation.Append("<a class=\"dropbtn\">" + "مرحبا" + " " + Session["FullName"] + "<i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>");
+                myLocation.Append("<a data-toggle=\"collapse\" href =\"#"+gov+"\">");
+                myLocation.Append("<span class=\"fa fa-angle-down arrow\"></span>");
+                myLocation.Append("<span style=\"float:right\">"+dt.Rows[i]["GovName"].ToString()+"</span></a>");
+                dt2 = BL.cityselection(Convert.ToInt32(dt.Rows[i]["GovID"].ToString()));
+                myLocation.Append("<ul id="+gov+" class=\"collapse librePanelSubListGroupItem\">");
+                for (x=0;x<dt2.Rows.Count;x++)
                 {
-                    cmd.Connection = con;
-                    con.Open();
-                    ddl.DataSource = cmd.ExecuteReader();
-                    ddl.DataTextField = text;
-                    ddl.DataValueField = value;
-                    ddl.DataBind();
-                    con.Close();
+                    myLocation.Append("<li class=\"list-group-item librePanelListGroupItem\">");
+                    myLocation.Append("<span style=\"float:right\"><a href=\"#\">" + dt2.Rows[x]["CityName"].ToString() + "</a></span></li> ");
+                    myLocation.Append("<br/>");
                 }
+                myLocation.Append("</ul>");
+                myLocation.Append("</li>");
+                gov = "menuNo" + i + 1;
             }
-            ddl.Items.Insert(0, new ListItem(defaultText, "0"));
+            menu2PanelSubListGroup.InnerHtml = myLocation.ToString();
+
+
         }
-        
-
-
-
-
-
-
-        protected void DropCountry_Changed(object sender, EventArgs e)
-        {
-            DropGOV.Enabled = false;
-
-            DropGOV.Items.Clear();
-
-            DropGOV.Items.Insert(0, new ListItem("إختر المحافظه", "0"));
-            int CountryID = Convert.ToInt32(DropCountry.SelectedItem.Value);
-            if (CountryID > 0)
-            {
-                string query = string.Format("select GovID, GovName from TBLGOV where CountryID = {0}", CountryID);
-                BindDropDownList(DropGOV, query, "GovName", "GovID", "إختر المحافظه");
-                DropGOV.Enabled = true;
-            }
-        }
-        protected void DropGOV_Changed(object sender, EventArgs e)
-        {
-            DropCity.Enabled = false;
-
-            DropCity.Items.Clear();
-
-            DropCity.Items.Insert(0, new ListItem("إختر المدينه", "0"));
-            int GovID = Convert.ToInt32(DropGOV.SelectedItem.Value);
-            if (GovID > 0)
-            {
-                string query = string.Format("select CITYID, CityName from Cities where GovID = {0}", GovID);
-                BindDropDownList(DropCity, query, "CityName", "CITYID", "إختر المدينه");
-                DropCity.Enabled = true;
-            }
-        }
-
-
 
 
 

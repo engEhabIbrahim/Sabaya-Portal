@@ -67,6 +67,15 @@ namespace Sabaya_Portal {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnLogin;
         
         /// <summary>
+        /// HtmlAnchorbutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor HtmlAnchorbutton;
+        
+        /// <summary>
         /// txtFaceBookFullName control.
         /// </summary>
         /// <remarks>

@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Sabaya_Portal.App_Code;
 using System.Xml;
+using System.Configuration;
 namespace Sabaya_Portal
 {
     public partial class LoginPage : System.Web.UI.Page
@@ -33,9 +34,11 @@ namespace Sabaya_Portal
                     }
                     
                 }
+                HtmlAnchorbutton.ServerClick += new EventHandler(HtmlAnchor_Click);
+
 
             }
-            
+
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -64,5 +67,22 @@ namespace Sabaya_Portal
 
 
         }
+
+
+        protected void HtmlAnchor_Click(Object sender, EventArgs e)
+        {
+            var client_id = ConfigurationManager.AppSettings["ClientId"].ToString();
+            var redirect_uri = ConfigurationManager.AppSettings["RedirectURI"].ToString();
+            Response.Redirect("https://api.instagram.com/oauth/authorize/?client_id=" + client_id + "&redirect_uri=" + redirect_uri + "&response_type=code");
+        }
+
+        //void LinkButton_Click(Object sender, EventArgs e)
+        //{
+        //    var client_id = ConfigurationManager.AppSettings["ClientId"].ToString();
+        //    var redirect_uri = ConfigurationManager.AppSettings["RedirectURI"].ToString();
+        //    Response.Redirect("https://api.instagram.com/oauth/authorize/?client_id=" + client_id + "&redirect_uri=" + redirect_uri + "&response_type=code");
+
+        //}
+
     }
 }
