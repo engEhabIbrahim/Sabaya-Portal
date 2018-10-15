@@ -32,25 +32,25 @@
 <!--===============================================================================================-->
           <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
       <script>
-        function CheckBoxRequired_ClientValidate(sender, e) {
-            e.IsValid = jQuery(".AcceptedAgreement input:checkbox").is(':checked');
-        }
+          function CheckBoxRequired_ClientValidate(sender, e) {
+              e.IsValid = jQuery(".AcceptedAgreement input:checkbox").is(':checked');
+          }
 
-        $(document).ready(function () {
-            $('#UserImg').on('change', function () {
-                readPath(this);
-            });
-        });
+          $(document).ready(function () {
+              $('#UserImg').on('change', function () {
+                  readPath(this);
+              });
+          });
 
-        function readPath(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#Image1').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+          function readPath(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+                      $('#Image1').attr('src', e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
     </script>
     <!--========================================== check if user name exists =====================================================-->
             
@@ -107,35 +107,45 @@
                              ForeColor="red" ErrorMessage="لا يجب ان يقل اسم المستخدم عن 3 احرف"></asp:RegularExpressionValidator>
                         <div id="test"></div>
 					</div>
-              <%--      <span class="label-input100">محل الاقامة </span>
-                         <select class="form-control" id="DRBLocation" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
-                            <option value="محافظة الرياض"  >محافظة الرياض</option>
-                            <option value="الدرعية" >الدرعية</option>
-                            <option value="الخرج" >الخرج</option>
-                            <option value="الدوادمي"  >الدوادمي</option>
-                            <option value="المجمعة" >المجمعة</option>
-                            <option value="القويعية" >القويعية</option>
-
-                        </select>--%>
-                    
+           
                     	<div class="wrap-input100 " >
                     <span class="label-input100">البلد  </span><br />
                      <asp:DropDownList ID="DropCountry"  class=" form-control  "  runat="server"  OnSelectedIndexChanged ="DropCountry_Changed" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
-                        </div>
-                    	<div class="wrap-input100 "  runat="server" id="divgov" visible="false">
-                         <asp:Label ID="LblGov" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
-                     <asp:DropDownList ID="DropGOV"  class=" form-control  "   runat="server" OnSelectedIndexChanged ="DropGOV_Changed"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
                     </div>
-                    	<div class="wrap-input100 " runat="server" id="divcity" visible="false">
-                          <asp:Label ID="LblCity" runat="server" Text="المدينه " class="label-input100"></asp:Label><br />
+                    	<div class="wrap-input100 "  runat="server" id="divgov" visible="false">
+                                <asp:Repeater ID="rptCustomers" runat="server" OnItemDataBound="OnItemDataBound">
 
-                     <asp:DropDownList ID="DropCity" class=" form-control  "  runat="server"  style="margin-top:20px;  margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true"></asp:DropDownList>
-</div>
+        <ItemTemplate>
+          
+            
+                                  <asp:Label ID="lblGovID" Visible="false" runat="server" Text='<%# Eval("GovID") %>' />
+                                <asp:Label ID="lblGOVName" Visible="false" class="label-input100" runat="server" Text='<%# Eval("GovName") %>' />
+
+                    <asp:DropDownList ID="ddlCountries" AppendDataBoundItems="true" DataTextField="CityName"  class=" form-control" style="margin-top:2px; margin-bottom:5px; padding-bottom:0px;padding-top:0px; direction:rtl" 
+                  DataValueField="CITYID" runat="server"  AutoPostBack="True" OnSelectedIndexChanged="ddlCountries_SelectedIndexChanged" >
+                    </asp:DropDownList>
+           
+          
+        </ItemTemplate>
+      
+    </asp:Repeater>
+        <asp:Label ID="Label1" runat="server" class="label-input100"  ForeColor="Red" Font-Size="X-Large"  Visible="false"  Text="Label"></asp:Label>
+                    </div>
                  <div class="wrap-input100 " runat="server" id="divgov2" visible="false">
 
               <asp:Label ID="Lblcity2" runat="server" Text="المحافظه " class="label-input100"></asp:Label><br />
              <input class="input100" type="text" name="name"  id="TxtGov" placeholder="المحافظه ..." runat="server"/>
 </div>
+                                        	<div class="wrap-input100 "  runat="server" id="divgov3" visible="false">
+                                            <span class="label-input100" id="lblselectedgov">المدينه  </span><br />
+
+                                                <asp:DropDownList ID="displayselectedgov" runat="server" class=" form-control" OnSelectedIndexChanged="displayselectedgov_SelectedIndexChanged" style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top:0px; direction:rtl" AutoPostBack = "true" >              
+
+                                                </asp:DropDownList>
+                                            
+                                                
+                                                </div>
+
 
 					<div class="wrap-input100 " >
 						<span class="label-input100">الرقم السري</span>
@@ -165,29 +175,13 @@
                     	<div class="wrap-input100 " >
 						<span class="label-input100">إضافه صوره</span><br /><br />
                             <asp:FileUpload ID="UserImg" runat="server" /><br />
-<%--                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5"  runat="server" ErrorMessage="من فضلك قم بإضافه صوره"   ForeColor="red" ControlToValidate="UserImg"></asp:RequiredFieldValidator>--%>
-<%--					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-                            <asp:Button ID="btnUpload" Text="عرض الصوره" runat="server"  class="login100-form-btn"  CausesValidation="False"  BackColor="#df5db5" OnClick="UploadFile" />
- </div></div>--%>
+
                    <asp:Image ID="Image1"  runat="server"   Height="200" Width="300" />
                             </div>
                     <div class="wrap-input100 " >
 						<span class="label-input100">سيره ذاتيه</span><br /><br />
                         <asp:TextBox ID="txtbio" class="input100" runat="server" TextMode="MultiLine"></asp:TextBox>
-<%--                        <textarea id="txtbio"  runat="server" class="input100"  cols="20" rows="3"></textarea>--%>
-<%--                       <input class="input100" type="text" name="username" id="txtbio" placeholder="سيره ذاتيه ..." runat="server"/>--%>
 
-                        </div>
-
-                   <%-- <div class="wrap-input100 " >
-						<span class="label-input100">رقم الجوال</span>
-						<input class="input100" type="text" name="Phone" id="txtPhoneNumber" placeholder="اختياري" runat="server">
-						<span class="focus-input100"></span>
-					</div>--%>
-
-                    <%--<div class="wrap-input100 " >--%>
 						<span class="label-input100">تسجيل ك </span>
                          <select class="form-control" id="DrpUserType" name="LocationSelect"  style="margin-top:20px; margin-bottom:40px; padding-bottom:0px;padding-top: 0px; direction:rtl" runat="server">
                             <option value="مشجعة"  > مشجعة</option>
@@ -203,7 +197,6 @@
                    
  					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
-							<%--<input class="input-checkbox100" id="CheckboxPrivacy" type="checkbox" name="remember-me" runat="server" >--%>
                             <label class="label-checkbox100" for="ckb1" style="display:inline;">
 								<span class="txt1">
 									 اوافق علي
