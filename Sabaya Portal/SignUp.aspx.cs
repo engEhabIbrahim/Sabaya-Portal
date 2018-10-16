@@ -21,18 +21,19 @@ namespace Sabaya_Portal
         static string fileUploadPath;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Visible = false;
-            divgov3.Visible = false;
+            //Label1.Visible = false;
+            //divgov3.Visible = false;
 
 
             if (!IsPostBack)
             {
+                locationSelection();
 
                 string query = "select CountryID, CountryName from Countries";
 
-                BindDropDownList(DropCountry, query, "CountryName", "CountryID", "إختر البلد");
-                rptCustomers.DataSource = this.GetData("select GovID, GovName from TBLGOV where CountryID=1");
-                rptCustomers.DataBind();
+                //BindDropDownList(DropCountry, query, "CountryName", "CountryID", "إختر البلد");
+                //rptCustomers.DataSource = this.GetData("select GovID, GovName from TBLGOV where CountryID=1");
+                //rptCustomers.DataBind();
             }
             if (Session["LoggedIn"] != null)
             {
@@ -63,31 +64,31 @@ namespace Sabaya_Portal
                 fileUploadPath = "";
             }
 
-            if (Convert.ToInt32(DropCountry.SelectedItem.Value) == 1)
-            {
+            //if (Convert.ToInt32(DropCountry.SelectedItem.Value) == 1)
+            //{
 
-                BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
-                      , false, false, false, RBUsertype.SelectedItem.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Label1.Text, txtbio.Text);
+            //    BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
+            //          , false, false, false, RBUsertype.SelectedItem.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Label1.Text, txtbio.Text);
 
 
-                Session["LoggedIn"] = true;
-                Session["UserType"] = RBUsertype.SelectedItem.Text;
-                Session["FullName"] = txtFullName.Value;
-                Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
+            //    Session["LoggedIn"] = true;
+            //    Session["UserType"] = RBUsertype.SelectedItem.Text;
+            //    Session["FullName"] = txtFullName.Value;
+            //    Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
 
-            }
-            else
-            {
+            //}
+            //else
+            //{
 
-                BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "", Convert.ToDateTime("1/1/1995"), "ll", fileUploadPath, TxtGov.Value
-                       , false, false, false, RBUsertype.SelectedItem.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), "", txtbio.Text);
+            //    BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "", Convert.ToDateTime("1/1/1995"), "ll", fileUploadPath, TxtGov.Value
+            //           , false, false, false, RBUsertype.SelectedItem.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), "", txtbio.Text);
 
-                Session["LoggedIn"] = true;
-                Session["UserType"] = RBUsertype.SelectedItem.Text;
-                Session["FullName"] = txtFullName.Value;
-                Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
+            //    Session["LoggedIn"] = true;
+            //    Session["UserType"] = RBUsertype.SelectedItem.Text;
+            //    Session["FullName"] = txtFullName.Value;
+            //    Response.Redirect("index.aspx?FullName=" + txtFullName.Value);
 
-            }
+            //}
         }
 
         private void BindDropDownList(DropDownList ddl, string query, string text, string value, string defaultText)
@@ -109,123 +110,156 @@ namespace Sabaya_Portal
             }
             ddl.Items.Insert(0, new ListItem(defaultText, "0"));
         }
-        protected void DropCountry_Changed(object sender, EventArgs e)
+        //protected void DropCountry_Changed(object sender, EventArgs e)
+        //{
+        //    if (Convert.ToInt32(DropCountry.SelectedItem.Value) == 1)
+        //    {
+        //        divgov.Visible = true;
+        //        divgov2.Visible = false;
+
+        //    }
+
+
+        //    else
+        //    {
+        //        divgov.Visible = false;
+        //        divgov2.Visible = true;
+        //    }
+        //}
+        //private DataTable GetData(string query)
+        //{
+        //    string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+        //    using (SqlConnection con = new SqlConnection(constr))
+        //    {
+        //        using (SqlCommand cmd = new SqlCommand(query, con))
+        //        {
+        //            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+        //            {
+        //                DataTable dt = new DataTable();
+        //                sda.Fill(dt);
+        //                return dt;
+        //            }
+        //        }
+        //    }
+        //}
+
+
+        //protected void OnItemDataBound(object sender, RepeaterItemEventArgs e)
+        //{
+
+        //    //System.Web.UI.WebControls.Label la = (System.Web.UI.WebControls.Label)rptCustomers.FindControl("lblGovID");
+
+
+        //    if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+        //    {
+
+        //        int lblGovID = Convert.ToInt32((e.Item.FindControl("lblGovID") as Label).Text);
+
+        //        //Find the DropDownList in the Repeater Item.
+        //        DropDownList ddlCountries = (e.Item.FindControl("ddlCountries") as DropDownList);
+        //        ddlCountries.DataSource = this.GetData("select CITYID, CityName from Cities where GovID='" + lblGovID + "'");
+        //        ddlCountries.DataTextField = "CityName";
+        //        ddlCountries.DataValueField = "CITYID";
+        //        ddlCountries.DataBind();
+
+        //        //Add Default Item in the DropDownList.
+        //        string lblGOVName = ((e.Item.FindControl("lblGOVName") as Label).Text);
+
+        //        ddlCountries.Items.Insert(0, new ListItem(lblGOVName));
+
+
+        //        //Select the Country of Customer in DropDownList.
+        //        //string country = (e.Item.DataItem as DataRowView)["GovID"].ToString();
+        //        //ddlCountries.Items.FindByValue(country).Selected = true;
+
+        //        string CityName;
+
+
+        //        for (int item = 0; item < 15; item++)
+        //        {
+        //            DropDownList dll = e.Item.FindControl("ddlCountries") as DropDownList;
+        //            if (dll.SelectedItem != null)
+        //            {
+        //                CityName = ((DropDownList)e.Item.FindControl("ddlCountries")).SelectedItem.Text; //No error
+        //                Label1.Visible = true;
+        //                Label1.Text = CityName;
+        //            }
+        //            else
+        //            {
+        //                // DoOtherStuff();
+        //            }
+        //        }
+
+        //    }
+        //}
+        //protected void ddlCountries_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    //Reference the Repeater Item using Button.
+        //    DropDownList item = sender as DropDownList;
+        //    //DropDownList item = (sender as DropDownList).NamingContainer as DropDownList;
+
+        //    //Reference the DropDownList.
+        //    DropDownList ddlCountries = item.FindControl("ddlCountries") as DropDownList;
+
+        //    //Get the Selected Text.
+        //    string selectedText = ddlCountries.SelectedItem.Text;
+
+        //    //Get the Selected Value.
+        //    string selectedValue = ddlCountries.SelectedItem.Value;
+        //    Label1.Text = ddlCountries.SelectedItem.Text;
+        //    divgov.Visible = false;
+        //    divgov3.Visible = true;
+        //    displayselectedgov.Items.Clear();
+        //    displayselectedgov.Items.Insert(0, new ListItem(Label1.Text, Label1.Text));
+        //    displayselectedgov.Items.Insert(1, new ListItem("لإعاده إختيار المدينه", "لإعاده إختيار المدينه"));
+
+
+
+
+        //}
+
+
+        //protected void displayselectedgov_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (displayselectedgov.SelectedItem.Text == "لإعاده إختيار المدينه")
+        //    {
+        //        divgov.Visible = true;
+
+
+        //    }
+        //}
+
+        public void locationSelection()
         {
-            if (Convert.ToInt32(DropCountry.SelectedItem.Value) == 1)
+            var myLocation = new StringBuilder();
+            BusinessLayer BL = new BusinessLayer();
+            DataTable dt = BL.Locationselection();
+            DataTable dt2 = new DataTable();
+            string gov = "Reyad";
+            int x;
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                divgov.Visible = true;
-                divgov2.Visible = false;
-
-            }
-
-
-            else
-            {
-                divgov.Visible = false;
-                divgov2.Visible = true;
-            }
-        }
-        private DataTable GetData(string query)
-        {
-            string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                myLocation.Append("<li class=\"list-group-item librePanelListGroupItem\">");
+                //myLocation.Append("<a class=\"dropbtn\">" + "مرحبا" + " " + Session["FullName"] + "<i class=\"fa fa-lock\" style=\"margin-right:5px; \"></i>");
+                myLocation.Append("<a data-toggle=\"collapse\" href =\"#" + gov + "\">");
+                myLocation.Append("<span class=\"fa fa-angle-down arrow\"></span>");
+                myLocation.Append("<span style=\"float:right\">" + dt.Rows[i]["GovName"].ToString() + "</span></a>");
+                dt2 = BL.cityselection(Convert.ToInt32(dt.Rows[i]["GovID"].ToString()));
+                myLocation.Append("<ul id=" + gov + " class=\"collapse librePanelSubListGroupItem\">");
+                for (x = 0; x < dt2.Rows.Count; x++)
                 {
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        sda.Fill(dt);
-                        return dt;
-                    }
+                    myLocation.Append("<li class=\"list-group-item librePanelListGroupItem\">");
+                    myLocation.Append("<span style=\"float:right\"><a href=\"#\">" + dt2.Rows[x]["CityName"].ToString() + "</a></span></li> ");
+                    myLocation.Append("<br/>");
                 }
+                myLocation.Append("</ul>");
+                myLocation.Append("</li>");
+                gov = "menuNo" + i + 1;
             }
-        }
-
-
-        protected void OnItemDataBound(object sender, RepeaterItemEventArgs e)
-        {
-
-            //System.Web.UI.WebControls.Label la = (System.Web.UI.WebControls.Label)rptCustomers.FindControl("lblGovID");
-
-
-            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
-            {
-
-                int lblGovID = Convert.ToInt32((e.Item.FindControl("lblGovID") as Label).Text);
-
-                //Find the DropDownList in the Repeater Item.
-                DropDownList ddlCountries = (e.Item.FindControl("ddlCountries") as DropDownList);
-                ddlCountries.DataSource = this.GetData("select CITYID, CityName from Cities where GovID='" + lblGovID + "'");
-                ddlCountries.DataTextField = "CityName";
-                ddlCountries.DataValueField = "CITYID";
-                ddlCountries.DataBind();
-
-                //Add Default Item in the DropDownList.
-                string lblGOVName = ((e.Item.FindControl("lblGOVName") as Label).Text);
-
-                ddlCountries.Items.Insert(0, new ListItem(lblGOVName));
-
-
-                //Select the Country of Customer in DropDownList.
-                //string country = (e.Item.DataItem as DataRowView)["GovID"].ToString();
-                //ddlCountries.Items.FindByValue(country).Selected = true;
-
-                string CityName;
-
-
-                for (int item = 0; item < 15; item++)
-                {
-                    DropDownList dll = e.Item.FindControl("ddlCountries") as DropDownList;
-                    if (dll.SelectedItem != null)
-                    {
-                        CityName = ((DropDownList)e.Item.FindControl("ddlCountries")).SelectedItem.Text; //No error
-                        Label1.Visible = true;
-                        Label1.Text = CityName;
-                    }
-                    else
-                    {
-                        // DoOtherStuff();
-                    }
-                }
-
-            }
-        }
-        protected void ddlCountries_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Reference the Repeater Item using Button.
-            DropDownList item = sender as DropDownList;
-            //DropDownList item = (sender as DropDownList).NamingContainer as DropDownList;
-
-            //Reference the DropDownList.
-            DropDownList ddlCountries = item.FindControl("ddlCountries") as DropDownList;
-
-            //Get the Selected Text.
-            string selectedText = ddlCountries.SelectedItem.Text;
-
-            //Get the Selected Value.
-            string selectedValue = ddlCountries.SelectedItem.Value;
-            Label1.Text = ddlCountries.SelectedItem.Text;
-            divgov.Visible = false;
-            divgov3.Visible = true;
-            displayselectedgov.Items.Clear();
-            displayselectedgov.Items.Insert(0, new ListItem(Label1.Text, Label1.Text));
-            displayselectedgov.Items.Insert(1, new ListItem("لإعاده إختيار المدينه", "لإعاده إختيار المدينه"));
-
-
+            menu2PanelSubListGroup.InnerHtml = myLocation.ToString();
 
 
         }
 
-
-        protected void displayselectedgov_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (displayselectedgov.SelectedItem.Text == "لإعاده إختيار المدينه")
-            {
-                divgov.Visible = true;
-
-
-            }
-        }
     }
 }
