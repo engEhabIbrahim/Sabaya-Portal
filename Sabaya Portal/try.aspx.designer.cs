@@ -13,30 +13,12 @@ namespace Sabaya_Portal {
     public partial class _try {
         
         /// <summary>
-        /// DropCountry control.
+        /// menu2PanelSubListGroup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropCountry;
-        
-        /// <summary>
-        /// DropGOV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropGOV;
-        
-        /// <summary>
-        /// DropCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropCity;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl menu2PanelSubListGroup;
     }
 }

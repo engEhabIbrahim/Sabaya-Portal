@@ -96,6 +96,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -400,6 +404,7 @@
     <Content Include="assets\fonts\helveticaneueltarabic-light.woff" />
     <Content Include="assets\img\img1.jpg" />
     <Content Include="SearchResults.aspx" />
+    <Content Include="testInstgram.aspx" />
     <Content Include="try.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="yallakora.html" />
@@ -584,6 +589,13 @@
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="testInstgram.aspx.cs">
+      <DependentUpon>testInstgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testInstgram.aspx.designer.cs">
+      <DependentUpon>testInstgram.aspx</DependentUpon>
+    </Compile>
     <Compile Include="try.aspx.cs">
       <DependentUpon>try.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

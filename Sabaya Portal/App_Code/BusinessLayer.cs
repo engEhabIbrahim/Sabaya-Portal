@@ -92,15 +92,7 @@ namespace Sabaya_Portal.App_Code
         }
 
 
-        public void insertBillNum(int LastbillId)
-        {
-            SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@LastbillId", SqlDbType.Int);
-            param[0].Value = LastbillId;
-
-            DataAccessLayer dal = new DataAccessLayer();
-            dal.ExcuteOperation("insertBillNum", param);
-        }
+       
 
         public void UpdateMyData(int id, string UserName, string Password)
         {
@@ -119,28 +111,20 @@ namespace Sabaya_Portal.App_Code
             DataAccessLayer dal = new DataAccessLayer();
             dal.ExcuteOperation("UpdateMyData", param);
         }
-        public DataTable GetAllUsers()
+        public DataTable Locationselection()
         {
             DataAccessLayer dal = new DataAccessLayer();
-            DataTable dt = dal.SelectData("GetAllUsers", null);
+            DataTable dt = dal.SelectData("Locationselection", null);
             return dt;
         }
-        public DataTable DeleteUser(int id)
+       
+        public DataTable cityselection(int GovID)
         {
             DataAccessLayer dal = new DataAccessLayer();
             SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@UserID", SqlDbType.Int);
-            param[0].Value = id;
-            DataTable dt = dal.SelectData("DeleteUser", param);
-            return dt;
-        }
-        public DataTable SelectUserData(int user_id)
-        {
-            DataAccessLayer dal = new DataAccessLayer();
-            SqlParameter[] param = new SqlParameter[1];
-            param[0] = new SqlParameter("@user_id", SqlDbType.Int);
-            param[0].Value = user_id;
-            DataTable dt = dal.SelectData("SelectUserData", param);
+            param[0] = new SqlParameter("@GovID", SqlDbType.Int);
+            param[0].Value = GovID;
+            DataTable dt = dal.SelectData("cityselection", param);
             return dt;
         }
         public void UpdateImageLogo(string LogoImage)

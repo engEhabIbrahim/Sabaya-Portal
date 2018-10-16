@@ -267,6 +267,12 @@ function fbLogout() {
 							<i class="fa fa-google"></i>
                             <script src="https://apis.google.com/js/platform.js?onload=onLoadGoogleCallback" async defer></script>
 						</a>
+                        <a  id="HtmlAnchorbutton" class="login100-social-item bg3" runat="server" onserverclick="HtmlAnchor_Click" causesvalidation="false">
+                            <i class="fa fa-instagram"></i>		
+
+                        </a>
+                        
+
 					</div>
                     <!-- HTML for render Google Sign-In button -->
 <%--                        <div id="gSignIn"></div>--%>
