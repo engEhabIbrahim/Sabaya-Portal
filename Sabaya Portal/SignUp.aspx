@@ -182,7 +182,7 @@
             </div>
             <ul class="list-group collapse " id="menu2PanelListGroup">
                 <li class="list-group-item librePanelListGroupItem">
-                    <a data-toggle="collapse" href="#ContentPlaceHolder1_menu2PanelSubListGroup">
+                    <a data-toggle="collapse" href="#menu2PanelSubListGroup">
                         <span class="fa fa-angle-down arrow"></span>
                         <span style="float:right">المملكة العربية السعودية</span>
                     </a>
