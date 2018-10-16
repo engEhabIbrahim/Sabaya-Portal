@@ -121,6 +121,7 @@
     <Content Include="assets\css\animate.css" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\colors\default.css" />
+    <Content Include="assets\css\flexslider.css" />
     <Content Include="assets\css\font.css" />
     <Content Include="assets\css\fontawesome-all.min.css" />
     <Content Include="assets\css\icofont.css" />
@@ -299,9 +300,11 @@
     <Content Include="assets\img\UsertypeImg\bwoman.png" />
     <Content Include="assets\img\UsertypeImg\fan-girl.png" />
     <Content Include="assets\img\UsertypeImg\fan-man.png" />
+    <Content Include="assets\img\UsertypeImg\players.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\custom.js" />
     <Content Include="assets\js\hovereffect.js" />
+    <Content Include="assets\js\index.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
     <Content Include="assets\js\jquery.classycountdown.min.js" />
     <Content Include="assets\js\jquery.counterup.min.js" />
@@ -360,6 +363,7 @@
     <Content Include="InCompleteteam.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Index2.aspx" />
+    <Content Include="IndexforMobile.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Matches.aspx" />
     <Content Include="News.aspx" />
@@ -399,6 +403,7 @@
     <Content Include="try.aspx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="yallakora.html" />
+    <Content Include="try.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -499,6 +504,13 @@
     <Compile Include="Index2.aspx.designer.cs">
       <DependentUpon>Index2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IndexforMobile.aspx.cs">
+      <DependentUpon>IndexforMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexforMobile.aspx.designer.cs">
+      <DependentUpon>IndexforMobile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Matches.aspx.cs">
       <DependentUpon>Matches.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -578,6 +590,13 @@
     </Compile>
     <Compile Include="try.aspx.designer.cs">
       <DependentUpon>try.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="try.Master.cs">
+      <DependentUpon>try.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="try.Master.designer.cs">
+      <DependentUpon>try.Master</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

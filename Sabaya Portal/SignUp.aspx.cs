@@ -66,7 +66,7 @@ namespace Sabaya_Portal
             {
 
                 BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "m", Convert.ToDateTime("1/1/1995"), "kk", fileUploadPath, "kk"
-                      , false, false, false, RBUsertype.SelectedItem.Text, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Label1.Text, txtbio.Text);
+                      , false, false, false, RBUsertype.SelectedItem.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), Label1.Text, txtbio.Text);
 
 
                 Session["LoggedIn"] = true;
@@ -79,7 +79,7 @@ namespace Sabaya_Portal
             {
 
                 BL.SignUp(txtUserName.Value, txtEmail.Value, txtPassword.Value, "", Convert.ToDateTime("1/1/1995"), "ll", fileUploadPath, TxtGov.Value
-                       , false, false, false, RBUsertype.SelectedItem.Text, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), "", txtbio.Text);
+                       , false, false, false, RBUsertype.SelectedItem.Value, false, txtFullName.Value, Convert.ToInt32(DropCountry.SelectedValue), "", txtbio.Text);
 
                 Session["LoggedIn"] = true;
                 Session["UserType"] = RBUsertype.SelectedItem.Text;

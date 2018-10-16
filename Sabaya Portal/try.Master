@@ -1,0 +1,430 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="try.master.cs" Inherits="Sabaya_Portal._try1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="keywords" content="Boostify, Responsive, Business Template, Bootstrap 4,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <title>Sabaya Portal</title>
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <style>
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {cursor: pointer;}
+.LogoImage{
+    width:144px;
+    height:35px;
+}
+ 
+/*@media screen and (max-width: 1199px) {
+ .LogoImage{
+    width:500px;
+    height:35px; 
+ }
+
+
+}
+
+.LogoImage{
+    width:144px;
+    height:35px;
+}
+ 
+@media screen and (max-width: 1199px) {
+ .LogoImage{
+    width:500px;
+    height:35px; 
+ }*/
+
+
+
+}
+    
+
+ .overlay,.sideMenu{position:fixed;bottom:0}
+.overlay{top:0;left:-100%;right:100%;margin:auto;background-color:rgba(0,0,0,.5);z-index:998;transition:all ease 0.2s}
+.overlay.open{left:0;right:0}
+.sidebarNavigation{margin-bottom:0;z-index:999;justify-content:flex-start}
+.sidebarNavigation .leftNavbarToggler{margin-right:10px;order:-1}
+.sideMenu{left:-100%;top:52px;transition:all ease 0.5s;overflow:hidden;width:100%;z-index:999;max-width:80%;margin-bottom:0;padding:1rem}
+.sideMenu.open{left:0;display:block;overflow-y:auto}
+.sideMenu ul{margin:0;padding:0 15px}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+ 
+</style>
+    <style type="text/css">
+::-webkit-scrollbar {width: 6px; height: 4px; background: #ffffff; }
+::-webkit-scrollbar-thumb { background-color: red; -webkit-border-radius: 1ex; }
+</style>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
+         <![endif]-->
+           <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+    <body>
+   
+<%--    <script>
+  (function() {
+    var cx = '016391107323187654995:zros920lrds';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>--%>
+        <form id="form1" runat="server">
+    <div>
+          <div>
+      <!--===// Start:  Header Top
+    =================================-->
+    
+    <section id="header-top">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
+                  <%--  <ul style="float:right; ">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+                        </asp:ContentPlaceHolder>--%>
+                       <%-- <li><i class="fas fa-phone mr-2"></i>Call: 0 (123) 456 7891</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>--%>
+                 <%--   </ul>--%>
+                </div>
+
+                <div class="col-lg-6 col-md-6 text-center text-md-right">
+                    <ul class="header-social d-inline-block" style="float:left;direction:ltr">
+                        <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
+                        <li><a href="#"><i class="icofont icofont-social-tumblr"></i></a></li>
+                       
+                    </ul>                    
+                    <!--<a href="#" class="book-now"><i class="icofont icofont-ebook mr-2"></i>Book Now</a>-->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--===// End:  Header Top
+    =================================-->
+        
+    <!--===// Start: Top Navbar
+    =================================-->
+
+    <section id="top-navbar">
+        <div class="container">
+            <div class="clearfix">
+                <div class="float-left">
+                    <div class="main-logo">
+                        <a href="index.aspx">
+                            <img src="assets/img/logo.jpg" class="LogoImage"  alt=""/></a>
+                    </div>
+                </div>
+                <div class="float-right cart-search">
+                
+    <script>
+  (function() {
+    var cx = '016391107323187654995:zros920lrds';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                </div>
+          <div class="d-none d-lg-block">
+                <div class="float-right header-info">
+                    <ul>
+                        <li>
+                            <i class="icofont icofont-social-google-map"></i>
+                            <p><span>مقر الشركة</span> <br>121 King Street, USA</p>
+                        </li>
+                        <li>
+                            <i class="icofont icofont-clock-time"></i>
+                            <p><span>ساعات العمل</span> <br/>Mon-Sat 8:00 - 18:00</p>
+                        </li>
+                    </ul>
+                </div>
+                    </div>
+                     
+                <div class="col-lg-6 col-md-6 text-md-left text-center mb-lg-0 mb-1">
+                    <ul style="float:right; ">
+                       <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                       <%-- <li><i class="fas fa-phone mr-2"></i>Call: 0 (123) 456 7891</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>--%>
+                    </ul>
+                    </div>
+              
+
+            </div>
+        </div>
+    </section>
+
+    <!--===// End: Top Navbar
+    =================================-->
+    
+    <!--===// Start:  Navbar
+    =================================-->
+
+    <section class="navbar-area sticky-nav">
+        <div class="container d-none d-md-block">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar-pc" >
+                        <ul style="float:right;">
+                            <li class="active"><a href="index.aspx">الرئيسية</a></li>
+                            <li><a href="News.aspx">الاخبار</a></li>
+                            <li><a href="no_leisure.aspx">لا للفراغ</a></li>
+                              
+                            
+                            <li class="b-dropdown">
+                                <a href="#">مراسلة فريق او لاعبة </a>
+                                <ul class="b-dropdown-menu">
+                                    <li><a href="portfolio-2-column.html">Portfolio 2 Column</a></li>
+                                    <li><a href="portfolio-3-column.html">Portfolio 3 Column</a></li>
+                                    <li><a href="portfolio-4-column.html">Portfolio 4 Column</a></li>
+                                    <li class="b-sub-dropdown">
+                                        <a href="#">Other Pages</a>
+                                        <ul class="b-sub-dropdown-menu">
+                                            <li><a href="portfolio-masonary.html">Portfolio masonary</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="b-dropdown">
+                                <a href="#">مباريات</a>
+                                <ul class="b-dropdown-menu">
+                                    <li><a href="CompleteTeam.aspx">فعاليات جماعيه مكتمله </a></li>
+                                    <li><a href="InCompleteteam.aspx">فعاليات جماعيه غير مكتمله</a></li>
+                                    <li><a href="CompleteIndividualMatch.aspx">فعاليات فرديه مكتمله </a></li>
+                                    <li><a href="InCompleteIndividualmatch.aspx">فعاليات فرديه غير مكتمله</a></li>
+                                </ul>
+                            </li>
+                            <li class="b-dropdown">
+                                <a href="#">فيديو وصور</a>
+                                <ul class="b-dropdown-menu">
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    <li><a href="404-page.html">404 Page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="Contact.aspx">تواصل معنا</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+  
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation  d-md-none" data-sidebarClass="navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-size:9px; padding-right:1px">الرياضات الفرق والاعضاء</a>
+        <a class="navbar-brand" href="News.aspx" style="font-size:9px;padding-right:1px">أخبار أحداث</a>
+        <a class="navbar-brand" href="no_leisure.aspx" style="font-size:9px;padding-right:1px">لا للفراغ</a>
+        <a class="navbar-brand" href="#" style="font-size:9px;padding-right:1px">فيديو وصور</a>
+
+<%--        <button class="navbar-toggler leftNavbarToggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.aspx" style="text-align:right">الرئيسيه
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">تعديل الإهتمامات</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">الاشعارات-الرسائل</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">إعدادات الدخول</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Contact.aspx" style="text-align:right">اتصل بنا</a>
+                </li>
+                     <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">كلمه المؤسس</a>
+                </li>
+            
+            </ul>
+           <form class="form-inline my-2 my-lg-0">
+      
+            </form> 
+        </div>--%>
+    </div>
+    </nav>
+    </section>
+    
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+     <footer id="footer-widgets" style="text-align:right">
+
+        <div id="action-bar">
+            <div class="container">
+                <div class="action-bar">
+                    <div class="row">
+                        <div class="col-lg-5 offset-lg-1 offset-0 text-center text-lg-left mb-3 mb-lg-0">
+                            <div class="bar-text">
+                                <p>هل تريد الإنضمام  ؟؟؟</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-lg-right text-center">
+                            <a href="#" class="boxed-btn white-bg">إنشاء حساب</a>
+                           أو
+                            <a href="#" class="boxed-btn contact-btn">تسجيل دخول</a>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>   
+
+        <div class="container">
+
+            
+
+        </div>
+    </footer>
+  
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation  d-md-none" data-sidebarClass="navbar-dark bg-dark"  style="position:fixed;bottom:0; width:100%">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="News.aspx" style="font-size:9px;">إعدادات</a>
+        <a class="navbar-brand" href="News.aspx" style="font-size:9px;">مراسله فريق او لاعبه</a>
+        <a class="navbar-brand" href="no_leisure.aspx" style="font-size:9px;">اماكن الفعاليات </a>
+        <a class="navbar-brand" href="#" style="font-size:9px;">مباريات فعاليات</a>
+
+        <%--<button class="navbar-toggler leftNavbarToggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>--%>
+
+<%--        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.aspx" style="text-align:right">الرئيسيه
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">تعديل الإهتمامات</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">الاشعارات-الرسائل</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">إعدادات الدخول</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Contact.aspx" style="text-align:right">اتصل بنا</a>
+                </li>
+                     <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">كلمه المؤسس</a>
+                </li>
+            
+            </ul>
+           <form class="form-inline my-2 my-lg-0">
+      
+            </form> 
+        </div>--%>
+    </div>
+    </nav>
+
+    <!--===// End: Footer
+    =================================-->
+    
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.shuffle.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/hovereffect.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="assets/js/custom.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"
+        type="text/javascript"></script>
+
+</body>
+
+</html>
