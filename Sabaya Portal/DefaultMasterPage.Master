@@ -471,13 +471,14 @@
                 </div>
             </div>
         </div>--%>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation  d-md-none" data-sidebarClass="navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation  d-md-none" data-sidebarClass="navbar-dark bg-dark">
         <div class="container-fluid">
-        <a class="navbar-brand" href="News.aspx" style="font-size:10px;">الاخبار</a>
-        <a class="navbar-brand" href="no_leisure.aspx" style="font-size:10px;">لا للفراغ</a>
-        <a class="navbar-brand" href="#" style="font-size:10px;">مراسله فريق او لاعبه</a>
+        <a class="navbar-brand" href="#" style="font-size:9px; padding-right:1px">الرياضات الفرق والاعضاء</a>
+        <a class="navbar-brand" href="News.aspx" style="font-size:9px;padding-right:1px">أخبار أحداث</a>
+        <a class="navbar-brand" href="no_leisure.aspx" style="font-size:9px;padding-right:1px">لا للفراغ</a>
+        <a class="navbar-brand" href="#" style="font-size:9px;padding-right:1px">فيديو وصور</a>
 
-        <button class="navbar-toggler leftNavbarToggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+<%--        <button class="navbar-toggler leftNavbarToggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -504,56 +505,18 @@
                      <li class="nav-item">
                     <a class="nav-link" href="#" style="text-align:right">كلمه المؤسس</a>
                 </li>
-             <%--   <li class="nav-item">
-                    <a class="nav-link disabled" href="#" style="text-align:right">Disabled</a>
-                </li>--%>
-           <%--     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>--%>
+            
             </ul>
            <form class="form-inline my-2 my-lg-0">
-           <%--     <input class="form-control mr-sm-2" type="text" placeholder="بحث" style="text-align:center"  aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>--%>
+      
             </form> 
-        </div>
+        </div>--%>
     </div>
     </nav>
     </section>
-        <!-- End Mobile Menu -->
-
-    <!--===// End: Navbar
-    =================================-->
-
-    <!--===// Start:  Search
-    =================================-->
-<%--    <div class="search__area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="search__inner">
-                        <form action="#" method="get" class="" role="search">
-                            <input type="search" name="q" value="" placeholder="بحث" style="text-align:center" class="" aria-label="Search">
-                            <button type="submit"><i class="icofont icofont-search-alt-1"></i></button>
-                        </form>
-                        <div class="search__close__btn">
-                            <span class="search__close__btn_icon"><i class="icofont icofont-close"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>--%>
-
-    <!--===// End: Search
-
     
-    =================================-->
+    
+  
            
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
@@ -585,116 +548,52 @@
 
         <div class="container">
 
-            <div class="row widgets-mb" >
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-4">
-                    <aside class="widget widget_about">
-                        <div class="footer-logo"><img src="assets/img/logo.jpg"  style="width:205px;height:35px;" alt=""></div>
-                        <hr>
-                        <p> لإعلان تواصل معنا علي  </p>
-                        <ul class="widget-info">
-                            <li><i class="fas fa-phone"></i>012-345-789</li>
-                            <li><i class="fas fa-globe"></i>www.yourdomain.com</li>
-                            <li><i class="fas fa-envelope"></i>yourmail@gmail.com</li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-4">
-                    <aside class="widget widget_links">
-                        <h4 class="widget-title">صفحات الموقع</h4>
-                        <hr>
-                        <ul>
-                            <li><a href="#">الرئيسيه</a></li>
-                            <li><a href="#">تعديل الإهتمامات</a></li>
-                            <li><a href="#">الاشعارات-الرسائل</a></li>
-                            <li><a href="#">إعدادات الدخول</a></li>
-                            <li><a href="#">إتصل بنا</a></li>
-                            <li><a href="#">كلمه المؤسس</a></li>
-                            
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 mb-lg-0 mb-md-0 mb-4">
-                    <aside class="widget widget_recent">
-                        <h4 class="widget-title">أحدث العروض</h4>
-                        <hr>
-                        <ul>
-                            <li class="latest-news">
-                                <a href="#">
-                                    <img src="assets/img/footer/anyq-thumb01.jpg" alt="">
-                                    <p>عرض خاص لحجز الساعة 6-4 لكل أيام الأسبوع   </p>
-                                </a>
-                            </li>
-                            <li class="latest-news">
-                                <a href="#">
-                                    <img src="assets/img/footer/anyq-thumb02.jpg" alt="">
-                                    <p>عرض نهاية الصيف حجز ملعب الصابون   </p>
-                                </a>
-                            </li>
-                            <li class="latest-news">
-                                <a href="#">
-                                    <img src="assets/img/footer/anyq-thumb03.jpg" alt="">
-                                    <p>عرض خاص ليوم السبت (9-15 2017-)حجز الساعتي </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <aside class="widget widget_instagram">
-                        <h4 class="widget-title">أحدث الصور</h4>
-                        <hr>
-                        <div class="instagram-photos">
-                            <div class="single-instagram">                                
-                                <a href="assets/img/footer/instagram01.jpg" class="popup">
-                                    <img src="assets/img/footer/instagram01.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="single-instagram">                                
-                                <a href="assets/img/footer/instagram01.jpg" class="popup">
-                                    <img src="assets/img/footer/instagram02.jpg" alt="">
-                                </a>                                
-                            </div>
-                            <div class="single-instagram">                                
-                                <a href="assets/img/footer/instagram01.jpg" class="popup">
-                                    <img src="assets/img/footer/instagram03.jpg" alt="">
-                                </a>                                
-                            </div>
-                            <div class="single-instagram">                                
-                                <a href="assets/img/footer/instagram01.jpg" class="popup">
-                                    <img src="assets/img/footer/instagram04.jpg" alt="">
-                                </a>                                
-                            </div>
-                            <div class="single-instagram">                                
-                                <a href="assets/img/footer/instagram01.jpg" class="popup">
-                                    <img src="assets/img/footer/instagram05.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="single-instagram">                                
-                                <a href="assets/img/footer/instagram01.jpg" class="popup">
-                                    <img src="assets/img/footer/instagram06.jpg" alt="">
-                                </a>                                
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-            <hr class="copyright-hr">
-            <div class="row copyright">
-              <%--  <div class="col-md-6 col-12 mb-lg-0 mb-3">
-                    <ul class="text-md-left text-center payment-method">
-                        <li><a href="#"><i class="fab fa-paypal"></i></a></li>
-                        <li><a href="#"><i class="fab fa-cc-visa"></i></a></li>
-                        <li><a href="#"><img src="assets/img/paymenticon01.png" alt=""></a></li>
-                        <li><a href="#"><img src="assets/img/paymenticon02.png" alt=""></a></li>
-                    </ul>
-                </div>--%>
-                <div class="col-md-12 col-12 text-md-right text-center copyright-text"><p style="text-align:center">Copyright © 2018 by <a href="#">Girl's Sport Generation  </a>.</p></div>
-                <a href="#" class="scrollup boxed-btn"><i class="icofont icofont-rounded-up"></i></a>
-            </div>
 
         </div>
     </footer>
-  
+   
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark sidebarNavigation  d-md-none" data-sidebarClass="navbar-dark bg-dark"  style="position:fixed;bottom:0; width:100%">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="News.aspx" style="font-size:9px;">إعدادات</a>
+        <a class="navbar-brand" href="News.aspx" style="font-size:9px;">مراسله فريق او لاعبه</a>
+        <a class="navbar-brand" href="no_leisure.aspx" style="font-size:9px;">اماكن الفعاليات </a>
+        <a class="navbar-brand" href="#" style="font-size:9px;">مباريات فعاليات</a>
+
+        <%--<button class="navbar-toggler leftNavbarToggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>--%>
+
+<%--        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.aspx" style="text-align:right">الرئيسيه
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">تعديل الإهتمامات</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">الاشعارات-الرسائل</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">إعدادات الدخول</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Contact.aspx" style="text-align:right">اتصل بنا</a>
+                </li>
+                     <li class="nav-item">
+                    <a class="nav-link" href="#" style="text-align:right">كلمه المؤسس</a>
+                </li>
+            
+            </ul>
+           <form class="form-inline my-2 my-lg-0">
+      
+            </form> 
+        </div>--%>
+    </div>
+    </nav>
 
     <!--===// End: Footer
     =================================-->

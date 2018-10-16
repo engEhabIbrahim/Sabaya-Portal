@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/try.master" AutoEventWireup="true" CodeBehind="IndexforMobile.aspx.cs" Inherits="Sabaya_Portal.IndexforMobile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DefaultMasterPage.master" AutoEventWireup="true" CodeBehind="IndexforMobile.aspx.cs" Inherits="Sabaya_Portal.IndexforMobile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
@@ -164,27 +164,28 @@
 .as-wrap .as-item .caption {padding:1em;}
 }
 
-  .post-container {
+ .post-container {
     margin: 20px 20px 0 0;  
     border: 1px solid #333;
     overflow: auto
 }
 .post-thumb {
-    float: left
+    float: left;
 }
 .post-thumb img {
     display: block
 }
 .post-content {
-    margin-left: 210px
+   text-align:center;
 }
 .post-title {
     font-weight: bold;
     font-size: 200%;
     padding: 9px;
     background: #ccc
-   
 }
+
+
  .post-container2 {
     margin: 20px 20px 0 0;  
     border: 1px solid #333;
@@ -197,7 +198,7 @@
     display: block
 }
 .post-content2 {
-    margin-left: 210px
+    margin-right: 10px
 }
 .post-title2 {
     font-weight: bold;
@@ -293,28 +294,79 @@
 
     <br/>
     <br />
+
+
   
+    
     <div class="post-container">
-    <div class="post-thumb"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <%--<div class="post-thumb"><img src="assets/img/imgUploaded/1.jpg"  width="80" height="100" /></div>
     <div class="post-content">
-        <p>ost desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p style="text-align:right"> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>--%>
+                            <section class="sidebar">
+                      
+
+                        <aside class="widget widdget-recent-post">
+                            
+                            <div class="popular-post">
+                        <img style="width:80px; height:80px;" src="assets/img/imgUploaded/1.jpg" alt="">
+                                <div class="popular-content">
+                                   
+                                    <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                      
+                 
+
+
+                        
+
+                    </section>
+
+
 </div>
      
 <div class="post-container2">
-    <div class="post-thumb2"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <div class="post-thumb2"><img src="assets/img/imgUploaded/2.jpg"  width="80" height="80" /></div>
     <div class="post-content2">
-        <p> post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
 </div>
-      <div class="post-container">
-    <div class="post-thumb"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <div class="post-container">
+    <%--<div class="post-thumb"><img src="assets/img/imgUploaded/1.jpg"  width="80" height="100" /></div>
     <div class="post-content">
-        <p>ost desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p style="text-align:right"> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>--%>
+                            <section class="sidebar">
+                      
+
+                        <aside class="widget widdget-recent-post">
+                            
+                            <div class="popular-post">
+                        <img style="width:80px; height:80px;" src="assets/img/imgUploaded/3.jpg" alt="">
+                                <div class="popular-content">
+                                   
+                                    <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                      
+                 
+
+
+                        
+
+                    </section>
+
+
 </div>
      
 <div class="post-container2">
-    <div class="post-thumb2"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <div class="post-thumb2"><img src="assets/img/imgUploaded/4.jpg"  width="80" height="80" /></div>
     <div class="post-content2">
-        <p> post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
 </div>
 
              
@@ -350,27 +402,76 @@
         </div>
 </div></section>
 
-      <div class="post-container">
-    <div class="post-thumb"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    
+    <div class="post-container">
+    <%--<div class="post-thumb"><img src="assets/img/imgUploaded/1.jpg"  width="80" height="100" /></div>
     <div class="post-content">
-        <p>ost desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p style="text-align:right"> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>--%>
+                            <section class="sidebar">
+                      
+
+                        <aside class="widget widdget-recent-post">
+                            
+                            <div class="popular-post">
+                        <img style="width:80px; height:80px;" src="assets/img/imgUploaded/1.jpg" alt="">
+                                <div class="popular-content">
+                                   
+                                    <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                      
+                 
+
+
+                        
+
+                    </section>
+
+
 </div>
      
 <div class="post-container2">
-    <div class="post-thumb2"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <div class="post-thumb2"><img src="assets/img/imgUploaded/2.jpg"  width="80" height="80" /></div>
     <div class="post-content2">
-        <p> post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
 </div>
-      <div class="post-container">
-    <div class="post-thumb"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <div class="post-container">
+    <%--<div class="post-thumb"><img src="assets/img/imgUploaded/1.jpg"  width="80" height="100" /></div>
     <div class="post-content">
-        <p>ost desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p style="text-align:right"> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>--%>
+                            <section class="sidebar">
+                      
+
+                        <aside class="widget widdget-recent-post">
+                            
+                            <div class="popular-post">
+                        <img style="width:80px; height:80px;" src="assets/img/imgUploaded/3.jpg" alt="">
+                                <div class="popular-content">
+                                   
+                                    <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+                                </div>
+                            </div>
+
+
+                        </aside>
+                      
+                 
+
+
+                        
+
+                    </section>
+
+
 </div>
      
 <div class="post-container2">
-    <div class="post-thumb2"><img src="http://dummyimage.com/200x200/f0f/fff" /></div>
+    <div class="post-thumb2"><img src="assets/img/imgUploaded/4.jpg"  width="80" height="80" /></div>
     <div class="post-content2">
-        <p> post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
+        <p> desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc </p></div>
 </div>
 
                       <section id="maincontent" style="padding-top:25px;">
